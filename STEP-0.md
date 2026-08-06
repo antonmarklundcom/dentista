@@ -41,28 +41,111 @@ precio implante dental paraguay
 cuanto cuestan los brackets paraguay
 ```
 
-Kortast först: rad 1–3 är huvudtermerna som avgör H1. Raderna 29–30 är den
-transaktionella prissvansen; den informationella svansen ("que es una
-endodoncia", "cuanto dura un implante") plockas ur KWP-exporten efter körning
-och blir `/guias/` i CORE 15 — hitta inte på guideämnen före exporten.
+## a2) Sökordskarta efter KWP-körning (låst)
+
+Volymer från användarens KWP-export. En sida äger exakt ett primärt sökord.
+
+**Startsidan** — `dentista` (1 000) + `dentista cerca de mi` (1 000).
+H1: `Dentista en Asunción y Gran Asunción`. Notera att `dentista asuncion`
+bara har 110 — huvudtermen bär volymen, geon läggs på för intentionen.
+
+**Servicios (5), rangordnade efter faktisk volym:**
+
+| Sida | Primärt sökord | Vol. | H2-teman ur svansen |
+|---|---|---|---|
+| `/servicios/brackets` | `brackets` | **4 400** | precio, tipos, cuánto duran |
+| `/servicios/profilaxis-dental` | `profilaxis dental` | 1 300 | limpieza de sarro (480), limpieza dental (170), ultrasonido dental (140), destartraje (40), curetaje |
+| `/servicios/blanqueamiento-dental` | `blanqueamiento dental` | 1 000 | blanqueamiento dental precio (110), blanqueador de dientes (110) |
+| `/servicios/muela-del-juicio` | `muela de juicio` | 590 | muelas juicio (480), extraccion de dientes (480), **exodoncia (210)**, extraccion de muela (140), extracción de muela infectada (140), restos radiculares (40) |
+| `/servicios/odontopediatria` | `odontopediatria` | 320 | odontopediatra (170), odonto pediatría (320) |
+
+**Två fynd som ändrar bygget:**
+
+- `brackets` (4 400) är tre gånger större än något annat i exporten. Det är
+  paraguayansk vardagsterm för ortodonti — sidan ska heta *brackets*, inte
+  *ortodoncia*, och den är sajtens tyngsta sida, inte implantat.
+- `exodoncia` (210) får **ingen egen sida**. Den ligger som H2 på
+  muela-del-juicio, annars konkurrerar två sidor om samma intention.
+
+**Saknas i exporten:** implantes dentales, ortodoncia, endodoncia, protesis,
+carillas, corona. Kör dem i KWP innan sida 16 och uppåt. Implantat är
+kommersiellt tyngst men får ingen sida förrän volymen är verifierad —
+gissningar bygger tunna sidor.
+
+**Zonas (3 + interior):**
+
+| Sida | Primärt sökord | Vol. |
+|---|---|---|
+| `/zonas/san-lorenzo` | `odontologo san lorenzo` | 210 |
+| `/zonas/luque` | `dentista luque` | 50 |
+| `/zonas/lambare` | `dentista lambare` | 30 |
+| `/zonas/interior` | specialfall, ingen volym | — |
+
+San Lorenzo-sidans H1 måste säga **odontólogo**, inte dentista: `odontologo
+san lorenzo` 210 mot `dentista san lorenzo` 50. Samma ort, fyra gånger
+skillnaden, enbart på ordvalet. Fernando de la Mora (10), Capiatá och Mariano
+Roque Alonso får ingen egen sida — de nämns i löptext på täckningssektionen.
+
+**Guías (2)** — informationell svans utan kannibalisering mot servicios:
+
+| Sida | Primärt sökord | Vol. |
+|---|---|---|
+| `/guias/curetaje-dental` | `curetaje` | 170 |
+| `/guias/dientes-postizos` | `dientes postizos` | 90 |
+
+Reserv om någon av dem visar sig tunn: `dolor de muelas intenso` (40, växande
++400 %), `restos radiculares` (40).
+
+**Kontrollera en sak i exporten:** att den kördes med platsfilter Paraguay och
+inte global spanska. `dentista` 1 000 och `dentista cerca de mi` 1 000 är höga
+för en PY-marknad; utan platsfilter är samtliga tal uppblåsta och rangordningen
+mellan sidorna kan ändras.
 
 ---
 
-## b) Blockerande frågor (5)
+## b) Blockerande frågor — besvarade och låsta
 
-1. Finns en odontólogo/klinik bakom leadsen ännu, och i så fall vilket
-   **Reg. Prof. N° / matrícula** ska stå i förtroendebandet? (Reglerat yrke —
-   varken hittas på eller antas bort. Utan nummer döljs raden helt.)
-2. Kör vi stage 1-numret **+595 995 628862** på alla WhatsApp-länkar, eller
-   finns ett eget nummer för dentista.com.py redan?
-3. Ska **priser** visas? Default annars: ingen prislista, utan cotizador som
-   ger ett intervall i Gs. per behandling + "Presupuesto sin costo".
-4. Finns **riktiga foton** (klinik, behandlingsrum) eller **riktiga reseñas**
-   (Google-citat med förnamn + barrio)? Annars körs AI-motiv i slotsen och
-   reseñas-sektionen ersätts enligt §5.
-5. När partner finns: vilken **adress + horarios** ska in i footern och
-   `streetAddress` i schemat? Fram till dess: `Asunción, Paraguay`, ingen gata,
-   ingen karta med nål.
+1. **Ingen odontólogo/matrícula ännu.** Ingen `Reg. Prof. N°` någonstans på
+   sajten. Förtroendebandet byggs om från meritband till **löftesband** — se nedan.
+2. **WhatsApp:** obesvarad → default **+595 995 628862** (stage 1). ⚠️ Antagande.
+   Numret ligger på ett ställe i koden (`--wa-number`), så bytet är en rad.
+3. **Inga priser.** Ingen prislista, inga intervall, ingen kalkylator med belopp.
+   P10-panelen blir i stället en behandlingsväljare som bygger det förifyllda
+   WhatsApp-meddelandet — samma konverteringsvärde, noll siffror.
+4. **Inga foton, inga reseñas.** AI-motiv i card- och section-slotsen,
+   `proof-photo` lämnas tom, reseñas-sektionen ersatt enligt §5.
+5. **Ingen adress.** Footer: `Asunción, Paraguay`. Inget `streetAddress`, ingen
+   karta med nål, ingen `openingHours` som inte är sann, ingen `aggregateRating`.
+   Byts när partner finns.
+
+### Förtroendebandet utan meriter (sektion 03)
+
+Ett meritband kräver meriter. Fyra påståenden som är sanna dag ett:
+
+```
+Presupuesto sin costo  ·  Respondemos por WhatsApp  ·  Asunción y Gran Asunción  ·  Coordinamos el horario que te sirva
+```
+
+Bannlyst tills partner finns: matrícula, RUC, factura legal, "profesionales
+matriculados", år i branschen, antal patienter, garantier, betyg, `Dr./Dra.`
+med namn, "nuestro equipo", "nuestra clínica".
+
+Positioneringen hålls i **koordinerande** form, aldrig ägande: *"Contanos qué
+necesitás y coordinamos tu consulta odontológica en Gran Asunción."* Sajten
+påstår aldrig att den är en klinik.
+
+FAQ får en rad som möter frågan direkt, formulerad som åtagande och inte som
+faktapåstående om en person som ännu inte finns:
+
+> **¿El profesional está matriculado?**
+> Sí. Trabajamos únicamente con odontólogos matriculados, y te pasamos los
+> datos del profesional antes de confirmar la consulta.
+
+⚠️ **En risk att ta ställning till, inte att bygga bort:** kommer ett lead in
+innan en partner finns går det inte att leverera på. Svara hellre "te confirmo
+disponibilidad hoy" och håll leadet varmt än att boka en tid som inte finns —
+det är skillnaden mellan en långsam start och ett bränt rykte i en stad där
+folk frågar runt.
 
 Allt annat är härlett: yrke, spår, sektionsordning, layoutmönster,
 konverteringsläge (whatsapp-first — tandvård är bokning, inte akututryckning),
@@ -118,12 +201,12 @@ familjen; då är dentista den som byter, inte grúas.
 |---|---|---|---|---|
 | 01 | Sticky header — `Dentista.com.py` + WhatsApp-knapp + nummer som text | — | nej | — |
 | 02 | Hero — `ASUNCIÓN · GRAN ASUNCIÓN`, H1 = primärt sökord | **P1** asymmetrisk split 7/5 | nej (visual sticker ut höger) | `card--raised` ×1 (bokningspanel, gränsöverlapp) |
-| 03 | Franja de confianza — RUC · Factura legal · Reg. Prof. · Formas de pago | **P8** full-bleed ribbon `.grain` | **ja, full-bleed** | — |
+| 03 | Franja de promesa — Presupuesto sin costo · Respondemos por WhatsApp · Asunción y Gran Asunción · Coordinamos tu horario (**inga meriter**, se §b) | **P8** full-bleed ribbon `.grain` | **ja, full-bleed** | — |
 | 04 | Servicios (5 behandlingar) | **P3** staggered-weight grid | nej | `card--ink` ×1 (implantes, span-2) + `card--hair` ×4 |
 | 05 | Tratamiento destacado — implantes/ortodoncia, förklarande | **P7** sticky-side scroll | nej | `card--bare` ×3 |
 | 06 | Banda full-bleed — miljöbild + en mening + CTA | **P6** bleed-image overlap | **ja, full-bleed + gränsöverlapp** | `card--raised` ×1 (korsar sektionsgränsen `translateY(40%)`) |
 | 07 | Cómo es tu primera consulta — 4 steg | **P5** numbered process rail | nej | — (oversized siffror `--t-5`, accent 20%) |
-| 08 | Cotizador orientativo — intervall i Gs., "Presupuesto sin costo" | **P10** data panel | nej | `card--raised` ×1 |
+| 08 | Armá tu consulta — behandlingsväljare som bygger WhatsApp-texten, **noll belopp**, CTA "Pedí tu presupuesto sin costo" | **P10** data panel | nej | `card--raised` ×1 |
 | 09 | Zonas de cobertura — Gran Asunción + Interior som specialfall | **P4** editorial två-kolumn | nej | `card--hair` ×2 |
 | 10 | Statement CTA — en rad, `.statement` | **P9** oversized statement | **ja, offsetbrott** | — |
 | 11 | Preguntas frecuentes — 6 st + FAQPage-schema | **P4** editorial två-kolumn | nej | `card--accent` ×1 (WhatsApp-uppmaning) |
@@ -140,10 +223,10 @@ familjen; då är dentista den som byter, inte grúas.
 - ≥3 kortvarianter, ingen mer än 4× — `card--raised` ×3, `card--hair` ×6 → **justering: hair kapas till 4** (servicios ×4, zonas byter till `card--bare` ×2), `card--ink` ×1, `card--accent` ×3, `card--bare` ×5 → **bare kapas till 4** (P7 kör 3, zonas 1 + löptext). Slutliga tal: hair 4 · bare 4 · accent 3 · raised 3 · ink 1. ✔
 - Sektion 8 (reseñas i §2:s standardordning) är utbytt mot cotizador enligt §5 tills riktiga citat finns — inte en tom sektion. ✔
 
-**Sidarkitektur efter godkänd startsida (CORE 15, §10.4.1):**
-`/` · `/servicios/{implantes-dentales, ortodoncia, endodoncia, limpieza-y-blanqueamiento, protesis-dental}` ·
-`/zonas/{asuncion, san-lorenzo, luque}` · `/zonas/interior` · `/cotizador` ·
-`/contacto` · `/preguntas-frecuentes` · `/guias/{2 st ur KWP:s informationella svans}`.
+**Sidarkitektur efter godkänd startsida (CORE 15, §10.4.1)** — låst mot KWP i §a2:
+`/` · `/servicios/{brackets, profilaxis-dental, blanqueamiento-dental, muela-del-juicio, odontopediatria}` ·
+`/zonas/{san-lorenzo, luque, lambare}` · `/zonas/interior` · `/armá-tu-consulta` (slug `/consulta`) ·
+`/contacto` · `/preguntas-frecuentes` · `/guias/{curetaje-dental, dientes-postizos}`.
 Ett primärt sökord per sida, aldrig två sidor på samma.
 
 **WhatsApp-attribution:** ett nummer på ett ställe i koden (`--wa-number`),
@@ -156,7 +239,7 @@ Pedí tu presupuesto.* Aldrig "Agenda"/"Escríbenos".
 
 ---
 
-## e) Bildprompter (7 st, fristående — klistras rakt in i Higgsfield-UI)
+## e) Bildprompter (8 st, fristående — klistras rakt in i Higgsfield-UI)
 
 Ingen `<<<element_id>>>` i någon prompt. Palett, ljus, objektiv och stämning
 upprepas i varje, negativblocket sist. Inga bildtexter med namn, inga
@@ -171,15 +254,15 @@ tills riktiga foton finns.
 > Editorial wide interior photograph of an empty modern dental clinic reception in Asunción, Paraguay: warm bone-white walls (#F7F4ED), deep green-black joinery (#14241E), one terracotta (#C2603A) upholstered bench, a potted tropical plant, soft daylight raking across the floor from a tall window. Quiet, expensive, unhurried atmosphere. Shot on 35mm at f/4, straight-on architectural framing, film-grade grain, muted warm palette, no people in frame.
 > Negative: no text, no letters, no logos, no watermarks, no signage, no brand names, no clutter, no fisheye distortion, no cold blue cast, no neon, no HDR halos, no collage, no borders.
 
-**3 — `card-motif` (implantes) · 4:3 · 1024px · nano_banana_flash**
-> Editorial close-up photograph of gloved dentist hands holding a titanium dental implant model beside a jaw study model on a clean bone-white (#F7F4ED) surface. Deep green-black (#14241E) background falloff, one small terracotta (#C2603A) detail on the instrument handle. Soft diffused natural daylight from the left, gentle shadows, no clinical blue. Shot on 85mm macro at f/4, crisp but calm, warm matte colour grading, fine natural grain.
-> Negative: no text, no letters, no logos, no watermarks, no distorted or extra fingers, no malformed teeth, no gore, no blood, no plastic waxy skin, no cold blue cast, no HDR, no collage, no borders.
+**3 — `card-motif` (muela del juicio) · 4:3 · 1024px · nano_banana_flash**
+> Editorial photograph of a dentist's gloved hand indicating a lower third molar on a panoramic dental x-ray displayed on a soft-glow lightbox, sterile forceps resting on a bone-white (#F7F4ED) cloth beside it. Deep green-black (#14241E) background falloff, one terracotta (#C2603A) detail on the instrument handle. Soft diffused natural daylight from the left, calm and clinical without coldness, no blue cast. Shot on 85mm at f/4, shallow depth of field, warm matte grading, fine natural grain, no people's faces in frame.
+> Negative: no text, no letters, no numbers, no logos, no watermarks, no patient names on the x-ray, no distorted or extra fingers, no malformed teeth, no gore, no blood, no open wounds, no plastic waxy skin, no cold blue cast, no HDR, no collage, no borders.
 
 **4 — `card-motif` (ortodoncia) · 4:3 · 1024px · nano_banana_flash**
 > Editorial close-up photograph of a young adult Paraguayan patient smiling gently with ceramic orthodontic brackets, seen at a three-quarter angle, framed from the nose down so the mouth is the subject. Bone-white (#F7F4ED) background, deep green-black (#14241E) shadow falloff, a terracotta (#C2603A) collar on the clothing. Soft natural window light, warm skin tones, no clinical blue. Shot on 85mm at f/2.8, shallow depth of field, calm editorial mood, matte grading, fine natural grain.
 > Negative: no text, no letters, no logos, no watermarks, no name badges, no malformed or extra teeth, no distorted lips, no plastic waxy skin, no exaggerated whitening, no cold blue cast, no HDR, no collage, no borders.
 
-**5 — `card-motif` (limpieza y blanqueamiento) · 4:3 · 1024px · nano_banana_flash**
+**5 — `card-motif` (profilaxis / limpieza) · 4:3 · 1024px · nano_banana_flash**
 > Editorial photograph of a dental hygienist's gloved hands performing a professional cleaning on a seated adult patient, viewed over the shoulder, instruments and suction visible, patient's eyes out of frame. Bone-white (#F7F4ED) room tones, deep green-black (#14241E) equipment, a single terracotta (#C2603A) accent. Soft natural daylight, warm and calm, no harsh clinical blue. Shot on 50mm at f/2.8, shallow depth of field, matte editorial grading, fine natural grain.
 > Negative: no text, no letters, no logos, no watermarks, no name badges, no distorted or extra fingers, no malformed teeth, no gore, no blood, no plastic waxy skin, no cold blue cast, no HDR, no collage, no borders.
 
@@ -190,6 +273,10 @@ tills riktiga foton finns.
 **7 — `card-motif` (bioseguridad) · 4:3 · 1024px · seedream_v5_pro**
 > Editorial still-life photograph of a sterile dental instrument tray: mirror, probe and forceps arranged on a fresh bone-white (#F7F4ED) cloth, sealed sterilisation pouch beside it, deep green-black (#14241E) worktop, one terracotta (#C2603A) element in the frame. Soft diffused natural daylight from the upper left, precise gentle shadows, no clinical blue. Shot on 85mm at f/5.6, top-down three-quarter angle, tactile realism, warm matte grading, fine natural grain, no people in frame.
 > Negative: no text, no letters, no logos, no watermarks, no brand names, no packaging labels, no certificates, no rust, no clutter, no cold blue cast, no HDR, no collage, no borders.
+
+**8 — `card-motif` (blanqueamiento) · 4:3 · 1024px · nano_banana_flash**
+> Editorial close-up photograph of a dentist holding a dental shade guide beside the smile of a relaxed adult Paraguayan patient, framed from the nose down so the mouth and the guide are the subject. Bone-white (#F7F4ED) surroundings, deep green-black (#14241E) shadow falloff, a terracotta (#C2603A) accent on the clothing. Soft natural window light, warm natural skin and tooth tones, no clinical blue, no artificial glare. Shot on 85mm at f/2.8, shallow depth of field, calm editorial mood, matte grading, fine natural grain.
+> Negative: no text, no letters, no numbers, no logos, no watermarks, no name badges, no unnaturally white or glowing teeth, no malformed or extra teeth, no distorted lips, no distorted or extra fingers, no plastic waxy skin, no before-and-after split frame, no cold blue cast, no HDR, no collage, no borders.
 
 **Kostnadsregel:** kör `get_cost: true` per modell och upplösning innan första
 batchen och redovisa credit-mattan. `use_unlim` finns inte på kontot. Setet
@@ -220,20 +307,20 @@ dentist-sajt via crop, scrim och accentöverlägg — inte per sajt.
     },
     {
       "slot": "card-motif",
-      "file": "implantes-dentales-asuncion.avif",
-      "alt": "Implante dental de titanio junto a un modelo de mandíbula en consultorio",
+      "file": "extraccion-muela-del-juicio-asuncion.avif",
+      "alt": "Radiografía panorámica que muestra una muela del juicio antes de la extracción",
       "ratio": "4:3", "px": 1024, "model": "nano_banana_flash", "prompt": "#3"
     },
     {
       "slot": "card-motif",
-      "file": "ortodoncia-brackets-asuncion.avif",
-      "alt": "Paciente joven con brackets de ortodoncia sonriendo",
+      "file": "brackets-ortodoncia-asuncion.avif",
+      "alt": "Paciente joven con brackets sonriendo en la consulta",
       "ratio": "4:3", "px": 1024, "model": "nano_banana_flash", "prompt": "#4"
     },
     {
       "slot": "card-motif",
-      "file": "limpieza-dental-blanqueamiento.avif",
-      "alt": "Limpieza dental profesional realizada en el consultorio",
+      "file": "profilaxis-limpieza-dental-asuncion.avif",
+      "alt": "Profilaxis y limpieza dental profesional realizada en el consultorio",
       "ratio": "4:3", "px": 1024, "model": "nano_banana_flash", "prompt": "#5"
     },
     {
@@ -247,6 +334,12 @@ dentist-sajt via crop, scrim och accentöverlägg — inte per sajt.
       "file": "bioseguridad-instrumental-dental-esterilizado.avif",
       "alt": "Instrumental dental esterilizado listo para la atención",
       "ratio": "4:3", "px": 1024, "model": "seedream_v5_pro", "prompt": "#7"
+    },
+    {
+      "slot": "card-motif",
+      "file": "blanqueamiento-dental-asuncion.avif",
+      "alt": "Guía de color dental junto a la sonrisa de una paciente durante el blanqueamiento",
+      "ratio": "4:3", "px": 1024, "model": "nano_banana_flash", "prompt": "#8"
     },
     {
       "slot": "proof-photo",
