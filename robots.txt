@@ -1,0 +1,11 @@
+# dentista.com.py
+# OBS: sajten är i demo-läge — index.html bär noindex,nofollow.
+# Vid lansering: ta bort noindex-metataggen och byt Disallow nedan mot Allow.
+
+User-agent: *
+Disallow: /
+# Vid lansering, ersätt raden ovan med:
+# Allow: /
+# Disallow: /contacto.php
+
+Sitemap: https://dentista.com.py/sitemap.xml

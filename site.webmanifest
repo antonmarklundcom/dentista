@@ -1,0 +1,12 @@
+{
+  "name": "Dentista.com.py",
+  "short_name": "Dentista.py",
+  "lang": "es-PY",
+  "start_url": "/",
+  "display": "browser",
+  "background_color": "#F7F4ED",
+  "theme_color": "#F7F4ED",
+  "icons": [
+    { "src": "/favicon.svg", "sizes": "any", "type": "image/svg+xml" }
+  ]
+}

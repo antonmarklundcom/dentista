@@ -1,0 +1,232 @@
+/* ─────────────────────────────────────────────────────────────
+   dentista.com.py — icke-kritisk CSS (sektion 04–13 + FAB, mobilbar, consent).
+   Tokens och allt över fold ligger inline i index.html.
+   Brytpunkter: ENDAST 640 / 1024 / 1280.
+   ───────────────────────────────────────────────────────────── */
+
+.lede--wide{max-width:60ch}
+.svc__link{
+  display:inline-flex;align-items:center;margin-top:var(--s-2);font-size:var(--t--1);font-weight:500;
+  color:var(--accent-ink);text-decoration:none;border-bottom:1px solid var(--hairline-strong);
+  padding-bottom:2px;min-height:48px;
+}
+.svc__link:hover{border-bottom-color:var(--accent)}
+
+/* Fält (cotizador + formulär) */
+.field{display:flex;flex-direction:column;gap:var(--s-2);max-width:none;margin:0 0 var(--s-4)}
+.field label{font-size:var(--t--1);letter-spacing:.06em;text-transform:uppercase;color:var(--ink-70);font-weight:500}
+.field input,.field select,.field textarea{
+  font:var(--t-0)/1.4 var(--font-text);color:var(--ink);
+  background:var(--surface);border:1px solid var(--hairline-strong);border-radius:var(--r-sm);
+  padding:var(--s-3) var(--s-4);min-height:48px;width:100%;
+}
+.field textarea{min-height:112px;resize:vertical}
+.field input:focus-visible,.field select:focus-visible,.field textarea:focus-visible,
+a:focus-visible,button:focus-visible,summary:focus-visible{
+  outline:2px solid var(--accent);outline-offset:2px;
+}
+
+/* ═══════ 04 · SERVICIOS — P3 staggered-weight grid ═══════ */
+.svc{display:grid;grid-template-columns:1fr;gap:var(--s-6);margin-top:var(--s-12)}
+.svc__media{aspect-ratio:4/3;margin-bottom:var(--s-6)}
+.svc article{display:flex;flex-direction:column}
+.svc h3{margin-bottom:var(--s-3)}
+.svc p{margin-bottom:var(--s-4)}
+.svc article > a{margin-top:auto;align-self:flex-start}
+.svc__lead .media{border-radius:var(--r-md)}
+@media (min-width:640px){
+  .svc{grid-template-columns:repeat(2,1fr)}
+  .svc__lead{grid-column:span 2}
+}
+@media (min-width:1024px){
+  .svc{grid-template-columns:repeat(4,1fr);gap:var(--s-8)}
+  .svc__lead{grid-column:span 2;grid-row:span 2}
+  .svc__lead .svc__media{aspect-ratio:16/10}
+}
+
+/* ═══════ 05 · TRATAMIENTO DESTACADO — P7 sticky-side ═══════ */
+.destacado__grid{display:grid;gap:var(--s-12)}
+.destacado__media{aspect-ratio:4/3;margin-top:var(--s-8)}
+.destacado__list{display:grid;gap:var(--s-8)}
+.destacado__list .card{border-top:1px solid var(--hairline);padding-top:var(--s-8)}
+.destacado__list .card:first-child{border-top:0;padding-top:0}
+@media (min-width:1024px){
+  .destacado__grid{grid-template-columns:5fr 7fr;gap:var(--s-16)}
+  .destacado__side{position:sticky;top:12vh;align-self:start}
+  .destacado__list{gap:var(--s-12)}
+}
+
+/* ═══════ 06 · BANDA FULL-BLEED — P6 bleed-image overlap ═══════ */
+.banda-wrap{padding-bottom:0}
+.banda{min-height:52vh;display:grid;overflow:hidden;background:var(--ink)}
+.banda > picture,.banda > picture img{grid-area:1/1;width:100%;height:100%}
+.banda > picture img{object-fit:cover;min-height:52vh}
+.banda::before{grid-area:1/1;z-index:1}
+.banda::after{grid-area:1/1;z-index:2}
+.banda__in{
+  grid-area:1/1;z-index:3;align-self:end;justify-self:center;width:100%;
+  padding-block:var(--s-16);display:flex;flex-direction:column;gap:var(--s-6);align-items:flex-start;
+}
+.banda__line{
+  font-family:var(--font-display);font-size:clamp(var(--t-2),4vw,var(--t-4));
+  line-height:1.05;letter-spacing:-.03em;color:#fff;max-width:22ch;margin:0;
+}
+.banda__panel{margin-top:var(--s-12);border-radius:var(--r-lg);max-width:52ch}
+@media (min-width:1024px){
+  .banda{min-height:64vh}
+  .banda > picture img{min-height:64vh}
+  /* gränsöverlapp 2 av 2 — panelen korsar gränsen mot sektion 07 */
+  .banda__panel{transform:translateY(40%);margin-top:calc(var(--s-12) * -1);position:relative;z-index:4}
+}
+
+/* ═══════ 07 · PRIMERA CONSULTA — P5 numbered process rail ═══════ */
+@media (min-width:1024px){.proceso{padding-top:clamp(var(--s-24),13vw,var(--s-40))}}
+.rail{display:grid;gap:var(--s-8);margin-top:var(--s-12);counter-reset:none}
+.rail li{position:relative;padding-left:var(--s-16)}
+.rail__n{
+  position:absolute;left:0;top:-.15em;
+  font-family:var(--font-display);font-size:var(--t-5);line-height:1;
+  color:color-mix(in srgb,var(--accent) 20%,transparent);
+}
+.rail h3{font-size:var(--t-1);margin-bottom:var(--s-2)}
+.rail p{margin:0}
+@media (max-width:767px){
+  .rail{position:relative}
+  .rail::before{content:"";position:absolute;left:calc(var(--s-8) - 1px);top:0;bottom:0;width:1px;background:var(--hairline)}
+}
+@media (min-width:768px){
+  .rail{grid-template-columns:repeat(2,1fr);gap:var(--s-12)}
+}
+@media (min-width:1024px){
+  .rail{grid-template-columns:repeat(4,1fr);gap:var(--s-8)}
+  .rail li{padding-left:0;padding-top:var(--s-16)}
+  .rail__n{top:0}
+}
+
+/* ═══════ 08 · ARMÁ TU CONSULTA — P10 data panel ═══════ */
+.cotiz{background:color-mix(in srgb,var(--ink) 4%,var(--base))}
+.cotiz__panel{border-radius:var(--r-lg);padding:clamp(var(--s-8),4vw,var(--s-16))}
+.cotiz__fields{display:grid;gap:var(--s-4);margin-top:var(--s-8)}
+.cotiz__preview{
+  margin-top:var(--s-6);padding:var(--s-4) var(--s-6);border-left:3px solid var(--accent);
+  background:color-mix(in srgb,var(--accent) 5%,transparent);border-radius:0 var(--r-sm) var(--r-sm) 0;
+  font-size:var(--t--1);color:var(--ink-70);max-width:none;
+}
+.cotiz__cta{margin-top:var(--s-6)}
+.cotiz__note{font-size:var(--t--1);color:var(--ink-70);margin-top:var(--s-4)}
+@media (min-width:1024px){
+  .cotiz__fields{grid-template-columns:repeat(3,1fr);gap:var(--s-6)}
+}
+
+/* ═══════ 09 · ZONAS — P4 editorial två-kolumn ═══════ */
+.zonas__grid{display:grid;gap:var(--s-8)}
+.zonas__interior{margin-top:var(--s-8);border-top:1px solid var(--hairline);padding-top:var(--s-8)}
+.zonas__interior h3{font-size:var(--t-1)}
+@media (min-width:1024px){
+  .zonas__grid{grid-template-columns:4fr 1fr 7fr}
+  .zonas__grid > :nth-child(2){grid-column:3}
+}
+
+/* ═══════ 10 · STATEMENT — P9 oversized statement (offsetbrott) ═══════ */
+.stmt__in{margin-left:clamp(0px,8vw,160px)}
+.stmt__sub{margin-top:var(--s-6);font-size:clamp(var(--t-0),2vw,var(--t-1))}
+.stmt .btn{margin-top:var(--s-4)}
+
+/* ═══════ 11 · FAQ — P4 editorial två-kolumn ═══════ */
+.faq__grid{display:grid;gap:var(--s-8)}
+.faq details{border-bottom:1px solid var(--hairline);padding:var(--s-6) 0}
+.faq details:first-of-type{border-top:1px solid var(--hairline)}
+.faq summary{
+  cursor:pointer;list-style:none;font-family:var(--font-display);font-weight:450;
+  font-size:var(--t-1);line-height:1.25;letter-spacing:-.02em;
+  display:flex;justify-content:space-between;gap:var(--s-6);align-items:baseline;min-height:32px;
+}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";color:var(--accent);font-family:var(--font-text);font-size:var(--t-2);line-height:1}
+.faq details[open] summary::after{content:"−"}
+.faq details p{margin:var(--s-4) 0 0}
+.faq__cta{margin-top:var(--s-12);border-radius:var(--r-md)}
+.faq__cta h3{font-size:var(--t-1)}
+@media (min-width:1024px){
+  .faq__grid{grid-template-columns:4fr 1fr 7fr}
+  .faq__grid > :nth-child(2){grid-column:3}
+}
+
+/* ═══════ 12 · CONTACTO — P1 speglad 5/7 ═══════ */
+.contacto{background:color-mix(in srgb,var(--ink) 4%,var(--base))}
+.contacto__grid{display:grid;gap:var(--s-8);margin-top:var(--s-12)}
+.contacto__side{display:grid;gap:var(--s-6);align-content:start}
+.contacto__num{font-family:var(--font-display);font-size:var(--t-2);margin:var(--s-6) 0 var(--s-2);color:var(--ink)}
+.contacto__trust{
+  position:relative;overflow:hidden;
+  background:
+    linear-gradient(color-mix(in srgb,var(--surface) 92%,transparent),color-mix(in srgb,var(--surface) 92%,transparent)),
+    url("/assets/img/bioseguridad-instrumental-dental-esterilizado-1280.webp") center/cover no-repeat,
+    linear-gradient(140deg,color-mix(in srgb,var(--ink) 12%,var(--base)),color-mix(in srgb,var(--accent) 10%,var(--base)));
+}
+.contacto__trust li{
+  position:relative;padding-left:var(--s-8);margin-bottom:var(--s-4);color:var(--ink-70);font-size:var(--t-0);
+}
+.contacto__trust li:last-child{margin-bottom:0}
+.contacto__trust li::before{
+  content:"";position:absolute;left:0;top:.62em;width:10px;height:10px;border-radius:50%;
+  background:var(--accent);
+}
+.contacto__form{background:var(--surface);border:1px solid var(--hairline);border-radius:var(--r-lg);padding:clamp(var(--s-6),3vw,var(--s-12))}
+.contacto__form .btn{width:100%;margin-top:var(--s-2)}
+.contacto__note{font-size:var(--t--1);color:var(--ink-70);margin-top:var(--s-4)}
+@media (min-width:1024px){
+  .contacto__grid{grid-template-columns:5fr 7fr;gap:var(--s-12);align-items:start}
+}
+
+/* ═══════ 13 · FOOTER ═══════ */
+.ftr{position:relative;background:var(--ink);color:color-mix(in srgb,var(--base) 78%,transparent);padding-block:var(--s-16) var(--s-8);overflow:hidden}
+.ftr p{color:inherit;max-width:38ch}
+.ftr .brand{color:var(--base);margin-bottom:var(--s-3);display:block}
+.ftr a{color:inherit;text-decoration:none;border-bottom:1px solid color-mix(in srgb,var(--base) 25%,transparent)}
+.ftr a:hover{color:var(--base)}
+.ftr__grid{display:grid;gap:var(--s-8);position:relative;z-index:1}
+.ftr__grid nav{display:flex;flex-direction:column;gap:var(--s-3);align-items:flex-start}
+.ftr__grid nav a{font-size:var(--t--1);border-bottom:0;display:inline-flex;align-items:center;min-height:48px;min-width:48px}
+.ftr__base{margin-top:var(--s-12);padding-top:var(--s-6);border-top:1px solid color-mix(in srgb,var(--base) 15%,transparent);position:relative;z-index:1}
+.ftr__base p{font-size:var(--t--1);margin:0}
+@media (min-width:1024px){.ftr__grid{grid-template-columns:2fr 1fr 1fr;gap:var(--s-12)}}
+
+/* ═══════ FAB + STICKY MOBILBAR ═══════ */
+.fab{
+  position:fixed;right:16px;bottom:16px;z-index:50;
+  width:56px;height:56px;border-radius:50%;background:var(--ink);
+  display:flex;align-items:center;justify-content:center;box-shadow:var(--shadow-2);
+  transition:transform var(--dur-fast) var(--ease-io);
+}
+.fab svg{fill:#25D366}
+.fab:hover{transform:translateY(-4px)}
+.mbar{
+  position:fixed;left:0;right:0;bottom:0;z-index:45;display:none;gap:var(--s-3);
+  padding:var(--s-3) var(--s-4) calc(var(--s-3) + env(safe-area-inset-bottom));
+  background:color-mix(in srgb,var(--base) 96%,transparent);
+  backdrop-filter:saturate(140%) blur(8px);border-top:1px solid var(--hairline);
+}
+.mbar .btn{flex:1}
+@media (max-width:767px){
+  body{padding-bottom:88px}
+  .mbar{display:flex}
+  .fab{bottom:88px}
+}
+
+/* ═══════ CONSENT (Ley 6534/2020) ═══════ */
+.consent{
+  position:fixed;left:16px;right:16px;bottom:16px;z-index:60;
+  background:var(--surface);border:1px solid var(--hairline);border-radius:var(--r-md);
+  box-shadow:var(--shadow-2);padding:var(--s-6);
+}
+.consent p{font-size:var(--t--1);margin:0 0 var(--s-4);max-width:64ch}
+.consent__btns{display:flex;flex-wrap:wrap;gap:var(--s-3);align-items:center}
+@media (min-width:1024px){.consent{left:auto;max-width:520px}}
+@media (max-width:767px){.consent{bottom:96px}}
+
+/* ═══════ REDUCED MOTION ═══════ */
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}
+  .btn:hover,.fab:hover{transform:none}
+}

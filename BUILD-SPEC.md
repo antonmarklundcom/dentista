@@ -915,6 +915,36 @@ passerar. Fel rapporteras explicit — ett fallerande bygge shippas aldrig tyst.
 
 ---
 
+## 11. Avvikelser från specen som exekveringen tvingade fram
+
+Två saker gick inte att bygga exakt som specen skrev dem. Båda är dokumenterade
+här i stället för att tyst avvika, och båda ligger i koden.
+
+**1. `--accent-ink: #A75332` — härledd accent för TEXT och CTA-fyllning.**
+`--accent #C2603A` klarar inte QA-gatens 4.5:1 när den används som textfärg:
+3,80:1 mot `--base`, 4,18:1 mot `--surface`, och vit text på den 4,18:1. Eyebrows,
+länkar och primärknappens etikett föll alltså på kontrastraden. `--accent` står
+kvar oförändrad som **den enda accenten** och används på allt dekorativt (kortkanter,
+punkter, citatkant, FAQ-tecken, rail-siffrorna). Den härledda `--accent-ink` är
+samma hue 14 % mörkare och används **bara** där accenten bär text:
+4,87:1 mot base, 4,51:1 mot den tonade cremen i sektion 08/12, 5,35:1 mot vitt.
+Detta är en tokenhärledning, inte ett andra accentfärgval — sajten läser fortfarande
+som en enda accent.
+
+**2. `data-reveal` borttaget från de två gränsöverlappspanelerna.**
+`motion.js` (kopierad ordagrant, får inte ändras) skriver inline `transform` på varje
+`[data-reveal]` och sätter den till `none` när elementet avslöjas. Det raderade
+CSS-transformen som ÄR gränsöverlappet — båda panelerna landade med 0 px överlapp.
+Panelerna avslöjas därför inte längre med scroll-reveal; överlappen mäter nu 99 px
+(hero → franja) och 105 px (banda → proceso) vid 1440 px. Regeln för framtida sidor:
+**ett element får bära `data-reveal` eller en layout-`transform`, aldrig båda.**
+
+**Rail-siffrorna (07)** är märkta `aria-hidden="true"`. De ligger på 20 % accent enligt
+P5 och klarar därför inte 4.5:1 — som dekor ska de inte heller göra det. Stegordningen
+bärs av `<ol>`-semantiken och av rubrikerna, så ingen information går förlorad.
+
+---
+
 ## Godkännandepunkt
 
 Specen är låst i alla tio punkter. Nästa steg kräver ditt godkännande, och därefter:

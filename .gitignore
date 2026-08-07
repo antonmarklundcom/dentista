@@ -1,0 +1,10 @@
+# Leads som loggats lokalt innan VenderCRM är kopplat — får ALDRIG committas.
+leads.log
+# Nycklar och env
+.env
+.env.*
+private/
+# OS/editor
+.DS_Store
+Thumbs.db
+node_modules/

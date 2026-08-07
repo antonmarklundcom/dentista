@@ -1,0 +1,742 @@
+<!doctype html>
+<html lang="es-PY">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>Dentista en Asunción y Gran Asunción | Dentista.com.py</title>
+<meta name="description" content="Coordinamos tu consulta odontológica en Asunción y el Gran Asunción: brackets, limpieza, blanqueamiento, muela del juicio y odontopediatría. Escribinos por WhatsApp, presupuesto sin costo.">
+<link rel="canonical" href="https://dentista.com.py/">
+
+<!-- BUILD-SPEC §7 / platshållare 16: tas bort vid lansering. -->
+<meta name="robots" content="noindex,nofollow">
+
+<meta property="og:type" content="website">
+<meta property="og:locale" content="es_PY">
+<meta property="og:site_name" content="Dentista.com.py">
+<meta property="og:title" content="Dentista en Asunción y Gran Asunción | Dentista.com.py">
+<meta property="og:description" content="Coordinamos tu consulta odontológica en Asunción y el Gran Asunción: brackets, limpieza, blanqueamiento, muela del juicio y odontopediatría. Escribinos por WhatsApp, presupuesto sin costo.">
+<meta property="og:url" content="https://dentista.com.py/">
+<meta property="og:image" content="https://dentista.com.py/assets/img/dentista-asuncion-consultorio-dental-1280.webp">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#F7F4ED">
+
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="manifest" href="/site.webmanifest">
+
+<!-- ANALYTICS: paste GTM or GA4 here. Events already fire via data-ev shim. -->
+<!-- SEARCH-CONSOLE: <meta name="google-site-verification" content=""> -->
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400..500&family=Inter+Tight:wght@400;500&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400..500&family=Inter+Tight:wght@400;500&display=swap">
+
+<style>
+/* ─────────────────────────────────────────────────────────────
+   Kritisk CSS — tokens (BUILD-SPEC §2, TRACK = EDITORIAL) + allt över fold.
+   Resten ligger i /assets/css/site.css.
+   ───────────────────────────────────────────────────────────── */
+:root{
+  /* ---- TRACK: EDITORIAL ---- */
+  --font-display:'Fraunces',Georgia,serif;
+  --font-text:'Inter Tight',system-ui,sans-serif;
+  --base:#F7F4ED;
+  --ink:#14241E;
+  --accent:#C2603A;
+  --accent-ink:#A75332;          /* härledd: accentfärgad TEXT + CTA-fyllning, klarar 4.5:1 */
+  --surface:#FFFFFF;
+
+  /* ---- derived ink ---- */
+  --ink-70:color-mix(in srgb,var(--ink) 70%,transparent);
+  --ink-55:color-mix(in srgb,var(--ink) 55%,transparent);
+  --hairline:color-mix(in srgb,var(--ink) 10%,transparent);
+  --hairline-strong:color-mix(in srgb,var(--ink) 18%,transparent);
+
+  /* ---- type scale, ratio 1.30, base 17px ---- */
+  --t--1:0.812rem; --t-0:1.0625rem; --t-1:1.383rem; --t-2:1.797rem;
+  --t-3:2.336rem;  --t-4:3.037rem;  --t-5:3.948rem; --t-6:5.133rem;
+  --measure:65ch;
+
+  /* ---- spacing, 4px base ---- */
+  --s-1:.25rem; --s-2:.5rem;  --s-3:.75rem; --s-4:1rem;
+  --s-6:1.5rem; --s-8:2rem;   --s-12:3rem;  --s-16:4rem;
+  --s-24:6rem;  --s-32:8rem;  --s-40:10rem;
+
+  /* ---- radii ---- */
+  --r-sm:6px; --r-md:14px; --r-lg:28px;
+
+  /* ---- shadows ---- */
+  --shadow-1:0 1px 2px rgb(0 0 0/.04), 0 4px 12px rgb(0 0 0/.06);
+  --shadow-2:0 2px 4px rgb(0 0 0/.06), 0 16px 40px rgb(0 0 0/.10);
+
+  /* ---- motion ---- */
+  --ease-out:cubic-bezier(.16,1,.3,1);
+  --ease-io:cubic-bezier(.4,0,.2,1);
+  --dur-fast:180ms; --dur:280ms; --dur-slow:400ms;
+
+  --container:1200px;
+  --gutter:clamp(1rem,5vw,3rem);
+}
+
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{
+  margin:0;background:var(--base);color:var(--ink);
+  font:var(--t-0)/1.65 var(--font-text);
+  overflow-x:hidden;
+  -webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;
+}
+h1,h2,h3{
+  font-family:var(--font-display);font-weight:450;
+  letter-spacing:-.03em;line-height:1.02;margin:0 0 var(--s-6);
+  text-wrap:balance;
+}
+h1{font-size:clamp(var(--t-4),6vw,var(--t-6))}
+h2{font-size:clamp(var(--t-3),4.5vw,var(--t-5))}
+h3{font-size:var(--t-2);line-height:1.15}
+p{max-width:var(--measure);color:var(--ink-70);margin:0 0 var(--s-4)}
+a{color:inherit}
+ul{margin:0;padding:0;list-style:none}
+img{max-width:100%;height:auto;display:block}
+
+.eyebrow{
+  font-size:var(--t--1);letter-spacing:.12em;text-transform:uppercase;
+  color:var(--accent-ink);font-weight:500;margin:0 0 var(--s-4);display:block;
+}
+.statement{font-family:var(--font-display);font-size:clamp(var(--t-5),9vw,var(--t-6));line-height:.95;letter-spacing:-.04em;margin:0}
+.wrap{max-width:var(--container);margin-inline:auto;padding-inline:var(--gutter)}
+section{padding-block:clamp(var(--s-16),9vw,var(--s-32));position:relative}
+.bleed{position:relative;width:100vw;margin-left:calc(50% - 50vw)}
+.skip{position:absolute;left:-9999px}
+.skip:focus{left:var(--s-4);top:var(--s-4);z-index:99;background:var(--surface);padding:var(--s-3) var(--s-4);border-radius:var(--r-sm)}
+
+/* ---- grain: endast mörka band ---- */
+.grain::after{
+  content:"";position:absolute;inset:0;pointer-events:none;opacity:.055;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3'/%3E%3C/filter%3E%3Crect width='140' height='140' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+/* ---- scrim: all text över bild ---- */
+.scrim::before{
+  content:"";position:absolute;inset:0;
+  background:linear-gradient(180deg,rgb(0 0 0/.15) 0%,rgb(0 0 0/.55) 60%,rgb(0 0 0/.78) 100%);
+}
+
+/* ---- kortvarianter ---- */
+.card{padding:var(--s-8);border-radius:var(--r-md)}
+.card--bare{padding-inline:0}
+.card--hair{border:1px solid var(--hairline)}
+.card--raised{background:var(--surface);box-shadow:var(--shadow-1)}
+.card--ink{background:var(--ink);color:var(--base)}
+.card--accent{background:var(--surface);border:1px solid var(--hairline);border-top:3px solid var(--accent)}
+.card--ink p,.card--ink .lede{color:color-mix(in srgb,var(--base) 78%,transparent)}
+
+/* ---- knappar ---- */
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:var(--s-2);
+  min-height:48px;padding:0 var(--s-6);border-radius:var(--r-sm);
+  font:500 var(--t-0)/1.2 var(--font-text);text-decoration:none;border:0;cursor:pointer;
+  transition:transform var(--dur-fast) var(--ease-io),box-shadow var(--dur-fast) var(--ease-io);
+}
+.btn:hover{transform:translateY(-2px);box-shadow:var(--shadow-2)}
+.btn--primary{background:var(--accent-ink);color:#fff}
+.btn--ghost{background:transparent;color:var(--ink);border:1px solid var(--hairline-strong)}
+/* WhatsApp-grönt lever ENBART inuti knappens glyf */
+.btn--wa{background:var(--ink);color:var(--base)}
+.btn--wa svg{fill:#25D366;flex:0 0 auto}
+.btn--sm{min-height:48px;padding:0 var(--s-4);font-size:var(--t--1)}
+
+/* ---- mediapanel: bär bilden, och håller formen även innan filen finns ---- */
+.media{
+  position:relative;overflow:hidden;border-radius:var(--r-md);
+  background:linear-gradient(140deg,color-mix(in srgb,var(--ink) 12%,var(--base)),color-mix(in srgb,var(--accent) 10%,var(--base)));
+}
+.media img{width:100%;height:100%;object-fit:cover}
+
+/* ─────────────── 01 Header ─────────────── */
+.hdr{
+  position:sticky;top:0;z-index:40;background:color-mix(in srgb,var(--base) 88%,transparent);
+  backdrop-filter:saturate(140%) blur(8px);border-bottom:1px solid transparent;
+  transition:border-color var(--dur) var(--ease-io),background var(--dur) var(--ease-io);
+}
+.hdr.is-stuck{border-bottom-color:var(--hairline);background:color-mix(in srgb,var(--base) 96%,transparent)}
+.hdr__in{display:flex;align-items:center;gap:var(--s-6);min-height:72px}
+.brand{font-family:var(--font-display);font-size:var(--t-1);letter-spacing:-.02em;text-decoration:none;white-space:nowrap}
+.hdr nav{display:none;margin-left:auto;gap:var(--s-6)}
+.hdr nav a{font-size:var(--t--1);text-decoration:none;color:var(--ink-70)}
+.hdr nav a:hover{color:var(--ink)}
+.hdr__tel{display:none;font-size:var(--t--1);text-decoration:none;color:var(--ink-70);white-space:nowrap}
+.hdr .btn{margin-left:auto}
+@media (min-width:1024px){
+  .hdr nav{display:flex}
+  .hdr__tel{display:inline-block;margin-left:var(--s-6)}
+  .hdr .btn{margin-left:var(--s-4)}
+}
+
+/* ─────────────── 02 Hero (P1, 7/5) ─────────────── */
+.hero{padding-block:clamp(var(--s-12),7vw,var(--s-24)) 0}
+.hero__grid{display:grid;gap:var(--s-12);align-items:start}
+.hero h1{margin-bottom:var(--s-6)}
+.lede{font-size:clamp(var(--t-0),2.2vw,var(--t-1));color:var(--ink-70);max-width:34ch}
+.hero__cta{display:flex;flex-wrap:wrap;gap:var(--s-3);margin-top:var(--s-8)}
+.hero__micro{font-size:var(--t--1);color:var(--ink-70);margin-top:var(--s-4)}
+.hero__media{aspect-ratio:4/3}
+.panel{margin-top:var(--s-12);border-radius:var(--r-lg)}
+.panel ol{counter-reset:p;margin:0;padding:0;list-style:none}
+.panel ol li{counter-increment:p;position:relative;padding-left:var(--s-8);margin-bottom:var(--s-4);color:var(--ink-70)}
+.panel ol li::before{
+  content:counter(p);position:absolute;left:0;top:-2px;
+  font-family:var(--font-display);color:var(--accent-ink);font-size:var(--t-1);line-height:1;
+}
+.panel__foot{border-top:1px solid var(--hairline);margin-top:var(--s-6);padding-top:var(--s-4);font-size:var(--t--1);color:var(--ink-70)}
+@media (min-width:1024px){
+  .hero__grid{grid-template-columns:7fr 5fr;gap:var(--s-16);align-items:center}
+  .hero__media{aspect-ratio:5/6;margin-right:calc(var(--gutter) * -1)}
+  /* gränsöverlapp 1 av 2 — panelen korsar gränsen mot sektion 03 */
+  .panel{transform:translateY(28%);margin-top:0;position:relative;z-index:2}
+  .hero{padding-bottom:0}
+}
+
+/* ─────────────── 03 Franja de promesa (P8, full-bleed) ─────────────── */
+.ribbon{background:var(--ink);color:var(--base);padding-block:var(--s-12);overflow:hidden}
+@media (min-width:1024px){.ribbon{padding-block:var(--s-16) var(--s-12);padding-top:calc(var(--s-24) + 2vw)}}
+.ribbon ul{display:flex;flex-wrap:wrap;gap:var(--s-4) var(--s-6);align-items:center;justify-content:center;text-align:center}
+.ribbon li{font-size:var(--t-0);color:color-mix(in srgb,var(--base) 82%,transparent);display:flex;align-items:center;gap:var(--s-6)}
+.ribbon li:not(:last-child)::after{content:"·";color:var(--accent);font-size:var(--t-2);line-height:0}
+</style>
+
+<link rel="stylesheet" href="/assets/css/site.css">
+</head>
+
+<body>
+<a class="skip" href="#main">Ir al contenido</a>
+
+<!-- ═══════════ 01 · HEADER ═══════════ -->
+<header class="hdr" data-sticky-header>
+  <div class="wrap hdr__in">
+    <a class="brand" href="/">Dentista.com.py</a>
+    <nav aria-label="Principal">
+      <a href="#servicios">Servicios</a>
+      <a href="#primera-consulta">Tu primera consulta</a>
+      <a href="#zonas">Zonas</a>
+      <a href="#preguntas">Preguntas</a>
+    </nav>
+    <a class="hdr__tel" href="tel:+595995628862" data-ev="call_click" data-ev-loc="header">+595 995 628862</a>
+    <a class="btn btn--wa btn--sm"
+       href="https://wa.me/595995628862?text=Hola%2C%20vengo%20de%20dentista.com.py%20(header)%20-%20quiero%20consultar%20por%20una%20consulta%20odontol%C3%B3gica"
+       data-ev="whatsapp_click" data-ev-loc="header" rel="noopener">
+      <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38a9.9 9.9 0 0 0 4.79 1.22h.01c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2Zm5.8 14.1c-.24.68-1.42 1.31-1.95 1.36-.5.05-.98.23-3.3-.69-2.78-1.1-4.55-3.94-4.69-4.13-.14-.19-1.12-1.49-1.12-2.85 0-1.35.71-2.02.96-2.29.25-.28.55-.34.73-.34.18 0 .37 0 .53.01.17.01.4-.06.62.48.24.57.8 1.97.87 2.11.07.14.12.31.02.5-.09.19-.14.31-.28.47-.14.16-.29.36-.42.48-.14.14-.28.29-.12.57.16.28.72 1.19 1.55 1.93 1.07.95 1.97 1.25 2.25 1.39.28.14.44.12.61-.07.16-.19.7-.81.88-1.09.19-.28.37-.23.62-.14.25.09 1.6.75 1.87.89.28.14.46.21.53.32.07.12.07.65-.16 1.33Z"/></svg>
+      Escribinos
+    </a>
+  </div>
+</header>
+
+<main id="main">
+
+<!-- ═══════════ 02 · HERO — P1 asymmetrisk split 7/5 ═══════════ -->
+<section class="hero" aria-labelledby="h1">
+  <div class="wrap hero__grid">
+    <div>
+      <span class="eyebrow">Asunción · Gran Asunción</span>
+      <h1 id="h1">Dentista en Asunción y Gran Asunción</h1>
+      <p class="lede">Contanos qué necesitás y coordinamos tu consulta odontológica con odontólogos matriculados en Asunción y el Gran Asunción. Te respondemos por WhatsApp y el presupuesto no tiene costo.</p>
+      <div class="hero__cta">
+        <a class="btn btn--wa"
+           href="https://wa.me/595995628862?text=Hola%2C%20vengo%20de%20dentista.com.py%20(hero)%20-%20quiero%20consultar%20por%20una%20consulta%20odontol%C3%B3gica"
+           data-ev="whatsapp_click" data-ev-loc="hero" rel="noopener">
+          <svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38a9.9 9.9 0 0 0 4.79 1.22h.01c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2Zm5.8 14.1c-.24.68-1.42 1.31-1.95 1.36-.5.05-.98.23-3.3-.69-2.78-1.1-4.55-3.94-4.69-4.13-.14-.19-1.12-1.49-1.12-2.85 0-1.35.71-2.02.96-2.29.25-.28.55-.34.73-.34.18 0 .37 0 .53.01.17.01.4-.06.62.48.24.57.8 1.97.87 2.11.07.14.12.31.02.5-.09.19-.14.31-.28.47-.14.16-.29.36-.42.48-.14.14-.28.29-.12.57.16.28.72 1.19 1.55 1.93 1.07.95 1.97 1.25 2.25 1.39.28.14.44.12.61-.07.16-.19.7-.81.88-1.09.19-.28.37-.23.62-.14.25.09 1.6.75 1.87.89.28.14.46.21.53.32.07.12.07.65-.16 1.33Z"/></svg>
+          Escribinos por WhatsApp
+        </a>
+        <a class="btn btn--ghost" href="tel:+595995628862" data-ev="call_click" data-ev-loc="hero">Llamanos: +595 995 628862</a>
+      </div>
+      <p class="hero__micro">Sin compromiso. Contanos tu caso y te decimos cómo seguir.</p>
+    </div>
+
+    <div class="media hero__media">
+      <picture>
+        <source type="image/avif" srcset="/assets/img/dentista-asuncion-consultorio-dental-640.avif 640w, /assets/img/dentista-asuncion-consultorio-dental-1280.avif 1280w, /assets/img/dentista-asuncion-consultorio-dental-1920.avif 1920w" sizes="(min-width:1024px) 42vw, 100vw">
+        <source type="image/webp" srcset="/assets/img/dentista-asuncion-consultorio-dental-640.webp 640w, /assets/img/dentista-asuncion-consultorio-dental-1280.webp 1280w, /assets/img/dentista-asuncion-consultorio-dental-1920.webp 1920w" sizes="(min-width:1024px) 42vw, 100vw">
+        <img src="/assets/img/dentista-asuncion-consultorio-dental-1280.webp"
+             alt="Odontóloga atendiendo a un paciente en un consultorio dental en Asunción"
+             width="1280" height="1536" fetchpriority="high" decoding="async">
+      </picture>
+    </div>
+  </div>
+
+  <div class="wrap">
+    <div class="card card--raised panel">
+      <span class="eyebrow">Cómo empezamos</span>
+      <h3>Coordiná tu consulta en tres pasos</h3>
+      <ol>
+        <li>Nos escribís qué te pasa o qué tratamiento buscás.</li>
+        <li>Te confirmamos disponibilidad y los datos del profesional.</li>
+        <li>Vas a tu consulta en el horario que te sirva.</li>
+      </ol>
+      <p class="panel__foot">Presupuesto sin costo · Respondemos por WhatsApp</p>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════ 03 · FRANJA DE PROMESA — P8 full-bleed ribbon ═══════════ -->
+<section class="bleed ribbon grain" aria-label="Nuestras promesas">
+  <div class="wrap">
+    <ul>
+      <li>Presupuesto sin costo</li>
+      <li>Respondemos por WhatsApp</li>
+      <li>Asunción y Gran Asunción</li>
+      <li>Coordinamos el horario que te sirva</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ═══════════ 04 · SERVICIOS — P3 staggered-weight grid ═══════════ -->
+<section id="servicios" aria-labelledby="h-servicios">
+  <div class="wrap">
+    <span class="eyebrow">Tratamientos</span>
+    <h2 id="h-servicios">Los tratamientos que más nos consultan</h2>
+    <p class="lede lede--wide">Contanos cuál te interesa y coordinamos la consulta. Si todavía no sabés qué necesitás, escribinos igual: primero se revisa y recién después se decide el tratamiento.</p>
+
+    <div class="svc">
+      <article class="card card--ink svc__lead" data-reveal="0">
+        <div class="media svc__media">
+          <picture>
+            <source type="image/avif" srcset="/assets/img/brackets-ortodoncia-asuncion-640.avif 640w, /assets/img/brackets-ortodoncia-asuncion-1280.avif 1280w" sizes="(min-width:1024px) 48vw, 100vw">
+            <source type="image/webp" srcset="/assets/img/brackets-ortodoncia-asuncion-640.webp 640w, /assets/img/brackets-ortodoncia-asuncion-1280.webp 1280w" sizes="(min-width:1024px) 48vw, 100vw">
+            <img src="/assets/img/brackets-ortodoncia-asuncion-1280.webp" alt="Paciente joven con brackets sonriendo en la consulta" width="1280" height="960" loading="lazy" decoding="async">
+          </picture>
+        </div>
+        <h3>Brackets y ortodoncia</h3>
+        <p>Es la consulta más frecuente y también la que más dudas trae: qué tipo de brackets te conviene, cuánto tiempo vas a usarlos y cómo se controla el tratamiento mes a mes. Se define después de revisarte la boca, nunca antes.</p>
+        <a class="btn btn--primary btn--sm"
+           href="https://wa.me/595995628862?text=Hola%2C%20vengo%20de%20dentista.com.py%20(brackets)%20-%20quiero%20consultar%20por%20brackets%20y%20ortodoncia"
+           data-ev="whatsapp_click" data-ev-loc="servicios-brackets" rel="noopener">Consultá por brackets</a>
+      </article>
+
+      <article class="card card--hair" data-reveal="1">
+        <div class="media svc__media">
+          <picture>
+            <source type="image/avif" srcset="/assets/img/profilaxis-limpieza-dental-asuncion-640.avif 640w, /assets/img/profilaxis-limpieza-dental-asuncion-1280.avif 1280w" sizes="(min-width:1024px) 24vw, 100vw">
+            <source type="image/webp" srcset="/assets/img/profilaxis-limpieza-dental-asuncion-640.webp 640w, /assets/img/profilaxis-limpieza-dental-asuncion-1280.webp 1280w" sizes="(min-width:1024px) 24vw, 100vw">
+            <img src="/assets/img/profilaxis-limpieza-dental-asuncion-1280.webp" alt="Profilaxis y limpieza dental profesional realizada en el consultorio" width="1280" height="960" loading="lazy" decoding="async">
+          </picture>
+        </div>
+        <h3>Profilaxis y limpieza dental</h3>
+        <p>Limpieza profesional con ultrasonido para sacar el sarro que el cepillo ya no saca. Es la consulta más simple de coordinar y la que más problemas evita más adelante.</p>
+        <a class="svc__link"
+           href="https://wa.me/595995628862?text=Hola%2C%20vengo%20de%20dentista.com.py%20(profilaxis)%20-%20quiero%20consultar%20por%20profilaxis%20y%20limpieza%20dental"
+           data-ev="whatsapp_click" data-ev-loc="servicios-profilaxis" rel="noopener">Consultá por profilaxis</a>
+      </article>
+
+      <article class="card card--hair" data-reveal="2">
+        <div class="media svc__media">
+          <picture>
+            <source type="image/avif" srcset="/assets/img/blanqueamiento-dental-asuncion-640.avif 640w, /assets/img/blanqueamiento-dental-asuncion-1280.avif 1280w" sizes="(min-width:1024px) 24vw, 100vw">
+            <source type="image/webp" srcset="/assets/img/blanqueamiento-dental-asuncion-640.webp 640w, /assets/img/blanqueamiento-dental-asuncion-1280.webp 1280w" sizes="(min-width:1024px) 24vw, 100vw">
+            <img src="/assets/img/blanqueamiento-dental-asuncion-1280.webp" alt="Guía de color dental junto a la sonrisa de una paciente durante el blanqueamiento" width="1280" height="960" loading="lazy" decoding="async">
+          </picture>
+        </div>
+        <h3>Blanqueamiento dental</h3>
+        <p>Blanqueamiento hecho en el consultorio, con guía de color antes y después para que veas el cambio real. Primero se revisa que las encías y los dientes estén en condiciones.</p>
+        <a class="svc__link"
+           href="https://wa.me/595995628862?text=Hola%2C%20vengo%20de%20dentista.com.py%20(blanqueamiento)%20-%20quiero%20consultar%20por%20blanqueamiento%20dental"
+           data-ev="whatsapp_click" data-ev-loc="servicios-blanqueamiento" rel="noopener">Consultá por blanqueamiento</a>
+      </article>
+
+      <article class="card card--hair" data-reveal="3">
+        <div class="media svc__media">
+          <picture>
+            <source type="image/avif" srcset="/assets/img/extraccion-muela-del-juicio-asuncion-640.avif 640w, /assets/img/extraccion-muela-del-juicio-asuncion-1280.avif 1280w" sizes="(min-width:1024px) 24vw, 100vw">
+            <source type="image/webp" srcset="/assets/img/extraccion-muela-del-juicio-asuncion-640.webp 640w, /assets/img/extraccion-muela-del-juicio-asuncion-1280.webp 1280w" sizes="(min-width:1024px) 24vw, 100vw">
+            <img src="/assets/img/extraccion-muela-del-juicio-asuncion-1280.webp" alt="Radiografía panorámica que muestra una muela del juicio antes de la extracción" width="1280" height="960" loading="lazy" decoding="async">
+          </picture>
+        </div>
+        <h3>Muela del juicio y exodoncias</h3>
+        <p>Extracción de muelas del juicio, dientes muy dañados y restos radiculares. Se pide una radiografía panorámica antes para saber exactamente cómo está ubicada la muela.</p>
+        <a class="svc__link"
+           href="https://wa.me/595995628862?text=Hola%2C%20vengo%20de%20dentista.com.py%20(muela-del-juicio)%20-%20quiero%20consultar%20por%20la%20muela%20del%20juicio"
+           data-ev="whatsapp_click" data-ev-loc="servicios-muela" rel="noopener">Consultá por muela del juicio</a>
+      </article>
+
+      <article class="card card--hair" data-reveal="4">
+        <div class="media svc__media">
+          <picture>
+            <source type="image/avif" srcset="/assets/img/odontopediatria-ninos-asuncion-640.avif 640w, /assets/img/odontopediatria-ninos-asuncion-1280.avif 1280w" sizes="(min-width:1024px) 24vw, 100vw">
+            <source type="image/webp" srcset="/assets/img/odontopediatria-ninos-asuncion-640.webp 640w, /assets/img/odontopediatria-ninos-asuncion-1280.webp 1280w" sizes="(min-width:1024px) 24vw, 100vw">
+            <img src="/assets/img/odontopediatria-ninos-asuncion-1280.webp" alt="Niño tranquilo en el sillón dental durante una consulta de odontopediatría" width="1280" height="960" loading="lazy" decoding="async">
+          </picture>
+        </div>
+        <h3>Odontopediatría</h3>
+        <p>Consultas para chicos, con tiempo y sin apuro. La primera visita es para que el chico conozca el consultorio y se anime, no para hacerle todo el primer día.</p>
+        <a class="svc__link"
+           href="https://wa.me/595995628862?text=Hola%2C%20vengo%20de%20dentista.com.py%20(odontopediatria)%20-%20quiero%20consultar%20por%20odontopediatr%C3%ADa"
+           data-ev="whatsapp_click" data-ev-loc="servicios-odontopediatria" rel="noopener">Consultá por odontopediatría</a>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════ 05 · TRATAMIENTO DESTACADO: BRACKETS — P7 sticky-side ═══════════ -->
+<section class="destacado" aria-labelledby="h-brackets">
+  <div class="wrap destacado__grid">
+    <div class="destacado__side">
+      <span class="eyebrow">El tratamiento más consultado</span>
+      <h2 id="h-brackets">Brackets, explicados sin vueltas</h2>
+      <p>Casi todo lo que se pregunta sobre brackets se responde en la primera consulta. Esto es lo que conviene saber antes de escribirnos.</p>
+      <a class="btn btn--primary"
+         href="https://wa.me/595995628862?text=Hola%2C%20vengo%20de%20dentista.com.py%20(brackets)%20-%20quiero%20consultar%20por%20brackets%20y%20ortodoncia"
+         data-ev="whatsapp_click" data-ev-loc="destacado" rel="noopener">Consultá por brackets</a>
+      <div class="media destacado__media">
+        <picture>
+          <source type="image/avif" srcset="/assets/img/brackets-ortodoncia-asuncion-640.avif 640w, /assets/img/brackets-ortodoncia-asuncion-1280.avif 1280w" sizes="(min-width:1024px) 34vw, 100vw">
+          <source type="image/webp" srcset="/assets/img/brackets-ortodoncia-asuncion-640.webp 640w, /assets/img/brackets-ortodoncia-asuncion-1280.webp 1280w" sizes="(min-width:1024px) 34vw, 100vw">
+          <img src="/assets/img/brackets-ortodoncia-asuncion-1280.webp" alt="Detalle de brackets estéticos colocados en la arcada superior" width="1280" height="960" loading="lazy" decoding="async">
+        </picture>
+      </div>
+    </div>
+
+    <div class="destacado__list">
+      <article class="card card--bare" data-reveal="0">
+        <h3>Primero se revisa, después se planifica</h3>
+        <p>No se puede decir qué brackets necesitás ni cuánto va a durar el tratamiento sin verte la boca. En la primera consulta se revisa, se piden las radiografías necesarias y recién ahí se arma el plan.</p>
+      </article>
+      <article class="card card--bare" data-reveal="1">
+        <h3>Hay más de un tipo, y no todos sirven para todos</h3>
+        <p>Metálicos, estéticos, autoligado. La diferencia no es solo el precio: cambia el tipo de movimiento que se puede hacer y los controles que vas a necesitar. Se elige según tu caso.</p>
+      </article>
+      <article class="card card--bare" data-reveal="2">
+        <h3>El control mensual es parte del tratamiento</h3>
+        <p>Los brackets funcionan si volvés a los controles. Cuando coordinamos tu consulta, coordinamos también que los controles te queden cerca y en un horario que puedas cumplir.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════ 06 · BANDA FULL-BLEED — P6 bleed-image overlap ═══════════ -->
+<section class="banda-wrap" aria-label="Cómo trabajamos">
+  <div class="bleed banda scrim grain">
+    <picture>
+      <source type="image/avif" srcset="/assets/img/clinica-dental-asuncion-recepcion-1280.avif 1280w, /assets/img/clinica-dental-asuncion-recepcion-1920.avif 1920w" sizes="100vw">
+      <source type="image/webp" srcset="/assets/img/clinica-dental-asuncion-recepcion-1280.webp 1280w, /assets/img/clinica-dental-asuncion-recepcion-1920.webp 1920w" sizes="100vw">
+      <img src="/assets/img/clinica-dental-asuncion-recepcion-1920.webp" alt="Recepción de una clínica dental moderna en Asunción" width="1920" height="823" loading="lazy" decoding="async">
+    </picture>
+    <div class="banda__in wrap">
+      <p class="banda__line">Una consulta tranquila, con todo explicado antes de empezar.</p>
+      <a class="btn btn--wa"
+         href="https://wa.me/595995628862?text=Hola%2C%20vengo%20de%20dentista.com.py%20(banda)%20-%20quiero%20agendar%20mi%20cita"
+         data-ev="whatsapp_click" data-ev-loc="banda" rel="noopener">
+        <svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38a9.9 9.9 0 0 0 4.79 1.22h.01c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2Zm5.8 14.1c-.24.68-1.42 1.31-1.95 1.36-.5.05-.98.23-3.3-.69-2.78-1.1-4.55-3.94-4.69-4.13-.14-.19-1.12-1.49-1.12-2.85 0-1.35.71-2.02.96-2.29.25-.28.55-.34.73-.34.18 0 .37 0 .53.01.17.01.4-.06.62.48.24.57.8 1.97.87 2.11.07.14.12.31.02.5-.09.19-.14.31-.28.47-.14.16-.29.36-.42.48-.14.14-.28.29-.12.57.16.28.72 1.19 1.55 1.93 1.07.95 1.97 1.25 2.25 1.39.28.14.44.12.61-.07.16-.19.7-.81.88-1.09.19-.28.37-.23.62-.14.25.09 1.6.75 1.87.89.28.14.46.21.53.32.07.12.07.65-.16 1.33Z"/></svg>
+        Agendá tu cita
+      </a>
+    </div>
+  </div>
+
+  <div class="wrap">
+    <div class="card card--raised banda__panel">
+      <span class="eyebrow">Sin apuros</span>
+      <h3>Nadie firma nada antes de entender qué le van a hacer</h3>
+      <p>Te explicamos qué se encontró, qué opciones hay y qué pasa si decidís esperar. Después decidís vos.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════ 07 · PRIMERA CONSULTA — P5 numbered process rail ═══════════ -->
+<section id="primera-consulta" class="proceso" aria-labelledby="h-proceso">
+  <div class="wrap">
+    <span class="eyebrow">Tu primera consulta</span>
+    <h2 id="h-proceso">Cómo es tu primera consulta</h2>
+    <ol class="rail">
+      <li data-reveal="0"><span class="rail__n" aria-hidden="true">01</span><h3>Escribinos</h3><p>Contanos qué te pasa, qué tratamiento te interesa y en qué zona estás. Te respondemos por WhatsApp.</p></li>
+      <li data-reveal="1"><span class="rail__n" aria-hidden="true">02</span><h3>Coordinamos día y horario</h3><p>Buscamos el turno que te sirva y te pasamos los datos del odontólogo matriculado que te va a atender antes de confirmar.</p></li>
+      <li data-reveal="2"><span class="rail__n" aria-hidden="true">03</span><h3>Revisión y diagnóstico</h3><p>En la consulta se revisa tu boca, se piden las radiografías que hagan falta y se te explica qué encontraron.</p></li>
+      <li data-reveal="3"><span class="rail__n" aria-hidden="true">04</span><h3>Presupuesto sin costo y decidís vos</h3><p>Te pasan el plan de tratamiento y el presupuesto. No se empieza nada hasta que vos digas que sí.</p></li>
+    </ol>
+  </div>
+</section>
+
+<!-- ═══════════ 08 · ARMÁ TU CONSULTA — P10 data panel (NOLL belopp) ═══════════ -->
+<section id="consulta" class="cotiz" aria-labelledby="h-cotiz">
+  <div class="wrap">
+    <div class="card card--raised cotiz__panel">
+      <span class="eyebrow">Armá tu consulta</span>
+      <h2 id="h-cotiz">Armá tu consulta en treinta segundos</h2>
+      <p>Elegí el tratamiento y tu zona. Con eso preparamos tu mensaje de WhatsApp y te respondemos con la disponibilidad.</p>
+
+      <div class="cotiz__fields">
+        <p class="field">
+          <label for="c-trat">¿Qué necesitás?</label>
+          <select id="c-trat">
+            <option value="brackets y ortodoncia">Brackets y ortodoncia</option>
+            <option value="profilaxis y limpieza dental">Profilaxis y limpieza dental</option>
+            <option value="blanqueamiento dental">Blanqueamiento dental</option>
+            <option value="muela del juicio o extracción">Muela del juicio o extracción</option>
+            <option value="odontopediatría (niños)">Odontopediatría (niños)</option>
+            <option value="una revisión">Todavía no sé / quiero una revisión</option>
+          </select>
+        </p>
+        <p class="field">
+          <label for="c-zona">¿En qué zona estás?</label>
+          <select id="c-zona">
+            <option>Asunción</option>
+            <option>Luque</option>
+            <option>San Lorenzo</option>
+            <option>Fernando de la Mora</option>
+            <option>Lambaré</option>
+            <option>Capiatá</option>
+            <option>Mariano Roque Alonso</option>
+            <option>Otra ciudad del interior</option>
+          </select>
+        </p>
+        <p class="field">
+          <label for="c-hora">¿Cuándo te queda mejor?</label>
+          <select id="c-hora">
+            <option value="mañana">Mañana</option>
+            <option value="tarde">Tarde</option>
+            <option value="cualquier horario">Me da igual</option>
+          </select>
+        </p>
+      </div>
+
+      <p class="cotiz__preview">Tu mensaje: <span id="c-preview">"Hola, vengo de dentista.com.py — necesito brackets y ortodoncia en Asunción, prefiero mañana."</span></p>
+
+      <a class="btn btn--wa cotiz__cta" id="c-cta"
+         href="https://wa.me/595995628862?text=Hola%2C%20vengo%20de%20dentista.com.py%20(cotizador)%20-%20necesito%20brackets%20y%20ortodoncia%20en%20Asunci%C3%B3n%2C%20prefiero%20ma%C3%B1ana"
+         data-ev="calc_complete" data-ev-loc="cotizador" rel="noopener">
+        <svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38a9.9 9.9 0 0 0 4.79 1.22h.01c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2Zm5.8 14.1c-.24.68-1.42 1.31-1.95 1.36-.5.05-.98.23-3.3-.69-2.78-1.1-4.55-3.94-4.69-4.13-.14-.19-1.12-1.49-1.12-2.85 0-1.35.71-2.02.96-2.29.25-.28.55-.34.73-.34.18 0 .37 0 .53.01.17.01.4-.06.62.48.24.57.8 1.97.87 2.11.07.14.12.31.02.5-.09.19-.14.31-.28.47-.14.16-.29.36-.42.48-.14.14-.28.29-.12.57.16.28.72 1.19 1.55 1.93 1.07.95 1.97 1.25 2.25 1.39.28.14.44.12.61-.07.16-.19.7-.81.88-1.09.19-.28.37-.23.62-.14.25.09 1.6.75 1.87.89.28.14.46.21.53.32.07.12.07.65-.16 1.33Z"/></svg>
+        Pedí tu presupuesto sin costo
+      </a>
+      <p class="cotiz__note">No pedimos datos de tarjeta ni pagos por acá. El presupuesto se te pasa en la consulta y no tiene costo.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════ 09 · ZONAS — P4 editorial två-kolumn ═══════════ -->
+<section id="zonas" class="zonas" aria-labelledby="h-zonas">
+  <div class="wrap zonas__grid">
+    <div>
+      <span class="eyebrow">Zonas</span>
+      <h2 id="h-zonas">Dónde coordinamos consultas</h2>
+    </div>
+    <div>
+      <p>Trabajamos en todo Asunción y el Gran Asunción — Luque, San Lorenzo, Fernando de la Mora, Lambaré, Capiatá y Mariano Roque Alonso. Contanos en qué zona estás y coordinamos la consulta lo más cerca posible de donde vivís o trabajás.</p>
+      <p>Si trabajás en el centro de Asunción y vivís en otra ciudad, decilo cuando escribas: muchas veces conviene coordinar el turno cerca del trabajo y no cerca de casa.</p>
+      <article class="card card--bare zonas__interior">
+        <h3>¿Estás fuera del Gran Asunción?</h3>
+        <p>Fuera del Gran Asunción coordinamos según el caso: escribinos y te confirmamos si podemos llegar.</p>
+        <a class="svc__link"
+           href="https://wa.me/595995628862?text=Hola%2C%20vengo%20de%20dentista.com.py%20(zonas)%20-%20quiero%20consultar%20si%20llegan%20a%20mi%20ciudad"
+           data-ev="zone_click" data-ev-loc="zonas-interior" rel="noopener">Consultá por tu ciudad</a>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════ 10 · STATEMENT CTA — P9 oversized statement (offsetbrott) ═══════════ -->
+<section class="stmt" aria-labelledby="h-stmt">
+  <div class="wrap">
+    <div class="stmt__in">
+      <h2 id="h-stmt" class="statement">Tu consulta, coordinada hoy.</h2>
+      <p class="stmt__sub">Escribinos por WhatsApp y te confirmamos disponibilidad.</p>
+      <a class="btn btn--wa"
+         href="https://wa.me/595995628862?text=Hola%2C%20vengo%20de%20dentista.com.py%20(statement)%20-%20quiero%20coordinar%20mi%20consulta%20hoy"
+         data-ev="whatsapp_click" data-ev-loc="statement" rel="noopener">
+        <svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38a9.9 9.9 0 0 0 4.79 1.22h.01c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2Zm5.8 14.1c-.24.68-1.42 1.31-1.95 1.36-.5.05-.98.23-3.3-.69-2.78-1.1-4.55-3.94-4.69-4.13-.14-.19-1.12-1.49-1.12-2.85 0-1.35.71-2.02.96-2.29.25-.28.55-.34.73-.34.18 0 .37 0 .53.01.17.01.4-.06.62.48.24.57.8 1.97.87 2.11.07.14.12.31.02.5-.09.19-.14.31-.28.47-.14.16-.29.36-.42.48-.14.14-.28.29-.12.57.16.28.72 1.19 1.55 1.93 1.07.95 1.97 1.25 2.25 1.39.28.14.44.12.61-.07.16-.19.7-.81.88-1.09.19-.28.37-.23.62-.14.25.09 1.6.75 1.87.89.28.14.46.21.53.32.07.12.07.65-.16 1.33Z"/></svg>
+        Escribinos ahora
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════ 11 · PREGUNTAS FRECUENTES — P4 editorial två-kolumn ═══════════ -->
+<section id="preguntas" class="faq" aria-labelledby="h-faq">
+  <div class="wrap faq__grid">
+    <div>
+      <span class="eyebrow">Preguntas frecuentes</span>
+      <h2 id="h-faq">Lo que más nos preguntan</h2>
+    </div>
+    <div>
+      <details data-ev="faq_open" data-ev-loc="faq">
+        <summary>¿El profesional está matriculado?</summary>
+        <p>Sí. Trabajamos únicamente con odontólogos matriculados, y te pasamos los datos del profesional antes de confirmar la consulta.</p>
+      </details>
+      <details data-ev="faq_open" data-ev-loc="faq">
+        <summary>¿Cuánto sale el tratamiento?</summary>
+        <p>Depende de lo que encuentren cuando te revisen, así que no publicamos precios: un número puesto antes de verte la boca no te sirve para decidir. El presupuesto se te pasa en la consulta, por escrito y sin costo, y recién ahí decidís si seguís.</p>
+      </details>
+      <details data-ev="faq_open" data-ev-loc="faq">
+        <summary>¿Cómo hago para sacar turno?</summary>
+        <p>Escribinos por WhatsApp contando qué necesitás y en qué zona estás. Te respondemos con la disponibilidad, coordinamos día y horario y te confirmamos los datos del profesional. No hace falta llamar ni ir hasta el consultorio para sacar el turno.</p>
+      </details>
+      <details data-ev="faq_open" data-ev-loc="faq">
+        <summary>Tengo dolor de muela ahora. ¿Qué hago?</summary>
+        <p>Escribinos igual y contanos hace cuánto te duele, si tenés la cara hinchada y si estás tomando algo. Buscamos el turno más cercano que haya y te confirmamos el mismo día si conseguimos lugar. No prometemos atención inmediata las veinticuatro horas: te decimos con claridad cuándo hay lugar.</p>
+      </details>
+      <details data-ev="faq_open" data-ev-loc="faq">
+        <summary>¿Atienden a chicos?</summary>
+        <p>Sí, coordinamos consultas de odontopediatría. La primera visita suele ser corta y sirve para que el chico conozca el consultorio y se anime. Si viene con miedo, avisanos antes y lo tenemos en cuenta al coordinar el turno.</p>
+      </details>
+      <details data-ev="faq_open" data-ev-loc="faq">
+        <summary>¿En qué zonas trabajan?</summary>
+        <p>En Asunción y todo el Gran Asunción: Luque, San Lorenzo, Fernando de la Mora, Lambaré, Capiatá y Mariano Roque Alonso. Fuera del Gran Asunción coordinamos según el caso: escribinos y te confirmamos si podemos llegar.</p>
+      </details>
+
+      <article class="card card--accent faq__cta">
+        <h3>¿Tu pregunta no está acá?</h3>
+        <p>Escribinos y te la respondemos por WhatsApp. No hace falta que sepas el nombre del tratamiento.</p>
+        <a class="btn btn--primary btn--sm"
+           href="https://wa.me/595995628862?text=Hola%2C%20vengo%20de%20dentista.com.py%20(faq)%20-%20tengo%20una%20pregunta"
+           data-ev="whatsapp_click" data-ev-loc="faq" rel="noopener">Hacé tu pregunta</a>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════ 12 · CONTACTO — P1 speglad 5/7 ═══════════ -->
+<section id="contacto" class="contacto" aria-labelledby="h-contacto">
+  <div class="wrap">
+    <span class="eyebrow">Contacto</span>
+    <h2 id="h-contacto">Contanos qué necesitás</h2>
+    <p class="lede lede--wide">La forma más rápida es WhatsApp. Si preferís que te escribamos nosotros, dejanos tus datos y te contactamos.</p>
+
+    <div class="contacto__grid">
+      <div class="contacto__side">
+        <article class="card card--accent">
+          <h3>WhatsApp</h3>
+          <p>Es por donde respondemos más rápido.</p>
+          <a class="btn btn--wa"
+             href="https://wa.me/595995628862?text=Hola%2C%20vengo%20de%20dentista.com.py%20(contacto)%20-%20quiero%20coordinar%20una%20consulta"
+             data-ev="whatsapp_click" data-ev-loc="contacto" rel="noopener">
+            <svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38a9.9 9.9 0 0 0 4.79 1.22h.01c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2Zm5.8 14.1c-.24.68-1.42 1.31-1.95 1.36-.5.05-.98.23-3.3-.69-2.78-1.1-4.55-3.94-4.69-4.13-.14-.19-1.12-1.49-1.12-2.85 0-1.35.71-2.02.96-2.29.25-.28.55-.34.73-.34.18 0 .37 0 .53.01.17.01.4-.06.62.48.24.57.8 1.97.87 2.11.07.14.12.31.02.5-.09.19-.14.31-.28.47-.14.16-.29.36-.42.48-.14.14-.28.29-.12.57.16.28.72 1.19 1.55 1.93 1.07.95 1.97 1.25 2.25 1.39.28.14.44.12.61-.07.16-.19.7-.81.88-1.09.19-.28.37-.23.62-.14.25.09 1.6.75 1.87.89.28.14.46.21.53.32.07.12.07.65-.16 1.33Z"/></svg>
+            Escribinos por WhatsApp
+          </a>
+          <p class="contacto__num">+595 995 628862</p>
+          <a class="svc__link" href="tel:+595995628862" data-ev="call_click" data-ev-loc="contacto">Llamanos: +595 995 628862</a>
+        </article>
+
+        <article class="card card--accent contacto__trust">
+          <ul>
+            <li>Presupuesto sin costo y por escrito</li>
+            <li>Odontólogos matriculados — te pasamos los datos antes de confirmar</li>
+            <li>Coordinamos el horario que te sirva</li>
+            <li>No se empieza ningún tratamiento sin tu confirmación</li>
+          </ul>
+        </article>
+      </div>
+
+      <form class="contacto__form" action="/contacto.php" method="POST">
+        <input type="hidden" name="form_id" value="site:dentista-com-py">
+        <p class="field">
+          <label for="f-nombre">Nombre</label>
+          <input id="f-nombre" name="nombre" required autocomplete="name">
+        </p>
+        <p class="field">
+          <label for="f-tel">WhatsApp</label>
+          <input id="f-tel" name="telefono" type="tel" required autocomplete="tel" inputmode="tel" placeholder="0981 123 456">
+        </p>
+        <p class="field">
+          <label for="f-msg">¿Qué necesitás?</label>
+          <textarea id="f-msg" name="mensaje" rows="4"></textarea>
+        </p>
+        <!-- Honeypot: botar fyller den, människor ser den aldrig. -->
+        <input name="website" tabindex="-1" autocomplete="off" style="position:absolute;left:-9999px" aria-hidden="true">
+        <button class="btn btn--primary" type="submit" data-ev="form_submit" data-ev-loc="contacto">Enviar mi consulta</button>
+        <p class="contacto__note">Usamos tus datos solo para responderte esta consulta.</p>
+      </form>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ═══════════ 13 · FOOTER ═══════════ -->
+<footer class="ftr grain">
+  <div class="wrap ftr__grid">
+    <div>
+      <p class="brand">Dentista.com.py</p>
+      <p>Coordinamos consultas odontológicas en Asunción y el Gran Asunción.</p>
+    </div>
+    <div>
+      <p>Asunción, Paraguay<br>
+        <a href="tel:+595995628862" data-ev="call_click" data-ev-loc="footer">+595 995 628862</a><br>
+        Respondemos por WhatsApp todos los días.</p>
+    </div>
+    <nav aria-label="Pie de página">
+      <a href="#servicios">Servicios</a>
+      <a href="#primera-consulta">Tu primera consulta</a>
+      <a href="#zonas">Zonas</a>
+      <a href="#preguntas">Preguntas</a>
+      <a href="/privacidad.html">Política de privacidad</a>
+    </nav>
+  </div>
+  <div class="wrap ftr__base"><p>© 2026 Dentista.com.py</p></div>
+</footer>
+
+<!-- ═══════════ FAB + STICKY MOBILBAR ═══════════ -->
+<a class="fab" aria-label="Escribinos por WhatsApp"
+   href="https://wa.me/595995628862?text=Hola%2C%20vengo%20de%20dentista.com.py%20(fab)%20-%20quiero%20consultar%20por%20una%20consulta%20odontol%C3%B3gica"
+   data-ev="whatsapp_click" data-ev-loc="fab" rel="noopener">
+  <svg width="28" height="28" viewBox="0 0 24 24" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38a9.9 9.9 0 0 0 4.79 1.22h.01c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2Zm5.8 14.1c-.24.68-1.42 1.31-1.95 1.36-.5.05-.98.23-3.3-.69-2.78-1.1-4.55-3.94-4.69-4.13-.14-.19-1.12-1.49-1.12-2.85 0-1.35.71-2.02.96-2.29.25-.28.55-.34.73-.34.18 0 .37 0 .53.01.17.01.4-.06.62.48.24.57.8 1.97.87 2.11.07.14.12.31.02.5-.09.19-.14.31-.28.47-.14.16-.29.36-.42.48-.14.14-.28.29-.12.57.16.28.72 1.19 1.55 1.93 1.07.95 1.97 1.25 2.25 1.39.28.14.44.12.61-.07.16-.19.7-.81.88-1.09.19-.28.37-.23.62-.14.25.09 1.6.75 1.87.89.28.14.46.21.53.32.07.12.07.65-.16 1.33Z"/></svg>
+</a>
+
+<div class="mbar">
+  <a class="btn btn--wa"
+     href="https://wa.me/595995628862?text=Hola%2C%20vengo%20de%20dentista.com.py%20(mobilbar)%20-%20quiero%20consultar%20por%20una%20consulta%20odontol%C3%B3gica"
+     data-ev="whatsapp_click" data-ev-loc="mobilbar" rel="noopener">
+    <svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38a9.9 9.9 0 0 0 4.79 1.22h.01c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2Zm5.8 14.1c-.24.68-1.42 1.31-1.95 1.36-.5.05-.98.23-3.3-.69-2.78-1.1-4.55-3.94-4.69-4.13-.14-.19-1.12-1.49-1.12-2.85 0-1.35.71-2.02.96-2.29.25-.28.55-.34.73-.34.18 0 .37 0 .53.01.17.01.4-.06.62.48.24.57.8 1.97.87 2.11.07.14.12.31.02.5-.09.19-.14.31-.28.47-.14.16-.29.36-.42.48-.14.14-.28.29-.12.57.16.28.72 1.19 1.55 1.93 1.07.95 1.97 1.25 2.25 1.39.28.14.44.12.61-.07.16-.19.7-.81.88-1.09.19-.28.37-.23.62-.14.25.09 1.6.75 1.87.89.28.14.46.21.53.32.07.12.07.65-.16 1.33Z"/></svg>
+    WhatsApp
+  </a>
+  <a class="btn btn--ghost" href="tel:+595995628862" data-ev="call_click" data-ev-loc="mobilbar">Llamar</a>
+</div>
+
+<!-- ═══════════ CONSENT (Ley 6534/2020) ═══════════ -->
+<div class="consent" id="consent" hidden>
+  <p>Usamos cookies solo para que el sitio funcione y para entender qué páginas se visitan. Podés aceptarlas o seguir sin ellas.</p>
+  <div class="consent__btns">
+    <button class="btn btn--primary btn--sm" id="consent-ok" type="button">Aceptar</button>
+    <button class="btn btn--ghost btn--sm" id="consent-no" type="button">Seguir sin aceptar</button>
+    <a class="svc__link" href="/privacidad.html">Política de privacidad</a>
+  </div>
+</div>
+
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"Dentist",
+  "name":"Dentista.com.py",
+  "url":"https://dentista.com.py",
+  "telephone":"+595995628862",
+  "image":"https://dentista.com.py/assets/img/dentista-asuncion-consultorio-dental-1280.webp",
+  "address":{"@type":"PostalAddress","addressLocality":"Asunción","addressRegion":"Central","addressCountry":"PY"},
+  "areaServed":[
+    {"@type":"City","name":"Asunción"},
+    {"@type":"City","name":"Luque"},
+    {"@type":"City","name":"San Lorenzo"},
+    {"@type":"City","name":"Fernando de la Mora"},
+    {"@type":"City","name":"Lambaré"},
+    {"@type":"City","name":"Capiatá"},
+    {"@type":"City","name":"Mariano Roque Alonso"},
+    {"@type":"Country","name":"Paraguay"}
+  ]
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"FAQPage",
+  "mainEntity":[
+    {"@type":"Question","name":"¿El profesional está matriculado?","acceptedAnswer":{"@type":"Answer","text":"Sí. Trabajamos únicamente con odontólogos matriculados, y te pasamos los datos del profesional antes de confirmar la consulta."}},
+    {"@type":"Question","name":"¿Cuánto sale el tratamiento?","acceptedAnswer":{"@type":"Answer","text":"Depende de lo que encuentren cuando te revisen, así que no publicamos precios: un número puesto antes de verte la boca no te sirve para decidir. El presupuesto se te pasa en la consulta, por escrito y sin costo, y recién ahí decidís si seguís."}},
+    {"@type":"Question","name":"¿Cómo hago para sacar turno?","acceptedAnswer":{"@type":"Answer","text":"Escribinos por WhatsApp contando qué necesitás y en qué zona estás. Te respondemos con la disponibilidad, coordinamos día y horario y te confirmamos los datos del profesional. No hace falta llamar ni ir hasta el consultorio para sacar el turno."}},
+    {"@type":"Question","name":"Tengo dolor de muela ahora. ¿Qué hago?","acceptedAnswer":{"@type":"Answer","text":"Escribinos igual y contanos hace cuánto te duele, si tenés la cara hinchada y si estás tomando algo. Buscamos el turno más cercano que haya y te confirmamos el mismo día si conseguimos lugar. No prometemos atención inmediata las veinticuatro horas: te decimos con claridad cuándo hay lugar."}},
+    {"@type":"Question","name":"¿Atienden a chicos?","acceptedAnswer":{"@type":"Answer","text":"Sí, coordinamos consultas de odontopediatría. La primera visita suele ser corta y sirve para que el chico conozca el consultorio y se anime. Si viene con miedo, avisanos antes y lo tenemos en cuenta al coordinar el turno."}},
+    {"@type":"Question","name":"¿En qué zonas trabajan?","acceptedAnswer":{"@type":"Answer","text":"En Asunción y todo el Gran Asunción: Luque, San Lorenzo, Fernando de la Mora, Lambaré, Capiatá y Mariano Roque Alonso. Fuera del Gran Asunción coordinamos según el caso: escribinos y te confirmamos si podemos llegar."}}
+  ]
+}
+</script>
+
+<!-- Attribution: aktiveras när VenderCRM-URL:en finns (BUILD-SPEC §8, platshållare 2).
+<script src="https://CRM_URL/vc-attribution.js" defer></script> -->
+<script src="/assets/js/site.js" defer></script>
+<script src="/assets/js/motion.js" defer></script>
+</body>
+</html>
