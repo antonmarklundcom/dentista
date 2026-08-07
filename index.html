@@ -152,6 +152,9 @@ section{padding-block:clamp(var(--s-16),9vw,var(--s-32));position:relative}
   background:linear-gradient(140deg,color-mix(in srgb,var(--ink) 12%,var(--base)),color-mix(in srgb,var(--accent) 10%,var(--base)));
 }
 .media img{width:100%;height:100%;object-fit:cover}
+/* Hero-källan är 21:9 (STEP-0 §e #1) och beskärs till kolumnen — motivet ligger
+   center-höger, negativa ytan till vänster, så beskärningen behåller personerna. */
+.hero__media img{object-position:62% center}
 
 /* ─────────────── 01 Header ─────────────── */
 .hdr{
@@ -191,7 +194,7 @@ section{padding-block:clamp(var(--s-16),9vw,var(--s-32));position:relative}
 .panel__foot{border-top:1px solid var(--hairline);margin-top:var(--s-6);padding-top:var(--s-4);font-size:var(--t--1);color:var(--ink-70)}
 @media (min-width:1024px){
   .hero__grid{grid-template-columns:7fr 5fr;gap:var(--s-16);align-items:center}
-  .hero__media{aspect-ratio:5/6;margin-right:calc(var(--gutter) * -1)}
+  .hero__media{aspect-ratio:4/5;margin-right:calc(var(--gutter) * -1)}
   /* gränsöverlapp 1 av 2 — panelen korsar gränsen mot sektion 03 */
   .panel{transform:translateY(28%);margin-top:0;position:relative;z-index:2}
   .hero{padding-bottom:0}

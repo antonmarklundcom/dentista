@@ -8,3 +8,5 @@ private/
 .DS_Store
 Thumbs.db
 node_modules/
+tools/src-images/*.png
+tools/src-images/*.jpg

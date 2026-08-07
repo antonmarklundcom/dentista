@@ -45,25 +45,39 @@ async function run() {
 
   const report = [];
 
-  for (const [base, url] of Object.entries(map)) {
-    const res = await fetch(url);
-    if (!res.ok) {
-      console.error(`✗ ${base}: ${res.status} ${res.statusText}`);
-      process.exitCode = 1;
-      continue;
+  for (const [base, src] of Object.entries(map)) {
+    let buf;
+
+    if (/^https?:\/\//.test(src)) {
+      const res = await fetch(src);
+      if (!res.ok) {
+        console.error(`✗ ${base}: ${res.status} ${res.statusText}`);
+        process.exitCode = 1;
+        continue;
+      }
+      buf = Buffer.from(await res.arrayBuffer());
+    } else {
+      /* Lokal fil — används när nätverkspolicyn blockerar Higgsfields CDN.
+         Sökvägen tolkas relativt repots rot. */
+      const local = path.resolve(ROOT, src);
+      if (!existsSync(local)) {
+        console.error(`✗ ${base}: hittar inte ${path.relative(ROOT, local)}`);
+        process.exitCode = 1;
+        continue;
+      }
+      buf = await readFile(local);
     }
-    const buf = Buffer.from(await res.arrayBuffer());
     const widths = WIDTHS[base] ?? WIDTHS._default;
 
     for (const w of widths) {
       for (const fmt of ['avif', 'webp']) {
         const file = path.join(OUT, `${base}-${w}.${fmt}`);
         const out = await sharp(buf)
-          .resize({ width: w, withoutEnlargement: true })
+          .resize({ width: w })
           .toFormat(fmt, { quality: QUALITY[fmt] })
           .toBuffer();
         await writeFile(file, out);
-        report.push({ file: path.basename(file), kb: Math.round(out.length / 1024) });
+        { const meta = await sharp(out).metadata(); report.push({ file: path.basename(file), px: meta.width + "x" + meta.height, kb: Math.round(out.length / 1024) }); }
       }
     }
     console.log(`✓ ${base}`);
