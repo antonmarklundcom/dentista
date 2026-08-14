@@ -20,18 +20,22 @@ layout nunca se rompe. Subí los archivos por el File Manager de Hostinger a
 | `og.jpg` | Vista previa al compartir (WhatsApp, Facebook) | 1200 × 630 px | Recomendado: el hero con el logotipo. |
 | `apple-touch-icon.png` | Ícono en iOS | 180 × 180 px | Fondo `#0B0C0B`, diente dorado `#B89458`. |
 
-## Imágenes ya generadas
+## Estado actual
 
-De las cinco que subiste, el mapeo natural es:
+Ya están subidas y en uso (formato WebP, livianas):
 
-- Skyline de Asunción al atardecer → `asuncion.png`
-- Alineador transparente en la mano → `alineadores.png`
-- Pareja conversando en la mesa → `hero-desktop.png` y `orientacion.png`
-- Sonrisa en primer plano → `urgencia.png` (o guardala para estética)
-- Implante dental sobre mármol → `implante.png`
+- `alineadores.webp` — alineador transparente en la mano
+- `hero-desktop.webp` y `orientacion.webp` — pareja conversando en la mesa
+- `hero-mobile.webp` — recorte vertical de la misma foto, sujeto centro-derecha
+- `urgencia.webp` — sonrisa en primer plano
+- `implante.webp` — implante dental sobre mármol
+- `og.jpg` — compuesto a partir del hero con el logotipo superpuesto
+- `apple-touch-icon.png` — ícono renderizado desde `favicon.svg`
 
-Falta generar: `hero-mobile.png` (versión vertical de la conversación) e
-`instrumentos.png` (instrumental odontológico de precisión).
+Todavía faltan (el sitio se ve bien igual, con el degradado de reemplazo):
+
+- `instrumentos.png` — instrumental odontológico de precisión
+- `asuncion.png` — skyline de Asunción para la marca de agua de la sección de preguntas
 
 ## Dirección de arte
 
