@@ -35,9 +35,21 @@
 
   <nav class="site-nav" aria-label="Principal">
     <a href="#como">¿Cómo funciona?</a>
-    <a href="#tratamientos">Tratamientos</a>
-    <a href="#urgencias">Urgencias</a>
-    <a href="#ninos">Para niños</a>
+    <div class="has-dropdown">
+      <a href="tratamientos/index.html">Tratamientos <span class="chev">▾</span></a>
+      <div class="dropdown-menu">
+      <a href="tratamientos/urgencias-dolor.html">Urgencias y dolor</a>
+      <a href="tratamientos/implantes.html">Implantes dentales</a>
+      <a href="tratamientos/ortodoncia.html">Ortodoncia</a>
+      <a href="tratamientos/alineadores.html">Alineadores transparentes</a>
+      <a href="tratamientos/estetica-dental.html">Estética dental</a>
+      <a href="tratamientos/protesis.html">Prótesis dentales</a>
+      <a href="tratamientos/limpieza-prevencion.html">Limpieza y prevención</a>
+      <a href="tratamientos/odontopediatria.html">Odontología para niños</a>
+      </div>
+    </div>
+    <a href="tratamientos/urgencias-dolor.html">Urgencias</a>
+    <a href="tratamientos/odontopediatria.html">Para niños</a>
     <a href="#preguntas">Preguntas</a>
   </nav>
 
@@ -56,9 +68,21 @@
 <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
   <button type="button" class="menu-close" aria-label="Cerrar">×</button>
   <a href="#como">¿Cómo funciona?</a>
-  <a href="#tratamientos">Tratamientos</a>
-  <a href="#urgencias">Urgencias</a>
-  <a href="#ninos">Para niños</a>
+  <details>
+    <summary>Tratamientos <span class="chev">▾</span></summary>
+    <div class="sub-links">
+      <a href="tratamientos/urgencias-dolor.html">Urgencias y dolor</a>
+      <a href="tratamientos/implantes.html">Implantes dentales</a>
+      <a href="tratamientos/ortodoncia.html">Ortodoncia</a>
+      <a href="tratamientos/alineadores.html">Alineadores transparentes</a>
+      <a href="tratamientos/estetica-dental.html">Estética dental</a>
+      <a href="tratamientos/protesis.html">Prótesis dentales</a>
+      <a href="tratamientos/limpieza-prevencion.html">Limpieza y prevención</a>
+      <a href="tratamientos/odontopediatria.html">Odontología para niños</a>
+    </div>
+  </details>
+  <a href="tratamientos/urgencias-dolor.html">Urgencias</a>
+  <a href="tratamientos/odontopediatria.html">Para niños</a>
   <a href="#preguntas">Preguntas</a>
 </div>
 
@@ -229,7 +253,7 @@
       <div class="eyebrow">SOLUCIONES PARA CADA ETAPA</div>
       <h2>Tratamientos dentales que cubrimos</h2>
       <p class="lead">Desde urgencias hasta estética y rehabilitación. Te ayudamos a encontrar el tipo de atención que necesitás.</p>
-      <a href="#selector" class="btn-link-row">
+      <a href="tratamientos/index.html" class="btn-link-row">
         Ver todos los tratamientos
         <svg width="22" height="10" viewBox="0 0 22 10" fill="none" aria-hidden="true"><path d="M0 5h20M16 1l4 4-4 4" stroke="#B89458" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round"></path></svg>
       </a>
@@ -329,14 +353,14 @@
       <h2>Cobertura en Asunción y Gran Asunción</h2>
       <p>Te conectamos con profesionales en las principales ciudades.</p>
       <div class="city-grid">
-        <div class="city"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 21c4-4.4 6-7.6 6-10.4A6 6 0 0 0 6 10.6C6 13.4 8 16.6 12 21Z" stroke="#B89458" stroke-width="1.1" stroke-linejoin="round"></path><circle cx="12" cy="10.4" r="2" stroke="#B89458" stroke-width="1.1"></circle></svg>Asunción</div>
-        <div class="city"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 21c4-4.4 6-7.6 6-10.4A6 6 0 0 0 6 10.6C6 13.4 8 16.6 12 21Z" stroke="#B89458" stroke-width="1.1" stroke-linejoin="round"></path><circle cx="12" cy="10.4" r="2" stroke="#B89458" stroke-width="1.1"></circle></svg>Luque</div>
-        <div class="city"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 21c4-4.4 6-7.6 6-10.4A6 6 0 0 0 6 10.6C6 13.4 8 16.6 12 21Z" stroke="#B89458" stroke-width="1.1" stroke-linejoin="round"></path><circle cx="12" cy="10.4" r="2" stroke="#B89458" stroke-width="1.1"></circle></svg>San Lorenzo</div>
-        <div class="city"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 21c4-4.4 6-7.6 6-10.4A6 6 0 0 0 6 10.6C6 13.4 8 16.6 12 21Z" stroke="#B89458" stroke-width="1.1" stroke-linejoin="round"></path><circle cx="12" cy="10.4" r="2" stroke="#B89458" stroke-width="1.1"></circle></svg>Fernando de la Mora</div>
-        <div class="city"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 21c4-4.4 6-7.6 6-10.4A6 6 0 0 0 6 10.6C6 13.4 8 16.6 12 21Z" stroke="#B89458" stroke-width="1.1" stroke-linejoin="round"></path><circle cx="12" cy="10.4" r="2" stroke="#B89458" stroke-width="1.1"></circle></svg>Lambaré</div>
-        <div class="city"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 21c4-4.4 6-7.6 6-10.4A6 6 0 0 0 6 10.6C6 13.4 8 16.6 12 21Z" stroke="#B89458" stroke-width="1.1" stroke-linejoin="round"></path><circle cx="12" cy="10.4" r="2" stroke="#B89458" stroke-width="1.1"></circle></svg>Capiatá</div>
-        <div class="city"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 21c4-4.4 6-7.6 6-10.4A6 6 0 0 0 6 10.6C6 13.4 8 16.6 12 21Z" stroke="#B89458" stroke-width="1.1" stroke-linejoin="round"></path><circle cx="12" cy="10.4" r="2" stroke="#B89458" stroke-width="1.1"></circle></svg>Mariano Roque Alonso</div>
-        <div class="city"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 21c4-4.4 6-7.6 6-10.4A6 6 0 0 0 6 10.6C6 13.4 8 16.6 12 21Z" stroke="#B89458" stroke-width="1.1" stroke-linejoin="round"></path><circle cx="12" cy="10.4" r="2" stroke="#B89458" stroke-width="1.1"></circle></svg>Limpio</div>
+        <a class="city" href="zonas/asuncion.html"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 21c4-4.4 6-7.6 6-10.4A6 6 0 0 0 6 10.6C6 13.4 8 16.6 12 21Z" stroke="#B89458" stroke-width="1.1" stroke-linejoin="round"></path><circle cx="12" cy="10.4" r="2" stroke="#B89458" stroke-width="1.1"></circle></svg>Asunción</a>
+        <a class="city" href="zonas/luque.html"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 21c4-4.4 6-7.6 6-10.4A6 6 0 0 0 6 10.6C6 13.4 8 16.6 12 21Z" stroke="#B89458" stroke-width="1.1" stroke-linejoin="round"></path><circle cx="12" cy="10.4" r="2" stroke="#B89458" stroke-width="1.1"></circle></svg>Luque</a>
+        <a class="city" href="zonas/san-lorenzo.html"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 21c4-4.4 6-7.6 6-10.4A6 6 0 0 0 6 10.6C6 13.4 8 16.6 12 21Z" stroke="#B89458" stroke-width="1.1" stroke-linejoin="round"></path><circle cx="12" cy="10.4" r="2" stroke="#B89458" stroke-width="1.1"></circle></svg>San Lorenzo</a>
+        <a class="city" href="zonas/fernando-de-la-mora.html"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 21c4-4.4 6-7.6 6-10.4A6 6 0 0 0 6 10.6C6 13.4 8 16.6 12 21Z" stroke="#B89458" stroke-width="1.1" stroke-linejoin="round"></path><circle cx="12" cy="10.4" r="2" stroke="#B89458" stroke-width="1.1"></circle></svg>Fernando de la Mora</a>
+        <a class="city" href="zonas/lambare.html"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 21c4-4.4 6-7.6 6-10.4A6 6 0 0 0 6 10.6C6 13.4 8 16.6 12 21Z" stroke="#B89458" stroke-width="1.1" stroke-linejoin="round"></path><circle cx="12" cy="10.4" r="2" stroke="#B89458" stroke-width="1.1"></circle></svg>Lambaré</a>
+        <a class="city" href="zonas/capiata.html"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 21c4-4.4 6-7.6 6-10.4A6 6 0 0 0 6 10.6C6 13.4 8 16.6 12 21Z" stroke="#B89458" stroke-width="1.1" stroke-linejoin="round"></path><circle cx="12" cy="10.4" r="2" stroke="#B89458" stroke-width="1.1"></circle></svg>Capiatá</a>
+        <a class="city" href="zonas/mariano-roque-alonso.html"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 21c4-4.4 6-7.6 6-10.4A6 6 0 0 0 6 10.6C6 13.4 8 16.6 12 21Z" stroke="#B89458" stroke-width="1.1" stroke-linejoin="round"></path><circle cx="12" cy="10.4" r="2" stroke="#B89458" stroke-width="1.1"></circle></svg>Mariano Roque Alonso</a>
+        <a class="city" href="zonas/limpio.html"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 21c4-4.4 6-7.6 6-10.4A6 6 0 0 0 6 10.6C6 13.4 8 16.6 12 21Z" stroke="#B89458" stroke-width="1.1" stroke-linejoin="round"></path><circle cx="12" cy="10.4" r="2" stroke="#B89458" stroke-width="1.1"></circle></svg>Limpio</a>
       </div>
     </div>
 
@@ -417,6 +441,57 @@
   "url": "https://dentista.com.py/",
   "inLanguage": "es-PY",
   "description": "Plataforma de orientación y conexión con profesionales odontológicos independientes en Asunción y Gran Asunción."
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "Dentista.com.py",
+  "url": "https://dentista.com.py/",
+  "image": "https://dentista.com.py/assets/og.jpg",
+  "description": "Plataforma de orientación y conexión con profesionales odontológicos independientes en Asunción y Gran Asunción.",
+  "areaServed": ["Asunción", "Luque", "San Lorenzo", "Fernando de la Mora", "Lambaré", "Capiatá", "Mariano Roque Alonso", "Limpio"],
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Asunción",
+    "addressCountry": "PY"
+  }
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "¿Dentista.com.py es una clínica dental?",
+      "acceptedAnswer": { "@type": "Answer", "text": "No. Dentista.com.py es una plataforma de orientación y conexión. No atendemos pacientes ni realizamos tratamientos: te escuchamos, te orientamos y te ponemos en contacto con un profesional independiente." }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Cómo sé que el profesional es confiable?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Trabajamos únicamente con profesionales odontológicos habilitados e independientes. Te contamos con quién vas a hablar antes de conectarte, y vos decidís si querés continuar." }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Cuánto cuesta una consulta?",
+      "acceptedAnswer": { "@type": "Answer", "text": "El valor lo define cada profesional según el caso. Antes de coordinar, te ayudamos a entender qué preguntar para que no haya sorpresas." }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Este servicio tiene algún costo?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Escribirnos y recibir orientación no tiene costo para vos." }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Puedo elegir con qué profesional hablar?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Sí. Te presentamos opciones según tu necesidad y ubicación, y la decisión siempre es tuya." }
+    }
+  ]
 }
 </script>
 

@@ -8,14 +8,17 @@ a JavaScript sin dependencias.
 ## Estructura
 
 ```
-index.html          Home completa
-404.html            Página de error
-css/styles.css      Todo el diseño — tokens, layout, animaciones
-js/config.js        ÚNICO archivo a editar para salir a producción
-js/main.js          Selector, FAQ, menú móvil, reveals
-assets/             Imágenes + favicon (ver assets/IMAGENES.md)
-.htaccess           HTTPS, www→no-www, gzip, caché, headers
-robots.txt          + sitemap.xml
+index.html                 Home completa
+404.html                   Página de error
+tratamientos/index.html    Hub de tratamientos
+tratamientos/*.html        8 páginas de tratamiento (urgencias, implantes, ortodoncia, ...)
+zonas/*.html                8 páginas de zona (Asunción, Luque, San Lorenzo, ...)
+css/styles.css              Todo el diseño — tokens, layout, animaciones
+js/config.js                 ÚNICO archivo a editar para salir a producción
+js/main.js                   Selector, FAQ, menú móvil, reveals, dropdown de tratamientos
+assets/                      Imágenes + favicon (ver assets/IMAGENES.md)
+.htaccess                    HTTPS, www→no-www, gzip, caché, headers
+robots.txt                   + sitemap.xml
 ```
 
 ## Antes de publicar
