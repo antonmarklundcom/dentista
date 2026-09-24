@@ -1,58 +1,63 @@
 # Dentista.com.py
 
-Sitio estático (HTML + CSS + JS, sin build) para subir tal cual a Hostinger.
-Reconstrucción 1:1 del diseño de referencia `Dentista_Homepage.dc.html`, con la
-lógica del componente (mobile/desktop, selector de 3 pasos, FAQ, menú) portada
-a JavaScript sin dependencias.
+Lead-generation site for dental patients in Asunción / Gran Asunción, plus a partner funnel
+for dentists who buy those leads. Plain PHP 8 + HTML + CSS, no database, no build step, no
+framework. Runs on Hostinger shared hosting.
 
-## Estructura
+## Two funnels
 
-```
-index.html          Home completa
-404.html            Página de error
-css/styles.css      Todo el diseño — tokens, layout, animaciones
-js/config.js        ÚNICO archivo a editar para salir a producción
-js/main.js          Selector, FAQ, menú móvil, reveals
-assets/             Imágenes + favicon (ver assets/IMAGENES.md)
-.htaccess           HTTPS, www→no-www, gzip, caché, headers
-robots.txt          + sitemap.xml
-```
+| Funnel | Pages | Form `type` | Ads conversion label |
+|---|---|---|---|
+| **Patients** (the leads you sell) | `/`, `/servicios/*`, `/zonas/*`, `/guias/*`, `/contacto/` | `paciente` | `ads_label_patient` |
+| **Dentists** (your buyers) | `/para-odontologos/` | `partner` | `ads_label_partner` |
+| **Google Ads landings** (noindex, no menu) | `/lp/<service>/` e.g. `/lp/brackets/` | `paciente` | `ads_label_patient` |
 
-## Antes de publicar
+Every lead is written to `leads/leads-YYYY-MM.csv` (web access denied) and optionally
+emailed and POSTed to a webhook (VenderCRM, Zapier, Make). Each row carries: ref, treatment,
+zone, urgency, **tier + value**, consent, source page, **gclid + UTM**. That is what makes a
+lead sellable: you can show a dentist exactly what the patient wants, how urgent it is and
+where it came from.
 
-1. **Número de WhatsApp** — abrí `js/config.js` y cambiá `whatsappNumber`
-   por el número real en formato internacional sin `+` ni espacios.
-   Ejemplo: `0981 123 456` → `"595981123456"`.
-   Todos los botones del sitio se actualizan solos.
-2. **Imágenes** — subí los archivos a `assets/` según `assets/IMAGENES.md`.
-   El sitio funciona igual si todavía faltan.
-3. **Dominio** — si el dominio final no es `dentista.com.py`, actualizá la
-   etiqueta `<link rel="canonical">` y las `og:` en `index.html`, más
-   `robots.txt` y `sitemap.xml`.
+## Content = data
 
-## Deploy en Hostinger
+| File | What |
+|---|---|
+| `content/site.php` | business facts, lead values per tier (Ads bidding), promises |
+| `content/servicios/<slug>.php` | one treatment page + its Ads landing (`lp` key) |
+| `content/guias/<slug>.php` | one guide |
+| `content/zonas.php` | city pages |
 
-Subí el contenido de este repositorio dentro de `public_html/` (que
-`index.html` quede en la raíz de `public_html`, no en una subcarpeta).
-No hace falta Node, ni PHP, ni base de datos.
+Add a treatment = add one file in `content/servicios/`. Menu, forms, sitemap, footer, service
+cards and `/lp/<slug>/` all pick it up automatically. One primary keyword per page (see
+`KEYWORDS.md` and the locked KWP map in git history, `STEP-0.md`).
 
-## Cómo funciona el selector
+## Local preview
 
-`js/main.js` mantiene tres valores: necesidad, ciudad y urgencia. Cada
-selección revela el paso siguiente, avanza la barra de progreso (8 → 34 → 66
-→ 100 %) y reescribe el `href` de **todos** los enlaces con atributo
-`data-wa`, de modo que el mensaje precargado de WhatsApp llega armado:
-
-```
-Hola, necesito orientación: Implantes dentales — Luque — Esta semana
+```sh
+php -S localhost:8080 index.php
 ```
 
-Sin JavaScript, el sitio sigue siendo legible y los botones de WhatsApp se
-pueden hacer funcionar poniendo el `href` a mano en el HTML.
+## Deploy on Hostinger
 
-## Responsive
+1. hPanel → the site → **Advanced → Git** → connect this repo, branch `main`, directory
+   empty (= `public_html`). Enable auto-deploy (webhook). No GitHub Actions needed.
+   (Or upload the files to `public_html/` with File Manager.)
+2. **PHP 8.1+** (hPanel → PHP Configuration), with `curl`.
+3. In File Manager copy `config.example.php` → `config.php` and fill it in: WhatsApp number,
+   `email_to`, GA4 id, Ads id + conversion labels. `config.php` is git-ignored — it is never
+   overwritten by a deploy.
+4. Check that `leads/` is writable, then submit a test lead and confirm it lands in the CSV
+   and your email.
+5. Google Search Console: add the domain, submit `https://dentista.com.py/sitemap.xml`.
 
-El componente original alternaba markup con una bandera `mobile` en JS. Acá el
-corte es CSS puro en **1060 px**: por debajo se muestra el hero vertical, la
-grilla de necesidades pasa a 2 columnas, las secciones divididas se apilan y
-aparece la barra fija de WhatsApp al pie.
+## Google Ads setup
+
+1. Create 3 conversion actions in Google Ads: **Lead paciente** (primary), **Lead odontólogo**
+   (primary, separate campaign), **Clic WhatsApp** (secondary). Paste the labels into `config.php`.
+2. Turn on *Enhanced conversions for leads* — the thank-you page already sends the
+   phone/email through gtag (hashed by Google).
+3. Final URL per ad group: `https://dentista.com.py/lp/<service>/?utm_source=google&utm_medium=cpc&utm_campaign=<service>`.
+4. Values: conversions carry `leadValues` from `content/site.php` (PYG). Set them to what a
+   dentist pays you per lead of that tier, then bid on *Maximize conversion value*.
+5. Offline conversion import: the CSV keeps `gclid`, so leads that turn into booked
+   appointments can be uploaded back to Ads as a stronger conversion.

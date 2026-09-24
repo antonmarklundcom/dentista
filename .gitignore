@@ -1,0 +1,5 @@
+config.php
+leads/*
+!leads/.htaccess
+!leads/index.php
+.DS_Store
