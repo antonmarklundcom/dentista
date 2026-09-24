@@ -6,6 +6,7 @@ return [
     'name'        => 'Brackets y ortodoncia',
     'keyword'     => 'brackets',
     'volume'      => 4400,
+    'image'       => null,
     'title'       => 'Brackets en Asunción: coordiná tu evaluación con ortodoncia',
     'description' => 'Brackets en Asunción y Gran Asunción. Tipos, duración y cuidados explicados. Contanos tu caso por WhatsApp y coordinamos tu evaluación, presupuesto sin costo.',
     'h1'          => 'Brackets en Asunción y Gran Asunción',
@@ -59,6 +60,12 @@ return [
             ],
         ],
         [
+            'h2' => 'Otras opciones: brackets autoligables y alineadores transparentes',
+            'p'  => [
+                'Si buscás otras alternativas dentro de la ortodoncia, tenemos páginas dedicadas a los brackets autoligables y a los alineadores transparentes, con más detalle sobre cada opción. El odontólogo es quien determina, después de la evaluación, cuál se ajusta mejor a tu caso.',
+            ],
+        ],
+        [
             'h2' => 'Ortodoncia en adultos: ¿es tarde para usar brackets?',
             'p'  => [
                 'La ortodoncia no tiene un límite de edad fijo. Cada vez es más común que adultos usen brackets para corregir apiñamiento, espacios o problemas de mordida que arrastraron desde jóvenes. El proceso biológico de mover un diente es el mismo a cualquier edad; lo que cambia es que el odontólogo revisa con más detalle el estado de las encías y el hueso antes de definir el plan, porque en adultos es más frecuente encontrar desgaste o retracción que conviene tratar antes de empezar.',
@@ -86,6 +93,6 @@ return [
         'sub'     => 'Contanos tu caso por WhatsApp y coordinamos tu evaluación con un odontólogo matriculado. Presupuesto sin costo.',
         'bullets' => ['Evaluación con odontólogo matriculado', 'Metálicos, estéticos o autoligado según tu caso', 'Presupuesto sin costo después de la evaluación', 'Coordinamos el horario en Asunción o Gran Asunción'],
     ],
-    'related'     => ['profilaxis-dental', 'blanqueamiento-dental'],
+    'related'     => ['brackets-autoligables', 'alineadores-transparentes'],
     'guides'      => ['dolor-de-muelas'],
 ];

@@ -16,6 +16,9 @@ RewriteRule ^ https://%1%{REQUEST_URI} [L,R=301]
 RewriteRule ^(inc|content|templates|leads|docs)(/|$) - [F,L]
 RewriteRule ^(config\.php|config\.example\.php|README\.md|KEYWORDS\.md|\.git.*)$ - [F,L]
 
+# Carpetas con su propio index.php
+RewriteRule ^(wa|admin)/ - [L]
+
 # Todo lo que no sea un archivo real va al front controller
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteRule ^ index.php [L,QSA]

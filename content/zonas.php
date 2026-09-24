@@ -4,15 +4,15 @@ return [
         'name'        => 'San Lorenzo',
         'keyword'     => 'odontologo san lorenzo',
         'volume'      => 210,
-        'title'       => 'Odontólogo en San Lorenzo: coordiná tu consulta',
-        'description' => 'Odontólogo en San Lorenzo: coordinamos tu consulta con un odontólogo matriculado. Respondemos por WhatsApp y el presupuesto es sin costo.',
-        'h1'          => 'Odontólogo en San Lorenzo',
-        'lead'        => 'Si buscás un odontólogo en San Lorenzo, te contamos qué necesitás para coordinar la consulta y qué tratamientos son los que más se piden desde la zona. Contanos tu caso por WhatsApp y coordinamos con un odontólogo matriculado de Asunción o el Gran Asunción.',
+        'title'       => 'Odontología y odontólogo en San Lorenzo: consultá',
+        'description' => 'Odontología en San Lorenzo: coordinamos tu consulta con un odontólogo matriculado. Respondemos por WhatsApp y el presupuesto es sin costo.',
+        'h1'          => 'Odontología y odontólogo en San Lorenzo',
+        'lead'        => 'Si buscás odontología en San Lorenzo o un odontólogo de confianza en la zona, te contamos qué necesitás para coordinar la consulta y qué tratamientos son los que más se piden desde ahí. Muchos de los odontólogos en San Lorenzo que coordinamos también atienden consultas de odontopediatra San Lorenzo para los más chicos. Contanos tu caso por WhatsApp y coordinamos con un odontólogo matriculado de Asunción o el Gran Asunción.',
         'body'        => [
             [
-                'h2' => 'Cómo coordinar tu consulta desde San Lorenzo',
+                'h2' => 'Cómo coordinar tu consulta de odontología en San Lorenzo',
                 'p'  => [
-                    'Desde San Lorenzo, coordinar una consulta odontológica es simple: nos contás por WhatsApp qué te pasa o qué tratamiento buscás, y te confirmamos disponibilidad con un odontólogo matriculado en Asunción o el Gran Asunción. No hace falta llamar ni completar formularios largos, todo se resuelve por chat.',
+                    'Desde San Lorenzo, coordinar una consulta de odontología es simple: nos contás por WhatsApp qué te pasa o qué tratamiento buscás, y te confirmamos disponibilidad con uno de los odontólogos matriculados en Asunción o el Gran Asunción que coordinamos habitualmente. No hace falta llamar ni completar formularios largos, todo se resuelve por chat.',
                     'Una vez coordinado el horario, te pasamos los datos necesarios para que llegues a la consulta sabiendo exactamente qué esperar: con qué profesional te vas a atender y a qué hora. Si preferís la mañana o la tarde, decilo al escribirnos y buscamos el turno que más se ajuste.',
                     'No hace falta que definas de antemano si vas a necesitar un tratamiento largo o una sola visita. Eso se aclara recién en la consulta, después de que el odontólogo revisa tu boca.',
                 ],
@@ -20,7 +20,7 @@ return [
             [
                 'h2' => 'Tratamientos que más se consultan desde San Lorenzo',
                 'p'  => [
-                    'Desde la zona de San Lorenzo, las consultas más frecuentes son por limpieza dental y control de rutina, dolor de muelas o urgencias, y brackets para chicos y adultos. También hay bastante interés en implantes dentales y en prótesis para reemplazar dientes perdidos.',
+                    'Desde la zona de San Lorenzo, las consultas más frecuentes son por limpieza dental y control de rutina, dolor de muelas o urgencias, y brackets para chicos y adultos. También hay bastante interés en implantes dentales, en prótesis para reemplazar dientes perdidos y en odontopediatra San Lorenzo, para familias que buscan un control pensado para los más chicos.',
                     'Sea cual sea el motivo, la primera consulta siempre empieza con una revisión: recién después se define el tratamiento y se da el presupuesto, que no tiene costo. Esto aplica tanto para quien busca una limpieza simple como para quien necesita un tratamiento más largo.',
                     'Si tenés dudas sobre qué tratamiento corresponde a tu caso, no hace falta que lo sepas antes de escribirnos. Contanos el síntoma o lo que te preocupa y el odontólogo se encarga de orientar el diagnóstico.',
                 ],

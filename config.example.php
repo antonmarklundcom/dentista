@@ -2,7 +2,7 @@
 /*
  * Copiá este archivo como config.php EN EL SERVIDOR (hPanel → Administrador de
  * archivos) y completalo. config.php está en .gitignore: nunca se sube a GitHub.
- * Sin config.php el sitio funciona igual con estos valores por defecto.
+ * Sin config.php el sitio funciona igual: los leads quedan en /leads/*.csv.
  */
 return [
     'site_url'        => 'https://dentista.com.py',
@@ -10,17 +10,17 @@ return [
     'phone_display'   => '+595 995 628862',     // ⚠️ confirmar
     'noindex'         => false,                 // true = staging / demo
 
-    // A dónde llegan los leads (además del CSV en /leads/).
-    'email_to'        => '',                    // ej. tu@gmail.com
-    'email_from'      => 'no-reply@dentista.com.py',
-    'webhook_url'     => '',                    // VenderCRM /api/v1/leads, Zapier, Make…
-    'webhook_key'     => '',                    // se envía como header X-API-Key
+    // VenderCRM — la clave va SOLO en config.php del servidor (o variable de
+    // entorno VENDERCRM_API_KEY). Nunca en el repo ni en JavaScript.
+    'vcrm_url'        => 'https://crm.clientes.com.py',
+    'vcrm_api_key'    => '',
 
-    // Google Analytics 4 + Google Ads. Vacío = no se carga ningún script.
-    'ga4_id'             => '',                 // G-XXXXXXXXXX
-    'ads_id'             => '',                 // AW-XXXXXXXXXX
-    'ads_label_patient'  => '',                 // etiqueta de conversión "Lead paciente"
-    'ads_label_partner'  => '',                 // etiqueta de conversión "Lead odontólogo"
-    'ads_label_whatsapp' => '',                 // etiqueta de conversión "Clic WhatsApp"
-    'gsc_verification'   => '',                 // meta google-site-verification (opcional)
+    // Aviso por email de cada lead (opcional, usa mail() de PHP).
+    'email_to'        => '',
+    'email_from'      => 'no-reply@dentista.com.py',
+
+    // Panel /admin/. Generá el hash con:
+    //   php -r "echo password_hash('TU-CLAVE', PASSWORD_DEFAULT), PHP_EOL;"
+    // Vacío = el panel está desactivado.
+    'admin_password_hash' => '',
 ];

@@ -1,16 +1,17 @@
 <?php
 return [
-    'order'       => 2,
+    'order'       => 3,
     'tier'        => 'C',
-    'nav'         => 'Profilaxis dental',
-    'name'        => 'Profilaxis dental',
+    'nav'         => 'Limpieza y sarro',
+    'name'        => 'Profilaxis y limpieza de sarro',
     'keyword'     => 'profilaxis dental',
     'volume'      => 1300,
-    'title'       => 'Profilaxis dental en Asunción: limpieza y presupuesto',
-    'description' => 'Profilaxis dental en Asunción y Gran Asunción: qué incluye la limpieza, cuándo hacerla y qué es el destartraje. Escribinos por WhatsApp, presupuesto sin costo.',
-    'h1'          => 'Profilaxis dental en Asunción y Gran Asunción',
-    'lead'        => 'La profilaxis dental es la limpieza que remueve la placa bacteriana y el sarro que el cepillado diario no llega a sacar. Se hace en consultorio, con instrumental específico, y es parte del cuidado preventivo que recomienda cualquier odontólogo. Contanos cuándo te conviene hacerla y coordinamos tu turno con un odontólogo matriculado.',
-    'card'        => 'Limpieza dental profesional para remover placa y sarro. Coordinamos tu turno con un odontólogo, presupuesto sin costo.',
+    'image'       => null,
+    'title'       => 'Profilaxis dental y limpieza de sarro en Asunción',
+    'description' => 'Profilaxis dental y limpieza de sarro en Asunción: qué incluye, cuándo hacerla y qué es el destartraje. Escribinos por WhatsApp, presupuesto sin costo.',
+    'h1'          => 'Profilaxis dental y limpieza de sarro en Asunción y Gran Asunción',
+    'lead'        => 'La profilaxis dental es la limpieza de sarro y placa bacteriana que el cepillado diario no llega a sacar. Se hace en consultorio, con instrumental específico, y es parte del cuidado preventivo que recomienda cualquier odontólogo. Contanos cuándo te conviene hacerla y coordinamos tu turno con un odontólogo matriculado.',
+    'card'        => 'Limpieza dental profesional para remover placa y sarro de los dientes. Coordinamos tu turno con un odontólogo, presupuesto sin costo.',
     'highlights'  => ['Remueve placa y sarro', 'Se recomienda cada 6 meses', 'Sin costo la orientación por WhatsApp'],
     'sections'    => [
         [
@@ -23,14 +24,14 @@ return [
         [
             'h2' => 'Profilaxis dental vs. destartraje: no es lo mismo',
             'p'  => [
-                'La profilaxis limpia la placa blanda, la que todavía no se endureció. El destartraje, en cambio, remueve el sarro (tártaro) ya endurecido y adherido al diente, que el cepillo no puede sacar. Muchas veces se hacen en la misma sesión: primero el destartraje, si hay sarro visible, y después el pulido que deja la superficie lisa.',
+                'La profilaxis limpia la placa blanda, la que todavía no se endureció. El destartraje, en cambio, es la limpieza de sarro (tártaro) ya endurecido y adherido al diente, que el cepillo no puede sacar. El sarro en los dientes se forma cuando la placa bacteriana no se remueve a tiempo y se calcifica, generalmente cerca de la línea de la encía. Muchas veces la profilaxis y el destartraje se hacen en la misma sesión: primero se saca el sarro visible, y después se pule la superficie.',
                 'Cuando hay acumulación de sarro por debajo de la línea de la encía, el odontólogo puede indicar un curetaje, un procedimiento más profundo enfocado en las encías. Si es tu caso, podés ver en detalle qué implica en nuestra guía de curetaje dental.',
             ],
         ],
         [
-            'h2' => '¿Cómo se hace la limpieza dental con ultrasonido?',
+            'h2' => 'Limpieza de sarro dental con ultrasonido: cómo se hace',
             'p'  => [
-                'La mayoría de las limpiezas actuales usan un equipo de ultrasonido dental: una punta vibra a alta frecuencia y desprende el sarro sin necesidad de raspar manualmente toda la superficie, lo que hace el procedimiento más rápido y más cómodo que las técnicas manuales antiguas. Después de esa etapa, el odontólogo pule los dientes con una pasta específica para dejar la superficie lisa, lo que además dificulta que la placa se vuelva a pegar tan rápido.',
+                'La mayoría de las limpiezas de sarro dental actuales usan un equipo de ultrasonido dental: una punta vibra a alta frecuencia y desprende el sarro sin necesidad de raspar manualmente toda la superficie, lo que hace el procedimiento más rápido y más cómodo que las técnicas manuales antiguas. Después de esa etapa, el odontólogo pule los dientes con una pasta específica para dejar la superficie lisa, lo que además dificulta que la placa se vuelva a pegar tan rápido.',
                 'La sesión suele durar entre 30 y 45 minutos, aunque puede variar si hay mucho sarro acumulado, si se combina con otros controles o si el odontólogo detecta zonas que necesitan más atención. Al terminar, es normal notar los dientes más lisos al pasar la lengua y las encías levemente sensibles por un día o dos.',
             ],
         ],
@@ -42,9 +43,9 @@ return [
             ],
         ],
         [
-            'h2' => '¿Cuánto cuesta la profilaxis dental en Paraguay?',
+            'h2' => 'Limpieza dental precio: qué define el presupuesto',
             'p'  => [
-                'El precio de una limpieza dental depende de si se necesita solo profilaxis, o profilaxis más destartraje por acumulación de sarro, de la duración de la sesión y de si hace falta un curetaje por sarro debajo de la encía. Por eso no publicamos un monto: cualquier cifra sin ver tu boca sería una estimación al aire, y el odontólogo prefiere revisar antes de comprometerse a un número.',
+                'La limpieza dental precio es de las búsquedas más frecuentes, y la respuesta honesta es que depende de cada boca: si se necesita solo profilaxis, o profilaxis más destartraje por acumulación de sarro, de la duración de la sesión y de si hace falta un curetaje por sarro debajo de la encía. Por eso no publicamos un monto: cualquier cifra sin ver tu boca sería una estimación al aire, y el odontólogo prefiere revisar antes de comprometerse a un número.',
                 'Esa evaluación inicial la coordinamos por WhatsApp y la consulta de orientación no tiene costo. En esa misma cita, el odontólogo suele poder hacer la limpieza si el estado de la boca lo permite.',
             ],
         ],
@@ -76,6 +77,6 @@ return [
         'sub'     => 'Contanos cuándo fue tu última limpieza y coordinamos tu turno con un odontólogo matriculado. Presupuesto sin costo.',
         'bullets' => ['Profilaxis y destartraje con equipo de ultrasonido', 'Evaluación con odontólogo matriculado', 'Presupuesto sin costo después de la evaluación', 'Coordinamos el horario en Asunción o Gran Asunción'],
     ],
-    'related'     => ['blanqueamiento-dental', 'brackets'],
-    'guides'      => ['curetaje-dental'],
+    'related'     => ['encias-inflamadas', 'blanqueamiento-dental'],
+    'guides'      => ['sarro-dental', 'curetaje-dental', 'placa-bacteriana'],
 ];

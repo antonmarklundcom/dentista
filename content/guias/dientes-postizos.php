@@ -1,11 +1,13 @@
 <?php
 return [
-    'order'       => 2,
+    'order'       => 8,
     'keyword'     => 'dientes postizos',
     'volume'      => 90,
-    'service'     => 'implantes-dentales',
+    'service'     => 'protesis-dental',
     'nav'         => 'Dientes postizos',
     'updated'     => '2026-09-24',
+    'card'        => 'Dientes postizos: prótesis fija, removible o placa dental. Diferencias y cómo coordinar la evaluación sin costo por WhatsApp.',
+    'image'       => null,
     'title'       => 'Dientes postizos en Asunción: tipos y opciones',
     'description' => 'Dientes postizos: prótesis fija, removible o placa dental. Diferencias, cuándo conviene cada una y cómo coordinar la evaluación sin costo por WhatsApp.',
     'h1'          => 'Dientes postizos en Asunción y Gran Asunción',

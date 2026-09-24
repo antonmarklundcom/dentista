@@ -1,11 +1,12 @@
 <?php
 return [
-    'order'       => 4,
+    'order'       => 10,
     'tier'        => 'A',
     'nav'         => 'Implantes',
     'name'        => 'Implantes dentales',
     'keyword'     => 'implantes dentales',
     'volume'      => null,
+    'image'       => null,
     'title'       => 'Implantes dentales en Asunción: consulta y presupuesto',
     'description' => 'Coordinamos tu consulta por implantes dentales con odontólogos matriculados en Asunción y Gran Asunción. Presupuesto sin costo. Escribinos por WhatsApp.',
     'h1'          => 'Implantes dentales en Asunción y Gran Asunción',

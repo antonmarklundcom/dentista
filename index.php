@@ -9,13 +9,13 @@ $path = rawurldecode(parse_url($_SERVER['REQUEST_URI'] ?? '/', PHP_URL_PATH) ?: 
 
 if (PHP_SAPI === 'cli-server' && $path !== '/') {
     if (preg_match('#^/(inc|content|leads|templates|docs)/|^/(config|KEYWORDS|README)#', $path)) { http_response_code(403); exit('Forbidden'); }
-    if (is_file(__DIR__ . $path)) return false;
+    if (is_file(__DIR__ . $path) || is_file(__DIR__ . rtrim($path, '/') . '/index.php')) return false;
 }
 
 if ($path === '/sitemap.xml') { require ROOT . '/templates/sitemap.php'; exit; }
 if ($path === '/robots.txt') {
     header('Content-Type: text/plain; charset=utf-8');
-    echo cfg('noindex') ? "User-agent: *\nDisallow: /\n" : "User-agent: *\nDisallow: /gracias/\nDisallow: /lp/\nDisallow: /enviar.php\n\nSitemap: " . abs_url('/sitemap.xml') . "\n";
+    echo cfg('noindex') ? "User-agent: *\nDisallow: /\n" : "User-agent: *\nDisallow: /gracias/\nDisallow: /lp/\nDisallow: /wa/\nDisallow: /admin/\nDisallow: /enviar.php\n\nSitemap: " . abs_url('/sitemap.xml') . "\n";
     exit;
 }
 
@@ -37,8 +37,11 @@ switch (true) {
     case $one === 'servicios' && isset(services()[$two]): $s = services()[$two]; require ROOT . '/templates/service.php'; break;
     case $one === 'zonas' && $two === null:             $hub = 'zonas'; require ROOT . '/templates/hub.php'; break;
     case $one === 'zonas' && isset(zones()[$two]):      $zslug = $two; $z = zones()[$two]; require ROOT . '/templates/zone.php'; break;
-    case $one === 'guias' && $two === null:             $hub = 'guias'; require ROOT . '/templates/hub.php'; break;
-    case $one === 'guias' && isset(guides()[$two]):     $g = guides()[$two]; require ROOT . '/templates/guide.php'; break;
+    case $one === 'guias':                              header('Location: ' . ($two !== null && isset(guides()[$two]) ? guide_url($two) : '/salud-dental/'), true, 301); exit;
+    case $one === 'salud-dental' && $two === null:      $hub = 'guias'; require ROOT . '/templates/hub.php'; break;
+    case $one === 'salud-dental' && $two === 'consultorios-odontologicos': header('Location: /consultorios-odontologicos/', true, 301); exit;
+    case $one === 'salud-dental' && isset(guides()[$two]): $g = guides()[$two]; require ROOT . '/templates/guide.php'; break;
+    case $one === 'consultorios-odontologicos' && $two === null && isset(guides()['consultorios-odontologicos']): $g = guides()['consultorios-odontologicos']; require ROOT . '/templates/guide.php'; break;
     case $one === 'lp' && isset(services()[$two]):      $s = services()[$two]; require ROOT . '/templates/landing.php'; break;
     case $one === 'para-odontologos' && $two === null:  require ROOT . '/templates/partner.php'; break;
     case $one === 'contacto' && $two === null:          require ROOT . '/templates/contact.php'; break;

@@ -1,11 +1,12 @@
 <?php
 return [
-    'order'       => 5,
+    'order'       => 9,
     'tier'        => 'B',
     'nav'         => 'Muela de juicio',
     'name'        => 'Muela del juicio y exodoncias',
     'keyword'     => 'muela de juicio',
     'volume'      => 590,
+    'image'       => null,
     'title'       => 'Muela de juicio en Asunción: extracción y exodoncias',
     'description' => 'Coordinamos tu consulta por dolor de muela de juicio o extracción de dientes con odontólogos matriculados en Asunción. Presupuesto sin costo, WhatsApp.',
     'h1'          => 'Muela de juicio y exodoncias en Asunción y Gran Asunción',

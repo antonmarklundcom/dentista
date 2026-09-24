@@ -1,11 +1,12 @@
 <?php
 return [
-    'order'       => 6,
+    'order'       => 12,
     'tier'        => 'C',
     'nav'         => 'Odontopediatría',
     'name'        => 'Odontopediatría',
     'keyword'     => 'odontopediatria',
     'volume'      => 320,
+    'image'       => null,
     'title'       => 'Odontopediatría en Asunción: odontólogo para niños',
     'description' => 'Coordinamos la primera visita al dentista de tu hijo con odontopediatras matriculados en Asunción y Gran Asunción. Presupuesto sin costo, WhatsApp.',
     'h1'          => 'Odontopediatría en Asunción y Gran Asunción',

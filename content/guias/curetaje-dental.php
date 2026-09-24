@@ -1,11 +1,13 @@
 <?php
 return [
-    'order'       => 1,
+    'order'       => 7,
     'keyword'     => 'curetaje',
     'volume'      => 170,
     'service'     => 'profilaxis-dental',
     'nav'         => 'Curetaje dental',
     'updated'     => '2026-09-24',
+    'card'        => 'Curetaje dental (raspado y alisado radicular): qué es, cuándo lo indica el odontólogo y cómo se coordina. Sin costo por WhatsApp.',
+    'image'       => null,
     'title'       => 'Curetaje dental en Asunción: qué es y cuándo se hace',
     'description' => 'Curetaje dental (raspado y alisado radicular): qué es, cuándo lo indica el odontólogo y cómo se coordina. Presupuesto sin costo por WhatsApp.',
     'h1'          => 'Curetaje dental en Asunción y Gran Asunción',
