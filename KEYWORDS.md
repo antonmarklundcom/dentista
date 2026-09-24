@@ -1,95 +1,89 @@
-# Keyword Planner — next run (50 keywords)
+# Keyword Planner — round 2 (50 keywords)
 
-**Settings (important):** Location **Paraguay** (not "all locations") · Language **Spanish** ·
-Google · last 12 months. Export CSV with *Avg. monthly searches*, *Three month change*,
-*Competition* and **Top of page bid (low/high)**. The bid column matters most: it is what
-advertisers already pay per click, i.e. what a lead is worth when you sell it to a dentist.
+Round 1 results: `docs/kwp-2026-09.md`.
 
-Already run (STEP-0, locked): dentista, dentista cerca de mi, brackets, profilaxis dental,
-blanqueamiento dental, muela de juicio, odontopediatria, curetaje, dientes postizos,
-odontologo san lorenzo, dentista luque/lambare/fernando de la mora. Re-run `dentista` and
-`brackets` in the same batch as a control — if the numbers change a lot, the old export was
-run without the Paraguay location filter.
+**Settings:** Location **Paraguay** · Language **Spanish** · last 12 months. Export
+volume + **Top of page bid (low/high)**.
 
-## 1 — High-ticket treatments (most valuable to sell)
+## 1 — Missing from round 1 (high value, re-check)
 
 ```
 implantes dentales
-implante dental precio
-implantes dentales paraguay
-carillas dentales
-carillas de resina
-diseño de sonrisa
-protesis dental
-protesis fija
-all on 4
-corona dental
-```
-
-## 2 — Orthodontics and aesthetics (biggest volume)
-
-```
+implante dental
+precio implante dental
 ortodoncia
 ortodoncista
-ortodoncia invisible
-alineadores invisibles
-brackets precio
-brackets zafiro
-brackets autoligado
-brackets para adultos
-carillas de porcelana
-retenedor dental
-```
-
-## 3 — Urgent / pain (hottest leads)
-
-```
-dentista de urgencia
-urgencia dental
-dentista 24 horas
-dolor de muela
-dolor de muela que hacer
-muela infectada
-flemon dental
-tratamiento de conducto
 endodoncia
-diente roto
+tratamiento de conducto
+corona dental
+diseño de sonrisa
+puente dental
 ```
 
-## 4 — Local and buyer modifiers
+## 2 — Aligners, Invisalign, aesthetic
 
 ```
-odontologo cerca de mi
-clinica dental cerca de mi
-clinica dental asuncion
-odontologo asuncion
-dentista villa morra
-dentista capiata
-dentista mariano roque alonso
-dentista economico
-odontologo ips
-consulta dental precio
+invisalign
+invisalign precio
+alineadores
+alineadores transparentes
+ortodoncia invisible
+brackets invisibles
+brackets esteticos
+carillas de resina
+carillas dentales
+carillas de composite
 ```
 
-## 5 — Dentist side (partners + what leads are worth)
+## 3 — Prosthesis (the highest CPC in round 1)
 
 ```
-marketing dental
-marketing para dentistas
-publicidad para dentistas
-pacientes para dentistas
-como conseguir pacientes dentista
-software para consultorio dental
-alquiler consultorio odontologico
-trabajo odontologo asuncion
-equipamiento odontologico paraguay
-sillon dental
+protesis dental precio
+dentadura postiza
+placa dental
+protesis flexible
+protesis removible
+protesis fija
+protesis sobre implantes
+protesis parcial
+dentadura completa
+arreglo de protesis dental
+```
+
+## 4 — Tartar, gums, bite
+
+```
+sarro dental
+como quitar el sarro
+sarro en los dientes
+encias inflamadas
+encias sangrantes
+periodoncia
+periodontitis
+piorrea
+mal aliento
+bruxismo
+```
+
+## 5 — Clinic intent + bigger cities
+
+```
+consultorio odontologico
+consultorio odontologico asuncion
+clinica dental
+clinica odontologica cerca de mi
+odontologo luque
+odontologo lambare
+dentista ciudad del este
+dentista encarnacion
+dentista san lorenzo
+dentista villa elisa
 ```
 
 ## How to use the results
 
 - **Volume ≥ 90** and no page yet → new page in `content/servicios/` or `content/guias/`.
 - **High bid** but low volume → Google Ads landing page (`/lp/<slug>/`), not an SEO page.
-- Block 5: volume will probably be low in PY. The bid is what matters: a high bid means
-  dentists already pay for patients, so you can charge more per lead.
+- Ciudad del Este / Encarnación: if volume is strong, the site can go national with city
+  pages, once there is at least one partner there.
 - Update `volume` in each content file, and `leadValues` in `content/site.php`, once bids are known.

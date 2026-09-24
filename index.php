@@ -8,7 +8,7 @@ require_once __DIR__ . '/inc/app.php';
 $path = rawurldecode(parse_url($_SERVER['REQUEST_URI'] ?? '/', PHP_URL_PATH) ?: '/');
 
 if (PHP_SAPI === 'cli-server' && $path !== '/') {
-    if (preg_match('#^/(inc|content|leads|templates)/|^/config#', $path)) { http_response_code(403); exit('Forbidden'); }
+    if (preg_match('#^/(inc|content|leads|templates|docs)/|^/(config|KEYWORDS|README)#', $path)) { http_response_code(403); exit('Forbidden'); }
     if (is_file(__DIR__ . $path)) return false;
 }
 
