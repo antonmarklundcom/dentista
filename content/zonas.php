@@ -211,6 +211,8 @@ return [
                     'Apenas confirmamos el turno, te pasamos los datos del odontólogo y lo que conviene llevar, para que la primera visita sea lo más ordenada posible.',
                     'Todo el proceso se hace por chat, sin necesidad de llamadas ni de completar formularios extensos antes de la cita.',
                     'Si preferís que te confirmemos el turno con un poco de anticipación para organizarte, decilo al escribirnos y lo tenemos en cuenta.',
+                    'Contanos también si la consulta es urgente o puede esperar unos días, para priorizar la búsqueda de disponibilidad según corresponda.',
+                    'Cualquier duda que surja antes de la cita, podés resolverla escribiendo de nuevo por el mismo chat.',
                 ],
             ],
             [
@@ -279,6 +281,8 @@ return [
                     'El intercambio por WhatsApp queda registrado, así que podés volver a escribirnos si tenés dudas antes de la cita sin tener que repetir todo desde cero.',
                     'Si necesitás cambiar el horario coordinado, avisanos con anticipación y buscamos otra opción disponible.',
                     'Si preferís que la consulta sea a primera hora o al final del día, contanos esa preferencia y la tenemos en cuenta al confirmar el turno.',
+                    'Contanos también si el motivo es una urgencia o una consulta que puede esperar unos días, para ajustar la prioridad al buscar disponibilidad.',
+                    'Ante cualquier duda que surja antes de la cita, podés volver a escribirnos por el mismo chat.',
                 ],
             ],
             [
@@ -347,6 +351,8 @@ return [
                     'Todo el proceso se resuelve por chat, sin necesidad de completar formularios largos ni de hacer llamadas previas.',
                     'Si necesitás reprogramar el turno una vez coordinado, avisanos con tiempo y buscamos otra fecha disponible.',
                     'Si tenés alguna preferencia de horario o de día, contanosla desde el primer mensaje para agilizar la búsqueda de disponibilidad.',
+                    'Si es una urgencia, decilo directamente al principio del mensaje para que priorizamos la respuesta.',
+                    'Cualquier duda que te surja antes de la cita, podés escribirnos de nuevo por el mismo chat.',
                 ],
             ],
             [
@@ -364,6 +370,7 @@ return [
                     'Llevá documento de identidad y cualquier radiografía o estudio dental previo que tengas. Si ya tenés un diagnóstico de otro profesional, contárselo al odontólogo ayuda a agilizar la primera evaluación.',
                     'Si el motivo es dolor, no hace falta juntar nada antes de escribirnos: contanos qué sentís y coordinamos la consulta cuanto antes.',
                     'Para consultas de rutina, alcanza con presentarte en el horario coordinado; el resto se organiza en la consulta misma.',
+                    'Si tenés alguna duda antes del día de la cita, podés escribirnos de nuevo por el mismo chat sin problema.',
                 ],
             ],
             [
