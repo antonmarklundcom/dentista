@@ -25,12 +25,13 @@ render([
   <div class="container hero__grid">
     <div class="hero__copy">
       <?php crumbs($Z_crumbs); ?>
-      <p class="eyebrow"><?= e($z['name']) ?> · Departamento Central</p>
+      <p class="eyebrow"><span class="eyebrow__icon"><?= icon('pin') ?></span><?= e($z['name']) ?> · Departamento Central</p>
       <h1><?= e($z['h1']) ?></h1>
       <p class="lead"><?= e($z['lead']) ?></p>
       <div class="btn-row">
-        <a class="btn btn--wa" href="<?= e(wa_link($Z_wa)) ?>" data-wa data-ev-loc="zone-hero" rel="noopener" target="_blank"><?php require ROOT . '/inc/icon-wa.php'; ?>Escribinos por WhatsApp</a>
+        <?= wa_btn($Z_wa, 'Escribinos por WhatsApp', 'zone-hero', 'btn btn--ink btn--lg') ?>
       </div>
+      <?php ticks_inline(['Presupuesto sin costo', 'Odontólogos matriculados', 'El horario que te sirva']); ?>
     </div>
     <div class="hero__form">
       <?php $F_zone = $zslug; $F_source = 'zona:' . $zslug; $F_title = 'Pedí tu turno en ' . $z['name']; require ROOT . '/inc/lead-form.php'; ?>
@@ -40,7 +41,10 @@ render([
 
 <?php promise_band(); ?>
 
-<div class="container article article--single">
+<div class="container article">
+  <aside class="article__side">
+    <?php toc_block($z['body']); ?>
+  </aside>
   <div class="article__main prose">
     <?php sections_block_anchored($z['body']); ?>
     <?php faq_block($z['faq'] ?? []); ?>
@@ -49,11 +53,11 @@ render([
 
 <section class="section section--tint">
   <div class="container">
-    <div class="section-head"><p class="eyebrow">Tratamientos</p><h2>Qué podés consultar desde <?= e($z['name']) ?></h2></div>
+    <div class="section-head section-head--link"><div><?= eyebrow('Tratamientos') ?><h2>Qué podés consultar desde <?= e($z['name']) ?></h2></div><a class="link-arrow" href="/servicios/">Ver todos<?= arrow() ?></a></div>
     <?php service_cards(); ?>
-    <?php if (!empty($z['nearby'])): ?><p class="zone-inline">Cerca de <?= e($z['name']) ?> también coordinamos en <?= e(implode(', ', $z['nearby'])) ?> y <a href="/">Asunción</a>.</p><?php endif; ?>
+    <p class="zone-inline"><?php if (!empty($z['nearby'])): ?>Cerca de <?= e($z['name']) ?> también coordinamos en <?= e(implode(', ', $z['nearby'])) ?> y <a href="/">Asunción</a>. <?php endif; ?>Ver <a href="/zonas/">todas las zonas</a>.</p>
   </div>
 </section>
 
-<?php cta_band('Tu consulta en ' . $z['name'] . ', coordinada hoy.', 'Contanos qué necesitás y te confirmamos disponibilidad por WhatsApp.', $Z_wa, 'zone-cta'); ?>
+<?php cta_band('Tu consulta en ' . $z['name'] . ',', 'Contanos qué necesitás y te confirmamos disponibilidad por WhatsApp.', $Z_wa, 'zone-cta', 'coordinada hoy.'); ?>
 <?php }]);

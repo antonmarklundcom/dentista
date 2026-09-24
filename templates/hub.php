@@ -1,49 +1,62 @@
 <?php
 /** @var string $hub servicios|zonas|guias */
 $HUB = [
-    'servicios' => ['Tratamientos', 'Tratamientos dentales en Asunción | Dentista.com.py', 'Brackets, limpieza dental, blanqueamiento, implantes, muela del juicio y odontopediatría en Asunción. Coordinamos tu consulta. Presupuesto sin costo.', 'Tratamientos dentales en Asunción', 'Elegí el tratamiento que te interesa para ver cómo es, qué conviene saber antes y cómo es la primera consulta. Si no sabés qué necesitás, pedí una revisión general.'],
+    'servicios' => ['Tratamientos', 'Tratamientos dentales en Asunción | Dentista.com.py', 'Brackets, prótesis, limpieza dental, blanqueamiento, implantes, muela del juicio y odontopediatría en Asunción. Coordinamos tu consulta. Presupuesto sin costo.', 'Tratamientos dentales en Asunción', 'Elegí el tratamiento que te interesa para ver cómo es, qué conviene saber antes y cómo es la primera consulta. Si no sabés qué necesitás, pedí una revisión general.'],
     'zonas'     => ['Zonas', 'Dentista en Gran Asunción: zonas | Dentista.com.py', 'Coordinamos consultas odontológicas en Asunción, San Lorenzo, Luque, Lambaré, Fernando de la Mora, Capiatá y Mariano Roque Alonso. Escribinos por WhatsApp.', 'Dentista en el Gran Asunción', 'Coordinamos tu consulta lo más cerca posible de donde vivís o trabajás. Elegí tu ciudad.'],
-    'guias'     => ['Salud dental', 'Salud dental: guías claras | Dentista.com.py', 'Guías claras sobre salud dental: curetaje, dientes postizos, dolor de muelas y más. Qué es, cuándo consultar y qué preguntar al odontólogo en Asunción.', 'Guías de salud dental', 'Información clara para llegar a la consulta sabiendo qué preguntar. Ninguna guía reemplaza la evaluación de un odontólogo.'],
+    'guias'     => ['Salud dental', 'Salud dental: guías claras | Dentista.com.py', 'Guías claras de salud dental: sarro, placa bacteriana, gingivitis, dolor de muelas y más. Qué es, cuándo consultar y qué preguntar al odontólogo en Asunción.', 'Salud dental: guías claras antes de la consulta', 'Información clara para llegar a la consulta sabiendo qué preguntar. Ninguna guía reemplaza la evaluación de un odontólogo.'],
 ][$hub];
 [$HB_label, $HB_title, $HB_desc, $HB_h1, $HB_lead] = $HUB;
 $HB_crumbs = [['Inicio', '/'], [$HB_label, $hub === 'guias' ? '/salud-dental/' : "/$hub/"]];
 render([
     'title' => $HB_title,
     'description' => $HB_desc,
+    'bodyClass' => 'page-hub page-hub--' . $hub,
     'schema' => [breadcrumb_schema($HB_crumbs)],
-    'body' => function () use ($hub, $HB_crumbs, $HB_h1, $HB_lead) { ?>
-<section class="hero hero--inner">
-  <div class="container narrow">
+    'body' => function () use ($hub, $HB_crumbs, $HB_h1, $HB_lead, $HB_label) { ?>
+<section class="hero hero--inner hero--hub">
+  <div class="container"><div class="hero__narrow">
     <?php crumbs($HB_crumbs); ?>
+    <?= eyebrow($HB_label, true) ?>
     <h1><?= e($HB_h1) ?></h1>
     <p class="lead"><?= e($HB_lead) ?></p>
-  </div>
+  </div></div>
 </section>
 <section class="section section--flush">
   <div class="container">
-  <?php if ($hub === 'servicios'): service_cards(null, 'is-home'); ?>
+  <?php if ($hub === 'servicios'): bento_services(isset(guides()['dolor-de-muelas']) ? guide_url('dolor-de-muelas') : '/contacto/'); ?>
   <?php elseif ($hub === 'zonas'): ?>
-    <div class="guide-grid">
-      <a class="card card--ink guide-card" href="/"><h3>Asunción</h3><p>Coordinamos consultas en toda la capital, cerca de tu casa o de tu trabajo.</p><span class="svc-card__more">Ver →</span></a>
+    <div class="zones">
+      <div>
+        <h2>Elegí tu ciudad</h2>
+        <?php zone_links(); ?>
+      </div>
+      <?php zone_map(); ?>
+    </div>
+    <div class="card-grid card-grid--zones">
       <?php foreach (zones() as $zs => $zz): ?>
-      <a class="card card--hair guide-card" href="/zonas/<?= e($zs) ?>/"><h3><?= e($zz['name']) ?></h3><p><?= e(mb_strimwidth($zz['lead'], 0, 150, '…')) ?></p><span class="svc-card__more">Ver zona →</span></a>
+      <article class="card card--link"><span class="card__icon"><?= icon('pin') ?></span><h3><a class="stretch" href="/zonas/<?= e($zs) ?>/"><?= e($zz['name']) ?></a></h3><p><?= e(mb_strimwidth($zz['lead'], 0, 150, '…')) ?></p><span class="link-arrow">Ver zona<?= arrow() ?></span></article>
       <?php endforeach; ?>
     </div>
   <?php else: ?>
-    <div class="guide-grid">
-      <?php foreach (edu_guides() as $G): ?>
-      <a class="card card--hair guide-card" href="<?= e(guide_url($G['slug'])) ?>"><h3><?= e($G['h1']) ?></h3><p><?= e($G['card'] ?? mb_strimwidth($G['lead'], 0, 170, '…')) ?></p><span class="svc-card__more">Leer guía →</span></a>
-      <?php endforeach; ?>
-    </div>
+    <?php guide_cards(edu_guides()); ?>
+    <?php if (isset(guides()['consultorios-odontologicos'])): $CG = guides()['consultorios-odontologicos']; ?>
+    <a class="feature-link" href="<?= e(guide_url('consultorios-odontologicos')) ?>">
+      <span class="features__i features__i--sand"><?= icon('clinic') ?></span>
+      <span><span class="feature-link__k">Cómo elegir</span><span class="feature-link__t"><?= e($CG['h1']) ?></span><span class="feature-link__p"><?= e($CG['card'] ?? '') ?></span></span>
+      <?= arrow() ?>
+    </a>
+    <?php endif; ?>
   <?php endif; ?>
   </div>
 </section>
+<?php if ($hub === 'servicios') before_after_block(null, 'Así puede cambiar una sonrisa', 'section section--line'); ?>
 <section class="section section--tint">
   <div class="container form-section">
     <div>
-      <p class="eyebrow">Coordiná tu consulta</p>
+      <?= eyebrow('Coordiná tu consulta') ?>
       <h2>¿No sabés por dónde empezar?</h2>
-      <p>Pedí una revisión general. El odontólogo te revisa, te explica qué encontró y te pasa el presupuesto sin costo. Después decidís vos.</p>
+      <p class="section-lead">Pedí una revisión general. El odontólogo te revisa, te explica qué encontró y te pasa el presupuesto sin costo. Después decidís vos.</p>
+      <?php ticks_inline(['Presupuesto sin costo', 'Odontólogos matriculados', 'Vos decidís antes de empezar'], 'ticks-inline--stack'); ?>
     </div>
     <?php $F_source = 'hub:' . $hub; require ROOT . '/inc/lead-form.php'; ?>
   </div>
