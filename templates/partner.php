@@ -40,7 +40,7 @@ render([
         <input type="hidden" name="type" value="partner">
         <input type="hidden" name="source" value="para-odontologos">
         <input type="hidden" name="page" value="/para-odontologos/">
-        <?php foreach (['gclid','gbraid','wbraid','utm_source','utm_medium','utm_campaign','utm_term','utm_content'] as $k): ?><input type="hidden" name="<?= $k ?>" value="" data-track="<?= $k ?>"><?php endforeach; ?>
+        <?php foreach (['utm_source','utm_medium','utm_campaign','utm_term','utm_content'] as $k): ?><input type="hidden" name="<?= $k ?>" value="" data-track="<?= $k ?>"><?php endforeach; ?>
         <div class="hp" aria-hidden="true"><label>No completar <input type="text" name="website" tabindex="-1" autocomplete="off"></label></div>
         <div class="field-row">
           <label class="field"><span>Tu nombre</span><input type="text" name="name" required maxlength="80" autocomplete="name" placeholder="Dr./Dra."></label>

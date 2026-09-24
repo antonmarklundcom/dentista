@@ -4,8 +4,6 @@ $L_path      = parse_url($_SERVER['REQUEST_URI'] ?? '/', PHP_URL_PATH) ?: '/';
 $L_canonical = $page['canonical'] ?? abs_url($L_path);
 $L_noindex   = !empty($page['noindex']) || cfg('noindex');
 $L_lp        = !empty($page['lp']);
-$L_ga4       = cfg('ga4_id');
-$L_ads       = cfg('ads_id');
 $L_waDefault = $page['wa'] ?? 'Hola, vengo de dentista.com.py — quiero coordinar una consulta odontológica.';
 $L_schema    = $page['schema'] ?? [];
 $L_schema[]  = [
@@ -35,23 +33,13 @@ $L_schema[]  = [
 <meta property="og:url" content="<?= e($L_canonical) ?>">
 <meta name="theme-color" content="#14241E">
 <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500&family=Inter+Tight:wght@400;500;600&display=swap">
+<link rel="preload" href="/assets/fonts/fraunces.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/fonts/inter-tight.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="/assets/css/site.css?v=<?= @filemtime(ROOT . '/assets/css/site.css') ?>">
 <?php foreach ($L_schema as $L_s): ?>
 <script type="application/ld+json"><?= json_encode($L_s, JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES) ?></script>
 <?php endforeach; ?>
-<?php if ($L_ga4 || $L_ads): $L_first = $L_ga4 ?: $L_ads; ?>
-<script async src="https://www.googletagmanager.com/gtag/js?id=<?= e($L_first) ?>"></script>
-<script>
-window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}
-gtag('js',new Date());
-<?php if ($L_ga4): ?>gtag('config','<?= e($L_ga4) ?>');<?php endif; ?>
-<?php if ($L_ads): ?>gtag('config','<?= e($L_ads) ?>',{allow_enhanced_conversions:true});<?php endif; ?>
-</script>
-<?php endif; ?>
-<script>window.SITE={ads:<?= json_encode($L_ads ?: null) ?>,waLabel:<?= json_encode(cfg('ads_label_whatsapp') ?: null) ?>,waValue:<?= (int)(site()['leadValues']['C']) ?>};</script>
+<script src="<?= e(rtrim((string)cfg('vcrm_url'), '/')) ?>/vc-attribution.js" defer></script>
 <script src="/assets/js/site.js?v=<?= @filemtime(ROOT . '/assets/js/site.js') ?>" defer></script>
 </head>
 <body class="<?= e($page['bodyClass'] ?? '') ?><?= $L_lp ? ' is-lp' : '' ?>">
@@ -63,7 +51,7 @@ gtag('js',new Date());
     <nav class="nav" id="nav" aria-label="Principal">
       <a href="/servicios/">Tratamientos</a>
       <a href="/zonas/">Zonas</a>
-      <a href="/guias/">Guías</a>
+      <a href="/salud-dental/">Salud dental</a>
       <a href="/para-odontologos/">Para odontólogos</a>
       <a href="/contacto/">Contacto</a>
     </nav>
@@ -97,7 +85,7 @@ gtag('js',new Date());
       <div>
         <p class="footer-h">Más</p>
         <ul class="footer-list">
-          <li><a href="/guias/">Guías</a></li>
+          <li><a href="/salud-dental/">Salud dental</a></li>
           <li><a href="/para-odontologos/">Para odontólogos</a></li>
           <li><a href="/contacto/">Contacto</a></li>
           <li><a href="/privacidad/">Privacidad</a></li>

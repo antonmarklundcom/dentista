@@ -1,7 +1,7 @@
-/* Dentista.com.py — menú, atribución (gclid/UTM), eventos de WhatsApp y formularios. Sin dependencias. */
+/* Dentista.com.py — menú, atribución UTM, clics de WhatsApp y formularios. Sin dependencias ni Google. */
 (function () {
   'use strict';
-  var KEYS = ['gclid', 'gbraid', 'wbraid', 'utm_source', 'utm_medium', 'utm_campaign', 'utm_term', 'utm_content'];
+  var KEYS = ['utm_source', 'utm_medium', 'utm_campaign', 'utm_term', 'utm_content'];
   var TTL = 90 * 864e5;
 
   function store(k, v) { try { localStorage.setItem('dp_' + k, JSON.stringify({ v: v, t: Date.now() })); } catch (e) {} }
@@ -11,9 +11,9 @@
       return o && Date.now() - o.t < TTL ? o.v : '';
     } catch (e) { return ''; }
   }
-  function track(name, params) { if (typeof window.gtag === 'function') window.gtag('event', name, params || {}); }
+  function track() {}
 
-  // 1. Guardar gclid/UTM de la URL (última interacción paga gana) y completar los formularios.
+  // 1. Guardar UTM de la URL (última interacción paga gana) y completar los formularios.
   var qs = new URLSearchParams(location.search);
   if (KEYS.some(function (k) { return qs.get(k); })) KEYS.forEach(function (k) { store(k, qs.get(k) || ''); });
   if (!read('utm_source') && document.referrer && document.referrer.indexOf(location.host) === -1) {
@@ -29,14 +29,13 @@
     document.body.classList.toggle('nav-open', open);
   });
 
-  // 3. Clics de WhatsApp: evento GA4 + conversión secundaria de Ads.
+  // 3. Clics de WhatsApp.
   document.addEventListener('click', function (ev) {
     var a = ev.target.closest('[data-wa]');
     if (a) {
-      track('whatsapp_click', { location: a.getAttribute('data-ev-loc') || '', page_path: location.pathname });
-      if (window.SITE && SITE.ads && SITE.waLabel) {
-        track('conversion', { send_to: SITE.ads + '/' + SITE.waLabel, value: SITE.waValue, currency: 'PYG' });
-      }
+      // /wa/ registra el clic; le sumamos qué botón fue.
+      var loc = a.getAttribute('data-ev-loc');
+      if (loc && a.href.indexOf('/wa/') !== -1 && a.href.indexOf('&l=') === -1) a.href += '&l=' + encodeURIComponent(loc);
       return;
     }
     var s = ev.target.closest('[data-scroll-form]');

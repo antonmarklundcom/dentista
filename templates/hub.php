@@ -3,10 +3,10 @@
 $HUB = [
     'servicios' => ['Tratamientos', 'Tratamientos dentales en Asunción | Dentista.com.py', 'Brackets, limpieza dental, blanqueamiento, implantes, muela del juicio y odontopediatría en Asunción. Coordinamos tu consulta. Presupuesto sin costo.', 'Tratamientos dentales en Asunción', 'Elegí el tratamiento que te interesa para ver cómo es, qué conviene saber antes y cómo es la primera consulta. Si no sabés qué necesitás, pedí una revisión general.'],
     'zonas'     => ['Zonas', 'Dentista en Gran Asunción: zonas | Dentista.com.py', 'Coordinamos consultas odontológicas en Asunción, San Lorenzo, Luque, Lambaré, Fernando de la Mora, Capiatá y Mariano Roque Alonso. Escribinos por WhatsApp.', 'Dentista en el Gran Asunción', 'Coordinamos tu consulta lo más cerca posible de donde vivís o trabajás. Elegí tu ciudad.'],
-    'guias'     => ['Guías', 'Guías de salud dental | Dentista.com.py', 'Guías claras sobre salud dental: curetaje, dientes postizos, dolor de muelas y más. Qué es, cuándo consultar y qué preguntar al odontólogo en Asunción.', 'Guías de salud dental', 'Información clara para llegar a la consulta sabiendo qué preguntar. Ninguna guía reemplaza la evaluación de un odontólogo.'],
+    'guias'     => ['Salud dental', 'Salud dental: guías claras | Dentista.com.py', 'Guías claras sobre salud dental: curetaje, dientes postizos, dolor de muelas y más. Qué es, cuándo consultar y qué preguntar al odontólogo en Asunción.', 'Guías de salud dental', 'Información clara para llegar a la consulta sabiendo qué preguntar. Ninguna guía reemplaza la evaluación de un odontólogo.'],
 ][$hub];
 [$HB_label, $HB_title, $HB_desc, $HB_h1, $HB_lead] = $HUB;
-$HB_crumbs = [['Inicio', '/'], [$HB_label, "/$hub/"]];
+$HB_crumbs = [['Inicio', '/'], [$HB_label, $hub === 'guias' ? '/salud-dental/' : "/$hub/"]];
 render([
     'title' => $HB_title,
     'description' => $HB_desc,
@@ -31,8 +31,8 @@ render([
     </div>
   <?php else: ?>
     <div class="guide-grid">
-      <?php foreach (guides() as $G): ?>
-      <a class="card card--hair guide-card" href="/guias/<?= e($G['slug']) ?>/"><h3><?= e($G['h1']) ?></h3><p><?= e($G['card'] ?? mb_strimwidth($G['lead'], 0, 170, '…')) ?></p><span class="svc-card__more">Leer guía →</span></a>
+      <?php foreach (edu_guides() as $G): ?>
+      <a class="card card--hair guide-card" href="<?= e(guide_url($G['slug'])) ?>"><h3><?= e($G['h1']) ?></h3><p><?= e($G['card'] ?? mb_strimwidth($G['lead'], 0, 170, '…')) ?></p><span class="svc-card__more">Leer guía →</span></a>
       <?php endforeach; ?>
     </div>
   <?php endif; ?>

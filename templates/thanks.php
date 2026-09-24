@@ -1,12 +1,8 @@
 <?php
-/*
- * /gracias/: dispara la conversión de Google Ads UNA sola vez por lead
- * (la sesión se consume acá), con valor y transaction_id para deduplicar,
- * y datos para conversiones mejoradas (gtag los hashea antes de enviarlos).
- */
+/* /gracias/: muestra la referencia del lead una sola vez (la sesión se consume acá). */
 session_start();
-$T = $_SESSION['conversion'] ?? null;
-unset($_SESSION['conversion']);
+$T = $_SESSION['thanks'] ?? null;
+unset($_SESSION['thanks']);
 $T_partner = ($T['type'] ?? '') === 'partner';
 $T_svc = $T && !$T_partner ? (services()[$T['service']] ?? null) : null;
 $T_wa = $T_partner
@@ -38,27 +34,9 @@ render([
     <li>Si estás embarazada o tenés alguna enfermedad crónica, avisalo al coordinar.</li>
   </ul>
   <?php if ($T_svc && !empty($T_svc['guides'])): $TG = guides()[$T_svc['guides'][0]] ?? null; if ($TG): ?>
-  <p>Mientras tanto, te puede servir: <a href="/guias/<?= e($TG['slug']) ?>/"><?= e($TG['h1']) ?></a>.</p>
+  <p>Mientras tanto, te puede servir: <a href="<?= e(guide_url($TG['slug'])) ?>"><?= e($TG['h1']) ?></a>.</p>
   <?php endif; endif; ?>
   <?php endif; ?>
   <p class="btn-row"><a class="btn btn--ghost" href="/">Volver al inicio</a></p>
 </div></section>
-<?php if ($T && cfg('ads_id') || $T && cfg('ga4_id')):
-    $label = cfg($T_partner ? 'ads_label_partner' : 'ads_label_patient');
-    $phone = preg_replace('/\D/', '', $T['phone']);
-    if (str_starts_with($phone, '0')) $phone = '595' . substr($phone, 1);
-    elseif (!str_starts_with($phone, '595')) $phone = '595' . $phone;
-    $ud = array_filter(['phone_number' => '+' . $phone, 'email' => $T['email'] ?: null]);
-?>
-<script>
-window.addEventListener('load', function () {
-  if (typeof gtag !== 'function') return;
-  gtag('set', 'user_data', <?= json_encode($ud) ?>);
-  gtag('event', 'generate_lead', {currency: 'PYG', value: <?= (int)$T['value'] ?>, lead_type: <?= json_encode($T['type']) ?>, service: <?= json_encode($T['service']) ?>});
-  <?php if (cfg('ads_id') && $label): ?>
-  gtag('event', 'conversion', {send_to: <?= json_encode(cfg('ads_id') . '/' . $label) ?>, value: <?= (int)$T['value'] ?>, currency: 'PYG', transaction_id: <?= json_encode($T['ref']) ?>});
-  <?php endif; ?>
-});
-</script>
-<?php endif; ?>
 <?php }]);

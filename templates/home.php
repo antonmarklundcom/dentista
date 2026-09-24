@@ -102,13 +102,13 @@ render([
   </div>
 </section>
 
-<?php if (guides()): ?>
+<?php if (edu_guides()): ?>
 <section class="section">
   <div class="container">
     <div class="section-head"><p class="eyebrow">Guías</p><h2>Antes de ir al dentista, leé esto</h2></div>
     <div class="guide-grid">
-      <?php foreach (guides() as $G): ?>
-      <a class="card card--hair guide-card" href="/guias/<?= e($G['slug']) ?>/"><h3><?= e($G['h1']) ?></h3><p><?= e($G['card'] ?? mb_strimwidth($G['lead'], 0, 170, '…')) ?></p><span class="svc-card__more">Leer guía →</span></a>
+      <?php foreach (edu_guides() as $G): ?>
+      <a class="card card--hair guide-card" href="<?= e(guide_url($G['slug'])) ?>"><h3><?= e($G['h1']) ?></h3><p><?= e($G['card'] ?? mb_strimwidth($G['lead'], 0, 170, '…')) ?></p><span class="svc-card__more">Leer guía →</span></a>
       <?php endforeach; ?>
     </div>
   </div>

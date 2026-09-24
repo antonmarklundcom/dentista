@@ -18,7 +18,7 @@ $F_title   ??= 'Pedí tu turno';
   <input type="hidden" name="type" value="paciente">
   <input type="hidden" name="source" value="<?= e($F_source) ?>">
   <input type="hidden" name="page" value="<?= e(parse_url($_SERVER['REQUEST_URI'] ?? '/', PHP_URL_PATH)) ?>">
-  <?php foreach (['gclid','gbraid','wbraid','utm_source','utm_medium','utm_campaign','utm_term','utm_content'] as $F_k): ?>
+  <?php foreach (['utm_source','utm_medium','utm_campaign','utm_term','utm_content'] as $F_k): ?>
   <input type="hidden" name="<?= $F_k ?>" value="" data-track="<?= $F_k ?>">
   <?php endforeach; ?>
   <div class="hp" aria-hidden="true"><label>No completar <input type="text" name="website" tabindex="-1" autocomplete="off"></label></div>

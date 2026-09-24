@@ -1,4 +1,6 @@
 /* Dentista.com.py — EDITORIAL. Tokens arriba; todo lo demás lee tokens. */
+@font-face { font-family: 'Fraunces'; src: url('/assets/fonts/fraunces.woff2') format('woff2'); font-weight: 100 900; font-style: normal; font-display: swap; }
+@font-face { font-family: 'Inter Tight'; src: url('/assets/fonts/inter-tight.woff2') format('woff2'); font-weight: 100 900; font-style: normal; font-display: swap; }
 :root {
   --base: #F7F4ED;
   --tint: #EFEADF;

@@ -57,7 +57,7 @@ render([
     <div class="section-head"><p class="eyebrow">Para leer antes</p><h2>Guías relacionadas</h2></div>
     <div class="guide-grid">
       <?php foreach ($s['guides'] as $gs): if (!isset(guides()[$gs])) continue; $G = guides()[$gs]; ?>
-      <a class="card card--hair guide-card" href="/guias/<?= e($gs) ?>/"><h3><?= e($G['h1']) ?></h3><p><?= e($G['card'] ?? mb_strimwidth($G['lead'], 0, 170, '…')) ?></p><span class="svc-card__more">Leer guía →</span></a>
+      <a class="card card--hair guide-card" href="<?= e(guide_url($gs)) ?>"><h3><?= e($G['h1']) ?></h3><p><?= e($G['card'] ?? mb_strimwidth($G['lead'], 0, 170, '…')) ?></p><span class="svc-card__more">Leer guía →</span></a>
       <?php endforeach; ?>
     </div>
   </div>

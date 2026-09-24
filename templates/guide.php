@@ -1,6 +1,8 @@
 <?php
 /** @var array $g */
-$G_crumbs = [['Inicio', '/'], ['Guías', '/guias/'], [$g['nav'] ?? $g['h1'], '/guias/' . $g['slug'] . '/']];
+$G_crumbs = $g['slug'] === 'consultorios-odontologicos'
+    ? [['Inicio', '/'], [$g['nav'] ?? $g['h1'], guide_url($g['slug'])]]
+    : [['Inicio', '/'], ['Salud dental', '/salud-dental/'], [$g['nav'] ?? $g['h1'], guide_url($g['slug'])]];
 $G_svc = services()[$g['service'] ?? ''] ?? null;
 $G_wa = $G_svc['wa'] ?? 'Hola, vengo de dentista.com.py — leí la guía sobre ' . $g['keyword'] . ' y quiero consultar.';
 render([
@@ -20,7 +22,7 @@ render([
             'dateModified' => $g['updated'] ?? date('Y-m-d'),
             'author' => ['@type' => 'Organization', 'name' => site()['name']],
             'publisher' => ['@type' => 'Organization', 'name' => site()['name'], 'logo' => ['@type' => 'ImageObject', 'url' => abs_url('/assets/img/favicon.svg')]],
-            'mainEntityOfPage' => abs_url('/guias/' . $g['slug'] . '/'),
+            'mainEntityOfPage' => abs_url(guide_url($g['slug'])),
         ],
     ],
     'body' => function () use ($g, $G_crumbs, $G_svc, $G_wa) { ?>
