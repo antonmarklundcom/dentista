@@ -13,11 +13,8 @@ $L_schema[]  = [
     'url'      => base_url() . '/',
     'inLanguage' => 'es-PY',
 ];
-$L_og = null;
-if (img_exists('hero')) {
-    $L_ogf = '/assets/img/' . images()['items']['hero']['file'];
-    $L_og = abs_url(is_file(ROOT . $L_ogf . '-1280.webp') ? $L_ogf . '-1280.webp' : $L_ogf . '-640.webp');
-}
+// Share card: PNG at 1200×630 (WhatsApp, Facebook and LinkedIn all render it).
+$L_og = abs_url('/assets/img/og-dentista.png');
 $L_nav = [
     ['/servicios/', 'Tratamientos'],
     ['/salud-dental/', 'Salud dental'],
@@ -43,10 +40,14 @@ $L_nav = [
 <meta property="og:title" content="<?= e($page['title']) ?>">
 <meta property="og:description" content="<?= e($page['description']) ?>">
 <meta property="og:url" content="<?= e($L_canonical) ?>">
-<?php if ($L_og): ?><meta property="og:image" content="<?= e($L_og) ?>">
-<?php endif; ?>
+<meta property="og:image" content="<?= e($L_og) ?>">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Dentista.com.py: tu dentista en Asunción, coordinado por WhatsApp">
+<meta name="twitter:card" content="summary_large_image">
 <meta name="theme-color" content="#14241E">
 <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
 <link rel="preload" href="/assets/fonts/fraunces.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/assets/fonts/inter-tight.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="/assets/css/site.css?v=<?= @filemtime(ROOT . '/assets/css/site.css') ?>">
