@@ -1,6 +1,6 @@
 <?php
 /** @var array $g */
-$G_choose = $g['slug'] === 'consultorios-odontologicos';
+$G_choose = in_array($g['slug'], TOP_GUIDES, true);
 $G_crumbs = $G_choose
     ? [['Inicio', '/'], [$g['nav'] ?? $g['h1'], guide_url($g['slug'])]]
     : [['Inicio', '/'], ['Salud dental', '/salud-dental/'], [$g['nav'] ?? $g['h1'], guide_url($g['slug'])]];
@@ -44,7 +44,7 @@ render([
   <div class="container<?= $G_check ? ' guide-hero' : '' ?>">
     <div class="hero__narrow">
       <?php crumbs($G_crumbs); ?>
-      <p class="eyebrow"><span class="eyebrow__icon"><?= guide_icon($g['slug']) ?></span><?= $G_choose ? 'Cómo elegir' : 'Guía de salud dental' ?></p>
+      <p class="eyebrow"><span class="eyebrow__icon"><?= guide_icon($g['slug']) ?></span><?= e($g['eyebrow'] ?? ($G_choose ? 'Cómo elegir' : 'Guía de salud dental')) ?></p>
       <h1><?= e($g['h1']) ?></h1>
       <p class="lead"><?= e($g['lead']) ?></p>
       <p class="meta"><span>Actualizada <time datetime="<?= e(date('Y-m-d', $G_ts)) ?>"><?= e(date('d/m/Y', $G_ts)) ?></time></span><span><?= $G_min ?> min de lectura</span><?php if ($G_svc): ?><span>Tratamiento: <a href="/servicios/<?= e($G_svc['slug']) ?>/"><?= e($G_svc['nav']) ?></a></span><?php endif; ?></p>
@@ -86,7 +86,7 @@ render([
   <div class="container zones">
     <div>
       <?= eyebrow('Zonas') ?>
-      <h2 id="gz-h">Consultorios en Asunción y <em>Gran Asunción.</em></h2>
+      <h2 id="gz-h"><?= $g['slug'] === 'consultorios-odontologicos' ? 'Consultorios' : 'Odontólogos' ?> en Asunción y <em>Gran Asunción.</em></h2>
       <p class="section-lead">No publicamos listas de clínicas. Nos decís dónde te queda cómodo y coordinamos con un odontólogo matriculado de la red, con los datos del profesional antes de confirmar.</p>
       <?php zone_links(); ?>
     </div>
@@ -96,7 +96,7 @@ render([
 <section class="section section--tint" aria-labelledby="gt-h">
   <div class="container">
     <div class="section-head section-head--link"><div><?= eyebrow('Tratamientos') ?><h2 id="gt-h">¿Ya sabés qué necesitás?</h2></div><a class="link-arrow" href="/servicios/">Ver todos<?= arrow() ?></a></div>
-    <?php service_cards(array_slice(array_keys(services()), 0, 3)); ?>
+    <?php service_cards(array_slice(array_keys(services()), 0, $g['slug'] === 'odontologia' ? 6 : 3)); ?>
   </div>
 </section>
 <?php elseif ($G_more): ?>

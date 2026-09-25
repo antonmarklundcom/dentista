@@ -105,6 +105,7 @@ function guide_icon(string $slug): string
     $map = [
         'sarro-dental' => 'tartar', 'dolor-de-muelas' => 'toothache', 'placa-bacteriana' => 'plaque', 'mal-aliento' => 'breath',
         'gingivitis' => 'gum', 'curetaje-dental' => 'clean', 'dientes-postizos' => 'denture', 'consultorios-odontologicos' => 'clinic',
+        'odontologia' => 'clinic', 'odontologos' => 'clinic',
     ];
     return icon($map[$slug] ?? 'tooth');
 }
@@ -124,6 +125,9 @@ function service_blurb(array $s): string
         'implantes-dentales' => 'Implantes dentales para reemplazar piezas perdidas.',
         'puente-dental' => 'Un puente fijo para reemplazar una o más piezas.',
         'odontopediatria' => 'Consultas para chicos, con paciencia y buen trato.',
+        'carillas-dentales' => 'Carillas de porcelana, resina o zirconio para tu sonrisa.',
+        'urgencias-odontologicas' => 'Dolor fuerte, diente roto o infección: te coordinamos rápido.',
+        'reconstruccion-dental' => 'Recuperá un diente roto, fracturado o muy dañado.',
     ];
     if (isset($map[$s['slug']])) return $map[$s['slug']];
     $first = preg_split('/(?<=\.)\s/u', (string)($s['card'] ?? ''))[0] ?? '';

@@ -39,9 +39,9 @@ switch (true) {
     case $one === 'zonas' && isset(zones()[$two]):      $zslug = $two; $z = zones()[$two]; require ROOT . '/templates/zone.php'; break;
     case $one === 'guias':                              header('Location: ' . ($two !== null && isset(guides()[$two]) ? guide_url($two) : '/salud-dental/'), true, 301); exit;
     case $one === 'salud-dental' && $two === null:      $hub = 'guias'; require ROOT . '/templates/hub.php'; break;
-    case $one === 'salud-dental' && $two === 'consultorios-odontologicos': header('Location: /consultorios-odontologicos/', true, 301); exit;
+    case $one === 'salud-dental' && in_array($two, TOP_GUIDES, true): header('Location: /' . $two . '/', true, 301); exit;
     case $one === 'salud-dental' && isset(guides()[$two]): $g = guides()[$two]; require ROOT . '/templates/guide.php'; break;
-    case $one === 'consultorios-odontologicos' && $two === null && isset(guides()['consultorios-odontologicos']): $g = guides()['consultorios-odontologicos']; require ROOT . '/templates/guide.php'; break;
+    case in_array($one, TOP_GUIDES, true) && $two === null && isset(guides()[$one]): $g = guides()[$one]; require ROOT . '/templates/guide.php'; break;
     case $one === 'lp' && isset(services()[$two]):      $s = services()[$two]; require ROOT . '/templates/landing.php'; break;
     case $one === 'para-odontologos' && $two === null:  require ROOT . '/templates/partner.php'; break;
     case $one === 'contacto' && $two === null:          require ROOT . '/templates/contact.php'; break;

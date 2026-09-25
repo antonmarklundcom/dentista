@@ -100,7 +100,7 @@ $L_nav = [
         <p class="footer-h">Dentista.com.py</p>
         <ul class="footer-list">
           <li><a href="/salud-dental/">Salud dental</a></li>
-          <?php if (isset(guides()['consultorios-odontologicos'])): ?><li><a href="<?= e(guide_url('consultorios-odontologicos')) ?>">Consultorios odontológicos</a></li><?php endif; ?>
+          <?php foreach (TOP_GUIDES as $F_t): if (isset(guides()[$F_t])): ?><li><a href="<?= e(guide_url($F_t)) ?>"><?= e(guides()[$F_t]['nav'] ?? guides()[$F_t]['h1']) ?></a></li><?php endif; endforeach; ?>
           <li><a href="/para-odontologos/">Para odontólogos</a></li>
           <li><a href="/contacto/">Contacto</a></li>
           <li><a href="/privacidad/">Privacidad</a></li>

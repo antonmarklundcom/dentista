@@ -86,6 +86,13 @@ render([
       <a class="link-arrow" href="/salud-dental/">Ver todas las guías<?= arrow() ?></a>
     </div>
     <?php guide_cards($H_g); ?>
+    <?php foreach (TOP_GUIDES as $H_t): if (!isset(guides()[$H_t])) continue; $H_tg = guides()[$H_t]; ?>
+    <a class="feature-link" href="<?= e(guide_url($H_t)) ?>">
+      <span class="features__i features__i--sand"><?= guide_icon($H_t) ?></span>
+      <span><span class="feature-link__k"><?= e($H_tg['nav'] ?? '') ?></span><span class="feature-link__t"><?= e($H_tg['h1']) ?></span><span class="feature-link__p"><?= e($H_tg['card'] ?? '') ?></span></span>
+      <?= arrow() ?>
+    </a>
+    <?php endforeach; ?>
   </div>
 </section>
 <?php endif; ?>

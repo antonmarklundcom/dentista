@@ -52,12 +52,15 @@ require_once __DIR__ . '/parts.php';
 function services(): array { return records('servicios'); }
 function guides(): array   { return records('guias'); }
 
-/** Guides shown in the "Salud dental" hub (the consultorios page lives at its own top-level URL). */
-function edu_guides(): array { return array_diff_key(guides(), ['consultorios-odontologicos' => 1]); }
+/** Guides that target a head term and live at their own top-level URL, not under /salud-dental/. */
+const TOP_GUIDES = ['consultorios-odontologicos', 'odontologia', 'odontologos'];
+
+/** Guides shown in the "Salud dental" hub. */
+function edu_guides(): array { return array_diff_key(guides(), array_flip(TOP_GUIDES)); }
 
 function guide_url(string $slug): string
 {
-    return $slug === 'consultorios-odontologicos' ? '/consultorios-odontologicos/' : '/salud-dental/' . $slug . '/';
+    return in_array($slug, TOP_GUIDES, true) ? '/' . $slug . '/' : '/salud-dental/' . $slug . '/';
 }
 
 /*
