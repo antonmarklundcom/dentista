@@ -459,7 +459,7 @@ function ba_picture(array $m, string $class): string
     return '<picture class="' . e($class) . '">'
         . (is_file(ROOT . "$b-640.avif") ? '<source type="image/avif" srcset="' . e($set('avif')) . '" sizes="' . $sizes . '">' : '')
         . '<source type="image/webp" srcset="' . e($set('webp')) . '" sizes="' . $sizes . '">'
-        . '<img src="' . e("$b-640.webp") . '" alt="' . e($m['alt']) . '" width="1280" height="960" loading="lazy" decoding="async"></picture>';
+        . '<img src="' . e("$b-640.webp") . '" alt="' . e($m['alt']) . '" width="1280" height="1280" loading="lazy" decoding="async"></picture>';
 }
 
 /**

@@ -1,7 +1,7 @@
 {
  "_notes": {
   "site": "dentista.com.py",
-  "generated": null,
+  "generated": "2026-09-25",
   "model_rule": "gpt_image_2_5 sunburst per higgsfield-image-pipeline",
   "resolution_rule": "medium 1k for everything shown <= 800px wide; hero is the LCP element",
   "high_slots": {
@@ -10,13 +10,24 @@
   "cost_preflight": {
    "high_2k": 2.75,
    "medium_1k": 0.5,
-   "total_estimate": 15.25
+   "medium_1k_edit_with_reference": 0.5,
+   "total_estimate": 15.25,
+   "checked": "2026-09-25 get_cost"
   },
-  "actual_spend_credits": null,
-  "ledger_checked": null,
-  "download_status": "blocked: *.cloudfront.net denied by environment network policy (403 CONNECT) on 2026-09-24; nothing generated",
+  "actual_spend_credits": 15.25,
+  "ledger_checked": "2026-09-25: 26 spend lines 01:24:46–01:27:17 UTC, all \"GPT Image 2.5 Sunburst\", 25 x 0.5 + 1 x 2.75 = 15.25; one extra submission (familia) was rejected 429 before a job existed, not charged, resubmitted once.",
+  "download_status": "done 2026-09-25: *.cloudfront.net reachable (HTTP 200), 26 PNGs downloaded, converted with webimg to assets/img/<file>-640/-1280 .avif/.webp",
   "before_after_rule": "generate the after first, then the before as a reference edit of it; always shown with the caption 'Simulación ilustrativa — no es un paciente real.'",
-  "output": "webimg → assets/img/<file>-640.avif/.webp and -1280.avif/.webp; alt text from content/images.php"
+  "output": "webimg → assets/img/<file>-640.avif/.webp and -1280.avif/.webp; alt text from content/images.php",
+  "pixel_check": "hero 1792x2240 (2k class); cards 1024x688 / 1168x880 / 896x1120 / 1024x1024 (1k class)",
+  "placement": {
+   "/": "hero, familia (photo band), 12 service images (bento), 4 before/after pairs",
+   "/servicios/": "12 service images + 4 before/after pairs",
+   "/servicios/<slug>/": "own image as hero + related cards + matching before/after pair",
+   "/zonas/": "adulto-mayor + pareja (photo pair)",
+   "/zonas/<city>/": "service cards",
+   "/para-odontologos/": "odontologa + consultorio"
+  }
  },
  "images": [
   {
@@ -30,10 +41,10 @@
    "quality": "high",
    "resolution": "2k",
    "prompt": "Woman about 30 with Italian-Paraguayan features, dark wavy hair, genuine wide smile showing natural healthy teeth, sitting on a sunny terrace in Asunción, a blooming pink lapacho tree softly out of focus behind her, holding a traditional tereré guampa, bone-white linen shirt, composition leaves calm space on one side. Editorial lifestyle photography, soft natural daylight, warm bone-white (#F7F4ED) and deep green-black (#14241E) tones with one terracotta (#C2603A) accent, 50-85mm lens, shallow depth of field, fine film grain, true-to-life skin texture, natural healthy teeth. Negative: no text, no letters, no logos, no brand names, no watermarks, no signage, no name badges, no distorted or extra teeth, no extra fingers, no plastic skin, no over-whitened teeth, no cold blue clinical cast, no collage, no borders.",
-   "url": null,
-   "width": null,
-   "height": null,
-   "job_id": null
+   "url": "https://d8j0ntlcm91z4.cloudfront.net/user_349VrHjTFIpx9q71lpfpAXcLXvR/hf_20260925_012446_28478b63-0d3f-4de6-bf82-3c37623476fc.png",
+   "width": 1792,
+   "height": 2240,
+   "job_id": "28478b63-0d3f-4de6-bf82-3c37623476fc"
   },
   {
    "id": "pareja",
@@ -46,10 +57,10 @@
    "quality": "medium",
    "resolution": "1k",
    "prompt": "Couple in their 30s with an Argentine-European look, laughing together at a café table on a tree-lined street in Villa Morra, Asunción, warm afternoon light, relaxed confident natural smiles. Editorial lifestyle photography, soft natural daylight, warm bone-white (#F7F4ED) and deep green-black (#14241E) tones with one terracotta (#C2603A) accent, 50-85mm lens, shallow depth of field, fine film grain, true-to-life skin texture, natural healthy teeth. Negative: no text, no letters, no logos, no brand names, no watermarks, no signage, no name badges, no distorted or extra teeth, no extra fingers, no plastic skin, no over-whitened teeth, no cold blue clinical cast, no collage, no borders.",
-   "url": null,
-   "width": null,
-   "height": null,
-   "job_id": null
+   "url": "https://d8j0ntlcm91z4.cloudfront.net/user_349VrHjTFIpx9q71lpfpAXcLXvR/hf_20260925_012446_88c07249-71ab-4f99-922c-e99c4fa890e4.png",
+   "width": 1024,
+   "height": 688,
+   "job_id": "88c07249-71ab-4f99-922c-e99c4fa890e4"
   },
   {
    "id": "familia",
@@ -62,10 +73,10 @@
    "quality": "medium",
    "resolution": "1k",
    "prompt": "Paraguayan family, mother, father and a 7-year-old daughter, smiling together in a bright modern living room, the girl showing a gap-toothed smile, warm and candid. Editorial lifestyle photography, soft natural daylight, warm bone-white (#F7F4ED) and deep green-black (#14241E) tones with one terracotta (#C2603A) accent, 50-85mm lens, shallow depth of field, fine film grain, true-to-life skin texture, natural healthy teeth. Negative: no text, no letters, no logos, no brand names, no watermarks, no signage, no name badges, no distorted or extra teeth, no extra fingers, no plastic skin, no over-whitened teeth, no cold blue clinical cast, no collage, no borders.",
-   "url": null,
-   "width": null,
-   "height": null,
-   "job_id": null
+   "url": "https://d8j0ntlcm91z4.cloudfront.net/user_349VrHjTFIpx9q71lpfpAXcLXvR/hf_20260925_012549_dbbf1918-1513-4408-85a8-c6876e174b29.png",
+   "width": 1024,
+   "height": 688,
+   "job_id": "dbbf1918-1513-4408-85a8-c6876e174b29"
   },
   {
    "id": "adulto-mayor",
@@ -78,10 +89,10 @@
    "quality": "medium",
    "resolution": "1k",
    "prompt": "Distinguished man about 65 with an Italian-Paraguayan look, silver hair, warm confident smile with a complete natural-looking set of teeth, standing in a garden in front of a warm red-brick wall, soft evening light. Editorial lifestyle photography, soft natural daylight, warm bone-white (#F7F4ED) and deep green-black (#14241E) tones with one terracotta (#C2603A) accent, 50-85mm lens, shallow depth of field, fine film grain, true-to-life skin texture, natural healthy teeth. Negative: no text, no letters, no logos, no brand names, no watermarks, no signage, no name badges, no distorted or extra teeth, no extra fingers, no plastic skin, no over-whitened teeth, no cold blue clinical cast, no collage, no borders.",
-   "url": null,
-   "width": null,
-   "height": null,
-   "job_id": null
+   "url": "https://d8j0ntlcm91z4.cloudfront.net/user_349VrHjTFIpx9q71lpfpAXcLXvR/hf_20260925_012446_7db1b046-b23e-4fd5-8a9a-5758782eb4e9.png",
+   "width": 896,
+   "height": 1120,
+   "job_id": "7db1b046-b23e-4fd5-8a9a-5758782eb4e9"
   },
   {
    "id": "brackets",
@@ -94,10 +105,10 @@
    "quality": "medium",
    "resolution": "1k",
    "prompt": "Teen girl about 16 with a confident smile showing classic metal braces, three-quarter view, framed from the nose down to the shoulders, bright bedroom window light. Editorial lifestyle photography, soft natural daylight, warm bone-white (#F7F4ED) and deep green-black (#14241E) tones with one terracotta (#C2603A) accent, 50-85mm lens, shallow depth of field, fine film grain, true-to-life skin texture, natural healthy teeth. Negative: no text, no letters, no logos, no brand names, no watermarks, no signage, no name badges, no distorted or extra teeth, no extra fingers, no plastic skin, no over-whitened teeth, no cold blue clinical cast, no collage, no borders.",
-   "url": null,
-   "width": null,
-   "height": null,
-   "job_id": null
+   "url": "https://d8j0ntlcm91z4.cloudfront.net/user_349VrHjTFIpx9q71lpfpAXcLXvR/hf_20260925_012446_ddb2113b-f6c7-4e01-9f1f-55d7e6997250.png",
+   "width": 1168,
+   "height": 880,
+   "job_id": "ddb2113b-f6c7-4e01-9f1f-55d7e6997250"
   },
   {
    "id": "brackets-autoligables",
@@ -110,10 +121,10 @@
    "quality": "medium",
    "resolution": "1k",
    "prompt": "Young woman about 19 smiling with discreet clear ceramic braces, three-quarter view, framed from the nose down to the shoulders, bright airy room. Editorial lifestyle photography, soft natural daylight, warm bone-white (#F7F4ED) and deep green-black (#14241E) tones with one terracotta (#C2603A) accent, 50-85mm lens, shallow depth of field, fine film grain, true-to-life skin texture, natural healthy teeth. Negative: no text, no letters, no logos, no brand names, no watermarks, no signage, no name badges, no distorted or extra teeth, no extra fingers, no plastic skin, no over-whitened teeth, no cold blue clinical cast, no collage, no borders.",
-   "url": null,
-   "width": null,
-   "height": null,
-   "job_id": null
+   "url": "https://d8j0ntlcm91z4.cloudfront.net/user_349VrHjTFIpx9q71lpfpAXcLXvR/hf_20260925_012446_1f192279-4d13-4998-bbe4-89180e785110.png",
+   "width": 1168,
+   "height": 880,
+   "job_id": "1f192279-4d13-4998-bbe4-89180e785110"
   },
   {
    "id": "alineadores-transparentes",
@@ -126,10 +137,10 @@
    "quality": "medium",
    "resolution": "1k",
    "prompt": "Man about 28 placing a completely unbranded clear plastic dental aligner on his upper teeth in front of a bathroom mirror, morning light, close crop on hands and smile. Editorial lifestyle photography, soft natural daylight, warm bone-white (#F7F4ED) and deep green-black (#14241E) tones with one terracotta (#C2603A) accent, 50-85mm lens, shallow depth of field, fine film grain, true-to-life skin texture, natural healthy teeth. Negative: no text, no letters, no logos, no brand names, no watermarks, no signage, no name badges, no distorted or extra teeth, no extra fingers, no plastic skin, no over-whitened teeth, no cold blue clinical cast, no collage, no borders.",
-   "url": null,
-   "width": null,
-   "height": null,
-   "job_id": null
+   "url": "https://d8j0ntlcm91z4.cloudfront.net/user_349VrHjTFIpx9q71lpfpAXcLXvR/hf_20260925_012446_ed09f6f6-6982-4f66-b111-7b2bf4c4860d.png",
+   "width": 1168,
+   "height": 880,
+   "job_id": "ed09f6f6-6982-4f66-b111-7b2bf4c4860d"
   },
   {
    "id": "protesis-dental",
@@ -142,10 +153,10 @@
    "quality": "medium",
    "resolution": "1k",
    "prompt": "Woman about 62 with fair skin and light-brown hair, laughing openly with a full natural-looking smile, seated at a family dinner table, family softly blurred behind. Editorial lifestyle photography, soft natural daylight, warm bone-white (#F7F4ED) and deep green-black (#14241E) tones with one terracotta (#C2603A) accent, 50-85mm lens, shallow depth of field, fine film grain, true-to-life skin texture, natural healthy teeth. Negative: no text, no letters, no logos, no brand names, no watermarks, no signage, no name badges, no distorted or extra teeth, no extra fingers, no plastic skin, no over-whitened teeth, no cold blue clinical cast, no collage, no borders.",
-   "url": null,
-   "width": null,
-   "height": null,
-   "job_id": null
+   "url": "https://d8j0ntlcm91z4.cloudfront.net/user_349VrHjTFIpx9q71lpfpAXcLXvR/hf_20260925_012446_1e21c586-2186-4ca0-a51d-e3d8fc367136.png",
+   "width": 1168,
+   "height": 880,
+   "job_id": "1e21c586-2186-4ca0-a51d-e3d8fc367136"
   },
   {
    "id": "puente-dental",
@@ -158,10 +169,10 @@
    "quality": "medium",
    "resolution": "1k",
    "prompt": "Studio still life of an unbranded dental model showing a three-unit ceramic dental bridge on a bone-white surface, soft side light, clean composition. Editorial lifestyle photography, soft natural daylight, warm bone-white (#F7F4ED) and deep green-black (#14241E) tones with one terracotta (#C2603A) accent, 50-85mm lens, shallow depth of field, fine film grain, true-to-life skin texture, natural healthy teeth. Negative: no text, no letters, no logos, no brand names, no watermarks, no signage, no name badges, no distorted or extra teeth, no extra fingers, no plastic skin, no over-whitened teeth, no cold blue clinical cast, no collage, no borders.",
-   "url": null,
-   "width": null,
-   "height": null,
-   "job_id": null
+   "url": "https://d8j0ntlcm91z4.cloudfront.net/user_349VrHjTFIpx9q71lpfpAXcLXvR/hf_20260925_012446_5ac7a282-9d8d-47d8-8fd1-6964e3f13f81.png",
+   "width": 1168,
+   "height": 880,
+   "job_id": "5ac7a282-9d8d-47d8-8fd1-6964e3f13f81"
   },
   {
    "id": "profilaxis-dental",
@@ -174,10 +185,10 @@
    "quality": "medium",
    "resolution": "1k",
    "prompt": "Over-the-shoulder view of a dental hygienist's gloved hands performing an ultrasonic cleaning on a relaxed adult patient, the patient's eyes out of frame, clean unbranded instruments. Editorial lifestyle photography, soft natural daylight, warm bone-white (#F7F4ED) and deep green-black (#14241E) tones with one terracotta (#C2603A) accent, 50-85mm lens, shallow depth of field, fine film grain, true-to-life skin texture, natural healthy teeth. Negative: no text, no letters, no logos, no brand names, no watermarks, no signage, no name badges, no distorted or extra teeth, no extra fingers, no plastic skin, no over-whitened teeth, no cold blue clinical cast, no collage, no borders.",
-   "url": null,
-   "width": null,
-   "height": null,
-   "job_id": null
+   "url": "https://d8j0ntlcm91z4.cloudfront.net/user_349VrHjTFIpx9q71lpfpAXcLXvR/hf_20260925_012446_bbbd544f-6fd4-4d9f-a4e7-08adf8417fb5.png",
+   "width": 1168,
+   "height": 880,
+   "job_id": "bbbd544f-6fd4-4d9f-a4e7-08adf8417fb5"
   },
   {
    "id": "blanqueamiento-dental",
@@ -190,10 +201,10 @@
    "quality": "medium",
    "resolution": "1k",
    "prompt": "Close-up of a dentist holding an unbranded dental shade guide next to the smile of a woman about 35, framed from the nose down, natural (not extreme) white teeth. Editorial lifestyle photography, soft natural daylight, warm bone-white (#F7F4ED) and deep green-black (#14241E) tones with one terracotta (#C2603A) accent, 50-85mm lens, shallow depth of field, fine film grain, true-to-life skin texture, natural healthy teeth. Negative: no text, no letters, no logos, no brand names, no watermarks, no signage, no name badges, no distorted or extra teeth, no extra fingers, no plastic skin, no over-whitened teeth, no cold blue clinical cast, no collage, no borders.",
-   "url": null,
-   "width": null,
-   "height": null,
-   "job_id": null
+   "url": "https://d8j0ntlcm91z4.cloudfront.net/user_349VrHjTFIpx9q71lpfpAXcLXvR/hf_20260925_012446_a70d7e05-4175-4949-9e92-dfbc490172b3.png",
+   "width": 1168,
+   "height": 880,
+   "job_id": "a70d7e05-4175-4949-9e92-dfbc490172b3"
   },
   {
    "id": "bruxismo",
@@ -206,10 +217,10 @@
    "quality": "medium",
    "resolution": "1k",
    "prompt": "Hands holding a clear unbranded night guard dental splint above a bedside table with a book and a glass of water, soft warm lamp light. Editorial lifestyle photography, soft natural daylight, warm bone-white (#F7F4ED) and deep green-black (#14241E) tones with one terracotta (#C2603A) accent, 50-85mm lens, shallow depth of field, fine film grain, true-to-life skin texture, natural healthy teeth. Negative: no text, no letters, no logos, no brand names, no watermarks, no signage, no name badges, no distorted or extra teeth, no extra fingers, no plastic skin, no over-whitened teeth, no cold blue clinical cast, no collage, no borders.",
-   "url": null,
-   "width": null,
-   "height": null,
-   "job_id": null
+   "url": "https://d8j0ntlcm91z4.cloudfront.net/user_349VrHjTFIpx9q71lpfpAXcLXvR/hf_20260925_012549_f00153f7-f3df-46e0-857b-27846a46e6e7.png",
+   "width": 1168,
+   "height": 880,
+   "job_id": "f00153f7-f3df-46e0-857b-27846a46e6e7"
   },
   {
    "id": "encias-inflamadas",
@@ -222,10 +233,10 @@
    "quality": "medium",
    "resolution": "1k",
    "prompt": "Macro of a healthy smile with pink firm gums, woman about 40, lips slightly parted, soft daylight, clinical but warm. Editorial lifestyle photography, soft natural daylight, warm bone-white (#F7F4ED) and deep green-black (#14241E) tones with one terracotta (#C2603A) accent, 50-85mm lens, shallow depth of field, fine film grain, true-to-life skin texture, natural healthy teeth. Negative: no text, no letters, no logos, no brand names, no watermarks, no signage, no name badges, no distorted or extra teeth, no extra fingers, no plastic skin, no over-whitened teeth, no cold blue clinical cast, no collage, no borders.",
-   "url": null,
-   "width": null,
-   "height": null,
-   "job_id": null
+   "url": "https://d8j0ntlcm91z4.cloudfront.net/user_349VrHjTFIpx9q71lpfpAXcLXvR/hf_20260925_012549_b7459f7a-6f13-48a8-b481-8e486acf87a9.png",
+   "width": 1168,
+   "height": 880,
+   "job_id": "b7459f7a-6f13-48a8-b481-8e486acf87a9"
   },
   {
    "id": "muela-del-juicio",
@@ -238,10 +249,10 @@
    "quality": "medium",
    "resolution": "1k",
    "prompt": "Gloved hand pointing at a lower wisdom tooth on a panoramic dental x-ray displayed on a lightbox, no names, no numbers, no text on the x-ray. Editorial lifestyle photography, soft natural daylight, warm bone-white (#F7F4ED) and deep green-black (#14241E) tones with one terracotta (#C2603A) accent, 50-85mm lens, shallow depth of field, fine film grain, true-to-life skin texture, natural healthy teeth. Negative: no text, no letters, no logos, no brand names, no watermarks, no signage, no name badges, no distorted or extra teeth, no extra fingers, no plastic skin, no over-whitened teeth, no cold blue clinical cast, no collage, no borders.",
-   "url": null,
-   "width": null,
-   "height": null,
-   "job_id": null
+   "url": "https://d8j0ntlcm91z4.cloudfront.net/user_349VrHjTFIpx9q71lpfpAXcLXvR/hf_20260925_012549_2be85017-febc-4e32-bb2d-77782bb2fe63.png",
+   "width": 1168,
+   "height": 880,
+   "job_id": "2be85017-febc-4e32-bb2d-77782bb2fe63"
   },
   {
    "id": "implantes-dentales",
@@ -254,10 +265,10 @@
    "quality": "medium",
    "resolution": "1k",
    "prompt": "Man about 50 with a Spanish-Paraguayan look and a short beard, relaxed natural smile in a bright clinic waiting area with plants softly blurred behind. Editorial lifestyle photography, soft natural daylight, warm bone-white (#F7F4ED) and deep green-black (#14241E) tones with one terracotta (#C2603A) accent, 50-85mm lens, shallow depth of field, fine film grain, true-to-life skin texture, natural healthy teeth. Negative: no text, no letters, no logos, no brand names, no watermarks, no signage, no name badges, no distorted or extra teeth, no extra fingers, no plastic skin, no over-whitened teeth, no cold blue clinical cast, no collage, no borders.",
-   "url": null,
-   "width": null,
-   "height": null,
-   "job_id": null
+   "url": "https://d8j0ntlcm91z4.cloudfront.net/user_349VrHjTFIpx9q71lpfpAXcLXvR/hf_20260925_012549_93af8087-a5ca-4241-b8bc-0fc574eb6b09.png",
+   "width": 1168,
+   "height": 880,
+   "job_id": "93af8087-a5ca-4241-b8bc-0fc574eb6b09"
   },
   {
    "id": "odontopediatria",
@@ -270,10 +281,10 @@
    "quality": "medium",
    "resolution": "1k",
    "prompt": "Boy about 8 sitting in a dental chair laughing while a dentist, out of focus, shows him a small dental mirror, joyful, no fear, subtle colours. Editorial lifestyle photography, soft natural daylight, warm bone-white (#F7F4ED) and deep green-black (#14241E) tones with one terracotta (#C2603A) accent, 50-85mm lens, shallow depth of field, fine film grain, true-to-life skin texture, natural healthy teeth. Negative: no text, no letters, no logos, no brand names, no watermarks, no signage, no name badges, no distorted or extra teeth, no extra fingers, no plastic skin, no over-whitened teeth, no cold blue clinical cast, no collage, no borders.",
-   "url": null,
-   "width": null,
-   "height": null,
-   "job_id": null
+   "url": "https://d8j0ntlcm91z4.cloudfront.net/user_349VrHjTFIpx9q71lpfpAXcLXvR/hf_20260925_012549_0c0f69c9-4185-4cc6-82e0-59580a1cfd85.png",
+   "width": 1168,
+   "height": 880,
+   "job_id": "0c0f69c9-4185-4cc6-82e0-59580a1cfd85"
   },
   {
    "id": "odontologa",
@@ -286,10 +297,10 @@
    "quality": "medium",
    "resolution": "1k",
    "prompt": "Female dentist about 38 with a Paraguayan-European look, hair tied back, cream scrubs, standing confidently in a modern treatment room with warm wood and green-black cabinetry, arms relaxed, soft window light, no name badge. Editorial lifestyle photography, soft natural daylight, warm bone-white (#F7F4ED) and deep green-black (#14241E) tones with one terracotta (#C2603A) accent, 50-85mm lens, shallow depth of field, fine film grain, true-to-life skin texture, natural healthy teeth. Negative: no text, no letters, no logos, no brand names, no watermarks, no signage, no name badges, no distorted or extra teeth, no extra fingers, no plastic skin, no over-whitened teeth, no cold blue clinical cast, no collage, no borders.",
-   "url": null,
-   "width": null,
-   "height": null,
-   "job_id": null
+   "url": "https://d8j0ntlcm91z4.cloudfront.net/user_349VrHjTFIpx9q71lpfpAXcLXvR/hf_20260925_012549_b29d2b14-bae5-4b33-b945-373d75ca2c65.png",
+   "width": 896,
+   "height": 1120,
+   "job_id": "b29d2b14-bae5-4b33-b945-373d75ca2c65"
   },
   {
    "id": "consultorio",
@@ -302,10 +313,10 @@
    "quality": "medium",
    "resolution": "1k",
    "prompt": "Empty modern dental treatment room in Asunción, dental chair in deep green upholstery, large window with a pink lapacho tree outside, warm and uncluttered, no people. Editorial lifestyle photography, soft natural daylight, warm bone-white (#F7F4ED) and deep green-black (#14241E) tones with one terracotta (#C2603A) accent, 50-85mm lens, shallow depth of field, fine film grain, true-to-life skin texture, natural healthy teeth. Negative: no text, no letters, no logos, no brand names, no watermarks, no signage, no name badges, no distorted or extra teeth, no extra fingers, no plastic skin, no over-whitened teeth, no cold blue clinical cast, no collage, no borders.",
-   "url": null,
-   "width": null,
-   "height": null,
-   "job_id": null
+   "url": "https://d8j0ntlcm91z4.cloudfront.net/user_349VrHjTFIpx9q71lpfpAXcLXvR/hf_20260925_012549_80627b8a-a2d5-4a86-83cb-362fca6bff8d.png",
+   "width": 1024,
+   "height": 688,
+   "job_id": "80627b8a-a2d5-4a86-83cb-362fca6bff8d"
   },
   {
    "id": "despues-blanqueamiento",
@@ -318,10 +329,10 @@
    "quality": "medium",
    "resolution": "1k",
    "prompt": "Simulated dental result for illustration. Woman about 32 with olive skin, smiling, framed from the nose down to the chin, frontal three-quarter view, same light and lipstick. Teeth: the same teeth two shades whiter with natural enamel texture. Editorial lifestyle photography, soft natural daylight, warm bone-white (#F7F4ED) and deep green-black (#14241E) tones with one terracotta (#C2603A) accent, 50-85mm lens, shallow depth of field, fine film grain, true-to-life skin texture, natural healthy teeth. Negative: no text, no letters, no logos, no brand names, no watermarks, no signage, no name badges, no distorted or extra teeth, no extra fingers, no plastic skin, no over-whitened teeth, no cold blue clinical cast, no collage, no borders.",
-   "url": null,
-   "width": null,
-   "height": null,
-   "job_id": null,
+   "url": "https://d8j0ntlcm91z4.cloudfront.net/user_349VrHjTFIpx9q71lpfpAXcLXvR/hf_20260925_012549_9e95c1df-4e1d-4c37-b282-f7e0d7d61e42.png",
+   "width": 1024,
+   "height": 1024,
+   "job_id": "9e95c1df-4e1d-4c37-b282-f7e0d7d61e42",
    "step": 1
   },
   {
@@ -336,11 +347,12 @@
    "resolution": "1k",
    "prompt": "Edit the reference image: keep the exact same person, face, lips, skin, lighting, framing and background. Change ONLY the teeth to show teeth visibly yellowed with mild coffee staining. Photorealistic, no other changes. Editorial lifestyle photography, soft natural daylight, warm bone-white (#F7F4ED) and deep green-black (#14241E) tones with one terracotta (#C2603A) accent, 50-85mm lens, shallow depth of field, fine film grain, true-to-life skin texture, natural healthy teeth. Negative: no text, no letters, no logos, no brand names, no watermarks, no signage, no name badges, no distorted or extra teeth, no extra fingers, no plastic skin, no over-whitened teeth, no cold blue clinical cast, no collage, no borders.",
    "reference": "despues-blanqueamiento",
-   "url": null,
-   "width": null,
-   "height": null,
-   "job_id": null,
-   "step": 2
+   "url": "https://d8j0ntlcm91z4.cloudfront.net/user_349VrHjTFIpx9q71lpfpAXcLXvR/hf_20260925_012716_baedfdf6-eda9-4065-aae7-fd313c6dd9a6.png",
+   "width": 1024,
+   "height": 1024,
+   "job_id": "baedfdf6-eda9-4065-aae7-fd313c6dd9a6",
+   "step": 2,
+   "prompt_deviation": "Shared style tail sent without \"natural healthy teeth\" and \"no distorted or extra teeth\" (both contradict the requested before-state); reference passed as the after job_id (role image_references)."
   },
   {
    "id": "despues-ortodoncia",
@@ -353,10 +365,10 @@
    "quality": "medium",
    "resolution": "1k",
    "prompt": "Simulated dental result for illustration. Man about 24 with fair skin, smiling, framed from the nose down to the chin, frontal view. Teeth: straight evenly aligned teeth. Editorial lifestyle photography, soft natural daylight, warm bone-white (#F7F4ED) and deep green-black (#14241E) tones with one terracotta (#C2603A) accent, 50-85mm lens, shallow depth of field, fine film grain, true-to-life skin texture, natural healthy teeth. Negative: no text, no letters, no logos, no brand names, no watermarks, no signage, no name badges, no distorted or extra teeth, no extra fingers, no plastic skin, no over-whitened teeth, no cold blue clinical cast, no collage, no borders.",
-   "url": null,
-   "width": null,
-   "height": null,
-   "job_id": null,
+   "url": "https://d8j0ntlcm91z4.cloudfront.net/user_349VrHjTFIpx9q71lpfpAXcLXvR/hf_20260925_012549_e442bd88-3199-4e68-80e5-5848871c8543.png",
+   "width": 1024,
+   "height": 1024,
+   "job_id": "e442bd88-3199-4e68-80e5-5848871c8543",
    "step": 1
   },
   {
@@ -371,11 +383,12 @@
    "resolution": "1k",
    "prompt": "Edit the reference image: keep the exact same person, face, lips, skin, lighting, framing and background. Change ONLY the teeth to show crowded overlapping lower incisors and one rotated canine. Photorealistic, no other changes. Editorial lifestyle photography, soft natural daylight, warm bone-white (#F7F4ED) and deep green-black (#14241E) tones with one terracotta (#C2603A) accent, 50-85mm lens, shallow depth of field, fine film grain, true-to-life skin texture, natural healthy teeth. Negative: no text, no letters, no logos, no brand names, no watermarks, no signage, no name badges, no distorted or extra teeth, no extra fingers, no plastic skin, no over-whitened teeth, no cold blue clinical cast, no collage, no borders.",
    "reference": "despues-ortodoncia",
-   "url": null,
-   "width": null,
-   "height": null,
-   "job_id": null,
-   "step": 2
+   "url": "https://d8j0ntlcm91z4.cloudfront.net/user_349VrHjTFIpx9q71lpfpAXcLXvR/hf_20260925_012716_9bec4594-221e-4b71-9307-34856fc82483.png",
+   "width": 1024,
+   "height": 1024,
+   "job_id": "9bec4594-221e-4b71-9307-34856fc82483",
+   "step": 2,
+   "prompt_deviation": "Shared style tail sent without \"natural healthy teeth\" and \"no distorted or extra teeth\" (both contradict the requested before-state); reference passed as the after job_id (role image_references)."
   },
   {
    "id": "despues-carillas",
@@ -388,10 +401,10 @@
    "quality": "medium",
    "resolution": "1k",
    "prompt": "Simulated dental result for illustration. Woman about 40 with an Italian look, smiling, framed from the nose down to the chin, frontal view. Teeth: harmonious natural-looking front teeth. Editorial lifestyle photography, soft natural daylight, warm bone-white (#F7F4ED) and deep green-black (#14241E) tones with one terracotta (#C2603A) accent, 50-85mm lens, shallow depth of field, fine film grain, true-to-life skin texture, natural healthy teeth. Negative: no text, no letters, no logos, no brand names, no watermarks, no signage, no name badges, no distorted or extra teeth, no extra fingers, no plastic skin, no over-whitened teeth, no cold blue clinical cast, no collage, no borders.",
-   "url": null,
-   "width": null,
-   "height": null,
-   "job_id": null,
+   "url": "https://d8j0ntlcm91z4.cloudfront.net/user_349VrHjTFIpx9q71lpfpAXcLXvR/hf_20260925_012549_e1477b04-f6ee-4690-af8f-1beb625a27b5.png",
+   "width": 1024,
+   "height": 1024,
+   "job_id": "e1477b04-f6ee-4690-af8f-1beb625a27b5",
    "step": 1
   },
   {
@@ -406,11 +419,12 @@
    "resolution": "1k",
    "prompt": "Edit the reference image: keep the exact same person, face, lips, skin, lighting, framing and background. Change ONLY the teeth to show small chipped front teeth with uneven edges and small gaps. Photorealistic, no other changes. Editorial lifestyle photography, soft natural daylight, warm bone-white (#F7F4ED) and deep green-black (#14241E) tones with one terracotta (#C2603A) accent, 50-85mm lens, shallow depth of field, fine film grain, true-to-life skin texture, natural healthy teeth. Negative: no text, no letters, no logos, no brand names, no watermarks, no signage, no name badges, no distorted or extra teeth, no extra fingers, no plastic skin, no over-whitened teeth, no cold blue clinical cast, no collage, no borders.",
    "reference": "despues-carillas",
-   "url": null,
-   "width": null,
-   "height": null,
-   "job_id": null,
-   "step": 2
+   "url": "https://d8j0ntlcm91z4.cloudfront.net/user_349VrHjTFIpx9q71lpfpAXcLXvR/hf_20260925_012716_d41a2bf1-332d-4f0d-b97f-d676a332c65d.png",
+   "width": 1024,
+   "height": 1024,
+   "job_id": "d41a2bf1-332d-4f0d-b97f-d676a332c65d",
+   "step": 2,
+   "prompt_deviation": "Shared style tail sent without \"natural healthy teeth\" and \"no distorted or extra teeth\" (both contradict the requested before-state); reference passed as the after job_id (role image_references)."
   },
   {
    "id": "despues-protesis",
@@ -423,10 +437,10 @@
    "quality": "medium",
    "resolution": "1k",
    "prompt": "Simulated dental result for illustration. Man about 66 with silver stubble, smiling, framed from the nose down to the chin, frontal view. Teeth: a complete natural-looking smile. Editorial lifestyle photography, soft natural daylight, warm bone-white (#F7F4ED) and deep green-black (#14241E) tones with one terracotta (#C2603A) accent, 50-85mm lens, shallow depth of field, fine film grain, true-to-life skin texture, natural healthy teeth. Negative: no text, no letters, no logos, no brand names, no watermarks, no signage, no name badges, no distorted or extra teeth, no extra fingers, no plastic skin, no over-whitened teeth, no cold blue clinical cast, no collage, no borders.",
-   "url": null,
-   "width": null,
-   "height": null,
-   "job_id": null,
+   "url": "https://d8j0ntlcm91z4.cloudfront.net/user_349VrHjTFIpx9q71lpfpAXcLXvR/hf_20260925_012549_aef1a6fa-7739-4005-be83-dbd519b4bfa3.png",
+   "width": 1024,
+   "height": 1024,
+   "job_id": "aef1a6fa-7739-4005-be83-dbd519b4bfa3",
    "step": 1
   },
   {
@@ -441,11 +455,12 @@
    "resolution": "1k",
    "prompt": "Edit the reference image: keep the exact same person, face, lips, skin, lighting, framing and background. Change ONLY the teeth to show two missing upper side teeth and a visible lower molar gap. Photorealistic, no other changes. Editorial lifestyle photography, soft natural daylight, warm bone-white (#F7F4ED) and deep green-black (#14241E) tones with one terracotta (#C2603A) accent, 50-85mm lens, shallow depth of field, fine film grain, true-to-life skin texture, natural healthy teeth. Negative: no text, no letters, no logos, no brand names, no watermarks, no signage, no name badges, no distorted or extra teeth, no extra fingers, no plastic skin, no over-whitened teeth, no cold blue clinical cast, no collage, no borders.",
    "reference": "despues-protesis",
-   "url": null,
-   "width": null,
-   "height": null,
-   "job_id": null,
-   "step": 2
+   "url": "https://d8j0ntlcm91z4.cloudfront.net/user_349VrHjTFIpx9q71lpfpAXcLXvR/hf_20260925_012716_71f5add7-a53c-4020-ad85-dbd5158b9ab9.png",
+   "width": 1024,
+   "height": 1024,
+   "job_id": "71f5add7-a53c-4020-ad85-dbd5158b9ab9",
+   "step": 2,
+   "prompt_deviation": "Shared style tail sent without \"natural healthy teeth\" and \"no distorted or extra teeth\" (both contradict the requested before-state); reference passed as the after job_id (role image_references)."
   }
  ]
 }

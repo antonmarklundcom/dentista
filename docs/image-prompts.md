@@ -1,6 +1,6 @@
 # Image plan — Dentista.com.py
 
-Nothing is generated yet. Run these when approved ("Generate image"). The file stems and alt
+Generated 2026-09-25 (gpt_image_2_5 sunburst, 15.25 credits); job ids and URLs in `docs/imagery-manifest.json`. The file stems and alt
 texts are registered in `content/images.php`; each page shows its image automatically as soon as
 `assets/img/<stem>-640.webp` exists. Optimize with webimg to AVIF + WebP at 640 and 1280 px:
 `<stem>-640.avif`, `<stem>-640.webp`, `<stem>-1280.avif`, `<stem>-1280.webp`

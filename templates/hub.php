@@ -50,6 +50,11 @@ render([
   </div>
 </section>
 <?php if ($hub === 'servicios') before_after_block(null, 'Así puede cambiar una sonrisa', 'section section--line'); ?>
+<?php if ($hub === 'zonas' && (img_exists('adulto-mayor') || img_exists('pareja'))): ?>
+<section class="photo-pair container" aria-hidden="true">
+  <?= img('adulto-mayor', 'photo-pair__a', '(min-width: 1024px) 400px, 50vw') ?><?= img('pareja', 'photo-pair__b', '(min-width: 1024px) 780px, 100vw') ?>
+</section>
+<?php endif; ?>
 <section class="section section--tint">
   <div class="container form-section">
     <div>
