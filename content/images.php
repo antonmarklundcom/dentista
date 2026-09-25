@@ -25,6 +25,7 @@ return [
         'encias-inflamadas'         => ['file' => 'encias-sanas', 'alt' => 'Sonrisa con encías sanas, rosadas y firmes', 'size' => [1280, 964]],
         'muela-del-juicio'          => ['file' => 'muela-del-juicio-radiografia', 'alt' => 'Radiografía panorámica que muestra una muela del juicio', 'size' => [1280, 964]],
         'implantes-dentales'        => ['file' => 'implantes-dentales-asuncion', 'alt' => 'Hombre de 50 años sonriendo tras un implante dental', 'size' => [1280, 964]],
+        'carillas-dentales'         => ['file' => 'despues-carillas', 'alt' => 'Sonrisa con dientes frontales armoniosos, estética dental (imagen ilustrativa)', 'size' => [1280, 964]],
         'odontopediatria'           => ['file' => 'odontopediatria-ninos', 'alt' => 'Niño riendo en el sillón dental durante una consulta de odontopediatría', 'size' => [1280, 964]],
 
         // Partner page (illustrative, not a real partner)
@@ -41,7 +42,7 @@ return [
         ['key' => 'ortodoncia', 'label' => 'Ortodoncia', 'service' => 'brackets',
          'before' => ['file' => 'antes-ortodoncia', 'alt' => 'Simulación: dientes apiñados antes de la ortodoncia'],
          'after'  => ['file' => 'despues-ortodoncia', 'alt' => 'Simulación: dientes alineados después de la ortodoncia']],
-        ['key' => 'carillas', 'label' => 'Estética dental', 'service' => 'blanqueamiento-dental',
+        ['key' => 'carillas', 'label' => 'Estética dental', 'service' => 'carillas-dentales',
          'before' => ['file' => 'antes-carillas', 'alt' => 'Simulación: dientes frontales desgastados y con espacios'],
          'after'  => ['file' => 'despues-carillas', 'alt' => 'Simulación: dientes frontales armoniosos después del tratamiento estético']],
         ['key' => 'protesis', 'label' => 'Prótesis', 'service' => 'protesis-dental',
