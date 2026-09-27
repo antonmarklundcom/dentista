@@ -36,13 +36,13 @@ render([
       <?php if ($H_img): echo $H_img; else: ?>
       <svg class="odontogram" viewBox="0 0 616 104" fill="none" role="img" aria-label="Odontograma ilustrativo con la pieza 26 señalada">
         <defs><path id="odt" d="M7 2C3.5 2 1.5 5 1.5 10c0 6 2.5 9 3.5 15 .8 5 1.5 11 4 11s2.5-7 6-7 3.5 7 6 7 3.2-6 4-11c1-6 3.5-9 3.5-15 0-5-2-8-5.5-8-3 0-4.5 2-8 2S10 2 7 2z"/></defs>
-        <rect x="436" y="0" width="154" height="24" rx="12" fill="#14241E"/>
-        <text x="513" y="16" text-anchor="middle" font-size="12" font-weight="500" fill="#F7F4ED">“me molesta esta”</text>
-        <path d="M513 24v8" stroke="#14241E" stroke-width="1.4"/>
-        <g stroke="#14241E" stroke-width="1.3" stroke-linejoin="round"><?php foreach ([4,42,80,118,156,194,232,270,308,346,384,422,460,536,574] as $x): ?><use href="#odt" x="<?= $x ?>" y="36"/><?php endforeach; ?></g>
-        <use href="#odt" x="498" y="36" fill="#E7B8A3" stroke="#A44C29" stroke-width="1.6" stroke-linejoin="round"/>
-        <path d="M304 32v58" stroke="#A39A88" stroke-width="1" stroke-dasharray="3 3"/>
-        <g font-size="11" fill="#4A5A53" text-anchor="middle"><?php foreach ([18,17,16,15,14,13,12,11,21,22,23,24,25,26,27,28] as $i => $n): ?><text x="<?= 19 + $i * 38 ?>" y="98"<?= $n === 26 ? ' fill="#A44C29" font-weight="600"' : '' ?>><?= $n ?></text><?php endforeach; ?></g>
+        <rect x="436" y="0" width="154" height="24" rx="12" fill="#0B2540"/>
+        <text x="513" y="16" text-anchor="middle" font-size="12" font-weight="500" fill="#FFFFFF">“me molesta esta”</text>
+        <path d="M513 24v8" stroke="#0B2540" stroke-width="1.4"/>
+        <g stroke="#0B2540" stroke-width="1.3" stroke-linejoin="round"><?php foreach ([4,42,80,118,156,194,232,270,308,346,384,422,460,536,574] as $x): ?><use href="#odt" x="<?= $x ?>" y="36"/><?php endforeach; ?></g>
+        <use href="#odt" x="498" y="36" fill="#B8D5F0" stroke="#0F5C9C" stroke-width="1.6" stroke-linejoin="round"/>
+        <path d="M304 32v58" stroke="#93A3B6" stroke-width="1" stroke-dasharray="3 3"/>
+        <g font-size="11" fill="#4A5D73" text-anchor="middle"><?php foreach ([18,17,16,15,14,13,12,11,21,22,23,24,25,26,27,28] as $i => $n): ?><text x="<?= 19 + $i * 38 ?>" y="98"<?= $n === 26 ? ' fill="#0F5C9C" font-weight="600"' : '' ?>><?= $n ?></text><?php endforeach; ?></g>
       </svg>
       <?php endif; ?>
     </div>
@@ -75,6 +75,9 @@ render([
 </section>
 
 <?php trust_block(); ?>
+
+<?php professionals_block(null, null, 'section'); ?>
+<?php testimonials_block(); ?>
 
 <?php before_after_block(null, 'Así puede cambiar una sonrisa'); ?>
 

@@ -658,3 +658,25 @@ ul, ol { margin: 0; }
   *, *::before, *::after { transition: none !important; animation: none !important; scroll-behavior: auto !important; }
 }
 
+/* ---------- trust + conversion blocks (render only with real data) ---------- */
+.price-from { display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 8px; margin: 1.25rem 0 0; }
+.price-from__k { font-size: .875rem; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; color: var(--ink-60); }
+.price-from strong { font: 700 1.5rem/1.1 var(--font-display); color: var(--ink); }
+.price-from__n { flex-basis: 100%; font-size: .875rem; color: var(--ink-60); }
+.card-grid--pros, .card-grid--reviews { grid-template-columns: repeat(auto-fill, minmax(min(100%, 300px), 1fr)); }
+.pro__head { display: flex; align-items: center; gap: 16px; margin-bottom: 16px; }
+.pro__head h3 { font-size: 1.25rem; }
+.pro__photo img, .pro__initials { width: 72px; height: 72px; border-radius: 50%; object-fit: cover; flex: none; }
+.pro__initials { display: grid; place-items: center; background: var(--sand); color: var(--accent-dark); font: 700 1.5rem/1 var(--font-display); }
+.card .pro__title { margin: 4px 0 0; }
+.card .pro__license { display: flex; align-items: center; gap: 6px; margin: 0; font-weight: 600; color: var(--ink); }
+.card .pro__zones { margin-top: auto; padding-top: 12px; font-size: .875rem; color: var(--ink-60); }
+.review { margin: 0; }
+.review blockquote { margin: 0; }
+.card.review blockquote p { margin: 0; font-size: 1.05rem; line-height: 1.55; color: var(--ink); }
+.review figcaption { margin-top: auto; padding-top: 16px; font-size: .95rem; }
+.review figcaption span { display: block; font-size: .8125rem; color: var(--ink-60); }
+.mid-cta { margin: 2.5rem 0; padding: 20px 22px; background: var(--tint); border: 1px solid var(--sand-line); border-left: 4px solid var(--accent); border-radius: var(--r-md); }
+.prose .mid-cta__t { margin: 0 0 6px; font: 650 1.2rem/1.25 var(--font-display); color: var(--ink); }
+.prose .mid-cta__p { margin: 0 0 14px; font-size: .95rem; color: var(--ink-80); }
+.mid-cta .btn-row { display: flex; flex-wrap: wrap; align-items: center; gap: 12px 20px; }

@@ -13,7 +13,7 @@ render([
     'lp' => true,
     'wa' => $s['wa'],
     'bodyClass' => 'page-lp',
-    'body' => function () use ($s) { $LP_img = img($s['slug'], 'hero__photo', '(min-width: 1024px) 560px, 100vw'); ?>
+    'body' => function () use ($s) { $LP_img = img($s['slug'], 'hero__photo', '(min-width: 1024px) 560px, 100vw', true); ?>
 <section class="hero hero--lp">
   <div class="container hero__grid">
     <div class="hero__copy">
