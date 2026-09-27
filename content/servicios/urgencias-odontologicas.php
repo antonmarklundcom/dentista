@@ -71,6 +71,6 @@ return [
         'sub'     => 'Contanos qué te pasa por WhatsApp y coordinamos tu consulta con un odontólogo matriculado lo antes posible. Orientación sin costo.',
         'bullets' => ['Dolor de muela, golpes o dientes rotos', 'Coordinamos lo antes posible según disponibilidad', 'Orientación por WhatsApp sin costo', 'Odontólogo matriculado en Asunción o Gran Asunción'],
     ],
-    'related'     => ['reconstruccion-dental', 'muela-del-juicio', 'bruxismo'],
-    'guides'      => ['dolor-de-muelas'],
+    'related'     => ['endodoncia', 'reconstruccion-dental', 'muela-del-juicio'],
+    'guides'      => ['flemon-dental', 'dolor-de-muelas'],
 ];

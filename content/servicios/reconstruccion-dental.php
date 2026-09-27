@@ -64,6 +64,6 @@ return [
         'sub'     => 'Contanos qué le pasa a tu diente por WhatsApp y coordinamos tu evaluación con un odontólogo matriculado. Presupuesto sin costo.',
         'bullets' => ['Evaluación con odontólogo matriculado', 'Resina, incrustación o corona según tu caso', 'Presupuesto sin costo después de la evaluación', 'Coordinamos el horario en Asunción o Gran Asunción'],
     ],
-    'related'     => ['urgencias-odontologicas', 'muela-del-juicio', 'profilaxis-dental'],
-    'guides'      => [],
+    'related'     => ['endodoncia', 'urgencias-odontologicas', 'profilaxis-dental'],
+    'guides'      => ['cuanto-cuesta-el-dentista'],
 ];
