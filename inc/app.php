@@ -48,6 +48,7 @@ function records(string $dir): array
 }
 
 require_once __DIR__ . '/parts.php';
+require_once __DIR__ . '/trust.php';
 
 function services(): array { return records('servicios'); }
 function guides(): array   { return records('guias'); }

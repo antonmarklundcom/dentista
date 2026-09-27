@@ -18,7 +18,7 @@ render([
             'areaServed' => ['@type' => 'City', 'name' => 'Asunción'],
             'provider' => ['@type' => 'Organization', 'name' => site()['name'], 'url' => base_url() . '/'],
             'url' => abs_url('/servicios/' . $s['slug'] . '/'),
-        ],
+        ] + (price_offer($s) ? ['offers' => price_offer($s)] : []),
     ],
     'body' => function () use ($s, $S_crumbs) {
         $S_img = img($s['slug'], 'hero__photo', '(min-width: 1024px) 620px, 100vw', true);
@@ -41,6 +41,7 @@ render([
       <h1><?= e($s['h1']) ?></h1>
       <p class="lead"><?= e($s['lead']) ?></p>
       <?php if (!empty($s['highlights'])) ticks_inline($s['highlights'], 'ticks-inline--stack'); ?>
+      <?= price_line($s) ?>
       <div class="btn-row">
         <?= wa_btn($s['wa'], 'Consultá por WhatsApp', 'service-hero', 'btn btn--ink btn--lg') ?>
       </div>
@@ -71,6 +72,8 @@ render([
   </div>
 </div>
 
+<?php professionals_block($s['slug']); ?>
+<?php testimonials_block($s['slug']); ?>
 <?php before_after_block($s['slug'], 'Antes y después: ' . mb_strtolower($s['nav']), 'section section--tint'); ?>
 
 <?php if ($S_guides): ?>

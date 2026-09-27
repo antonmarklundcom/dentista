@@ -45,10 +45,9 @@ $L_nav = [
 <meta property="og:image:height" content="630">
 <meta property="og:image:alt" content="Dentista.com.py: tu dentista en Asunción, coordinado por WhatsApp">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="theme-color" content="#14241E">
+<meta name="theme-color" content="#0B2540">
 <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
-<link rel="preload" href="/assets/fonts/fraunces.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/assets/fonts/inter-tight.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="/assets/css/site.css?v=<?= @filemtime(ROOT . '/assets/css/site.css') ?>">
 <script>document.documentElement.className+=' js';setTimeout(function(){if(!window.__dp)document.documentElement.classList.remove('js')},4000)</script>

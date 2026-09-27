@@ -6,8 +6,8 @@
  */
 return [
     'site_url'        => 'https://dentista.com.py',
-    'whatsapp'        => '595995628862',        // ⚠️ confirmar. Formato internacional sin + ni espacios.
-    'phone_display'   => '+595 995 628862',     // ⚠️ confirmar
+    'whatsapp'        => '595995628862',        // confirmado por Anton 2026-09-27. Formato internacional sin + ni espacios.
+    'phone_display'   => '+595 995 628862',
     'noindex'         => false,                 // true = staging / demo
 
     // VenderCRM — la clave va SOLO en config.php del servidor (o variable de

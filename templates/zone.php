@@ -51,6 +51,8 @@ render([
   </div>
 </div>
 
+<?php professionals_block(null, $zslug); ?>
+
 <section class="section section--tint">
   <div class="container">
     <div class="section-head section-head--link"><div><?= eyebrow('Tratamientos') ?><h2>Qué podés consultar desde <?= e($z['name']) ?></h2></div><a class="link-arrow" href="/servicios/">Ver todos<?= arrow() ?></a></div>

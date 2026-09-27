@@ -33,6 +33,13 @@ render([
         $G_ts = strtotime($G_updated) ?: time();
         ob_start(); edu_diagram($g['slug']); $G_svg = ob_get_clean();
         $G_after = $G_svg !== '' ? [0 => function () use ($G_svg) { echo $G_svg; }] : [];
+        // Mid-article call to action for readers who are not ready to book yet: after the
+        // middle section (never after the last one, where the full CTA already follows).
+        $G_mid = intdiv(count($g['sections']), 2) - 1;
+        if ($G_svc && $G_mid >= 0 && $G_mid < count($g['sections']) - 1) {
+            $G_prev = $G_after[$G_mid] ?? null;
+            $G_after[$G_mid] = function () use ($G_prev, $G_svc, $G_wa) { if ($G_prev) $G_prev(); mid_cta($G_svc, $G_wa); };
+        }
         // The "cómo elegir" page: its first section list becomes the hero checklist.
         $G_check = $G_choose ? ($g['sections'][0]['list'] ?? []) : [];
         $G_more = array_filter(edu_guides(), fn($o) => $o['slug'] !== $g['slug'] && $G_svc && ($o['service'] ?? '') === $G_svc['slug']);

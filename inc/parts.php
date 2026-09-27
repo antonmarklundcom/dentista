@@ -274,12 +274,12 @@ function bento_art(string $slug, bool $feature): string
     if ($feature) {
         return '<svg class="bento__art bento__art--feature" viewBox="0 0 236 130" fill="none" aria-hidden="true" focusable="false"><g stroke="currentColor" stroke-opacity=".75" stroke-width="1.5">'
             . '<rect x="10" y="34" width="32" height="70" rx="12"/><rect x="47" y="26" width="32" height="74" rx="12"/><rect x="84" y="22" width="32" height="78" rx="12"/><rect x="121" y="22" width="32" height="78" rx="12"/><rect x="158" y="26" width="32" height="74" rx="12"/><rect x="195" y="34" width="32" height="70" rx="12"/></g>'
-            . '<path d="M4 68C60 52 176 52 232 68" stroke="#D49075" stroke-width="2.2" stroke-linecap="round"/><g fill="#D49075"><rect x="19" y="57" width="14" height="14" rx="3"/><rect x="56" y="52" width="14" height="14" rx="3"/><rect x="93" y="50" width="14" height="14" rx="3"/><rect x="130" y="50" width="14" height="14" rx="3"/><rect x="167" y="52" width="14" height="14" rx="3"/><rect x="204" y="57" width="14" height="14" rx="3"/></g></svg>';
+            . '<path d="M4 68C60 52 176 52 232 68" stroke="#6FA7DC" stroke-width="2.2" stroke-linecap="round"/><g fill="#6FA7DC"><rect x="19" y="57" width="14" height="14" rx="3"/><rect x="56" y="52" width="14" height="14" rx="3"/><rect x="93" y="50" width="14" height="14" rx="3"/><rect x="130" y="50" width="14" height="14" rx="3"/><rect x="167" y="52" width="14" height="14" rx="3"/><rect x="204" y="57" width="14" height="14" rx="3"/></g></svg>';
     }
-    return '<svg class="bento__art" viewBox="0 0 170 140" fill="none" aria-hidden="true" focusable="false"><path d="M6 40h158" stroke="#14241E" stroke-width="1.5" stroke-dasharray="4 4"/>'
-        . '<path d="M14 40c0-12 6-20 18-20s18 8 18 20v20c0 18-5 40-11 40-5 0-5-16-7-16s-2 16-7 16c-6 0-11-22-11-40z" stroke="#14241E" stroke-width="1.5" stroke-linejoin="round"/>'
-        . '<path d="M120 40c0-12 6-20 18-20s18 8 18 20v20c0 18-5 40-11 40-5 0-5-16-7-16s-2 16-7 16c-6 0-11-22-11-40z" stroke="#14241E" stroke-width="1.5" stroke-linejoin="round"/>'
-        . '<path d="M60 30c0-8 6-12 25-12s25 4 25 12v28c0 10-10 16-25 16S60 68 60 58z" fill="#fff" stroke="#A44C29" stroke-width="1.8"/><path d="M50 44h10M110 44h10" stroke="#A44C29" stroke-width="1.8" stroke-linecap="round"/></svg>';
+    return '<svg class="bento__art" viewBox="0 0 170 140" fill="none" aria-hidden="true" focusable="false"><path d="M6 40h158" stroke="#0B2540" stroke-width="1.5" stroke-dasharray="4 4"/>'
+        . '<path d="M14 40c0-12 6-20 18-20s18 8 18 20v20c0 18-5 40-11 40-5 0-5-16-7-16s-2 16-7 16c-6 0-11-22-11-40z" stroke="#0B2540" stroke-width="1.5" stroke-linejoin="round"/>'
+        . '<path d="M120 40c0-12 6-20 18-20s18 8 18 20v20c0 18-5 40-11 40-5 0-5-16-7-16s-2 16-7 16c-6 0-11-22-11-40z" stroke="#0B2540" stroke-width="1.5" stroke-linejoin="round"/>'
+        . '<path d="M60 30c0-8 6-12 25-12s25 4 25 12v28c0 10-10 16-25 16S60 68 60 58z" fill="#fff" stroke="#0F5C9C" stroke-width="1.8"/><path d="M50 44h10M110 44h10" stroke="#0F5C9C" stroke-width="1.8" stroke-linecap="round"/></svg>';
 }
 
 /** Simple card grid (related services, zone pages). */
@@ -439,13 +439,13 @@ function zone_map(): void
 { ?>
 <figure class="map">
   <svg viewBox="0 0 520 440" fill="none" role="img" aria-labelledby="map-t"><title id="map-t">Mapa ilustrativo de Asunción y las ciudades del Gran Asunción donde coordinamos consultas</title>
-    <path d="M70 -10C112 60 58 122 94 184S70 300 118 362 108 424 138 450" stroke="#A9BDB6" stroke-width="16" stroke-linecap="round"/>
-    <text x="46" y="286" transform="rotate(-80 46 286)" font-size="11" letter-spacing="2" fill="#4A5A53">RÍO PARAGUAY</text>
-    <g stroke="#C9C1B1" stroke-width="1.2" stroke-dasharray="4 5"><path d="M175 185L225 85M175 185L345 120M175 185L285 225M285 225L375 265M375 265L465 315M175 185L165 300"/></g>
-    <g fill="#14241E"><circle cx="225" cy="85" r="6"/><circle cx="345" cy="120" r="6"/><circle cx="285" cy="225" r="6"/><circle cx="375" cy="265" r="6"/><circle cx="165" cy="300" r="6"/><circle cx="465" cy="315" r="6"/></g>
-    <g stroke="#14241E" stroke-opacity=".25" stroke-width="1.2"><circle cx="225" cy="85" r="13"/><circle cx="345" cy="120" r="13"/><circle cx="285" cy="225" r="13"/><circle cx="375" cy="265" r="13"/><circle cx="165" cy="300" r="13"/><circle cx="465" cy="315" r="13"/></g>
-    <circle cx="175" cy="185" r="9" fill="#A44C29"/><circle cx="175" cy="185" r="20" stroke="#A44C29" stroke-opacity=".4" stroke-width="1.4"/>
-    <g font-size="14" font-weight="600" fill="#14241E" text-anchor="middle">
+    <path d="M70 -10C112 60 58 122 94 184S70 300 118 362 108 424 138 450" stroke="#A7BACD" stroke-width="16" stroke-linecap="round"/>
+    <text x="46" y="286" transform="rotate(-80 46 286)" font-size="11" letter-spacing="2" fill="#4A5D73">RÍO PARAGUAY</text>
+    <g stroke="#B9C6D5" stroke-width="1.2" stroke-dasharray="4 5"><path d="M175 185L225 85M175 185L345 120M175 185L285 225M285 225L375 265M375 265L465 315M175 185L165 300"/></g>
+    <g fill="#0B2540"><circle cx="225" cy="85" r="6"/><circle cx="345" cy="120" r="6"/><circle cx="285" cy="225" r="6"/><circle cx="375" cy="265" r="6"/><circle cx="165" cy="300" r="6"/><circle cx="465" cy="315" r="6"/></g>
+    <g stroke="#0B2540" stroke-opacity=".25" stroke-width="1.2"><circle cx="225" cy="85" r="13"/><circle cx="345" cy="120" r="13"/><circle cx="285" cy="225" r="13"/><circle cx="375" cy="265" r="13"/><circle cx="165" cy="300" r="13"/><circle cx="465" cy="315" r="13"/></g>
+    <circle cx="175" cy="185" r="9" fill="#0F5C9C"/><circle cx="175" cy="185" r="20" stroke="#0F5C9C" stroke-opacity=".4" stroke-width="1.4"/>
+    <g font-size="14" font-weight="600" fill="#0B2540" text-anchor="middle">
       <text x="175" y="155" class="map__city">Asunción</text><text x="225" y="62">Mariano Roque Alonso</text><text x="345" y="100">Luque</text>
       <text x="285" y="255">Fernando de la Mora</text><text x="400" y="294">San Lorenzo</text><text x="165" y="330">Lambaré</text><text x="465" y="345">Capiatá</text>
     </g>
@@ -501,36 +501,36 @@ function edu_diagram(string $slug): void
 {
     // Tooth outline centred on 0,0 (crown on top, roots below). Gum is drawn over the roots.
     $tooth = 'M-26 -40c-12 0-20 10-20 26 0 16 6 26 9 42 3 14 5 26 12 26 7 0 7-18 25-18s18 18 25 18c7 0 9-12 12-26 3-16 9-26 9-42 0-16-8-26-20-26-10 0-13 6-26 6s-16-6-26-6z';
-    $gum = fn(string $fill = '#E7B8A3', int $top = 24) => '<path d="M-62 ' . ($top + 6) . 'c14-8 26-8 36-2 10 5 16 6 26 6s16-1 26-6c10-6 22-6 36 2v' . (70 - $top) . 'h-124z" fill="' . $fill . '"/>';
+    $gum = fn(string $fill = '#B8D5F0', int $top = 24) => '<path d="M-62 ' . ($top + 6) . 'c14-8 26-8 36-2 10 5 16 6 26 6s16-1 26-6c10-6 22-6 36 2v' . (70 - $top) . 'h-124z" fill="' . $fill . '"/>';
     $d = [
         'sarro-dental' => ['Cómo la placa se convierte en sarro', 'Diagrama en tres pasos: la placa blanda se acumula sobre el diente junto a la encía, la saliva la mineraliza y se endurece como sarro; ese sarro solo lo saca el odontólogo.',
             function () use ($tooth, $gum) {
                 $labels = [['1. Placa blanda', 'Se va con el cepillo'], ['2. Placa acumulada', 'La saliva la mineraliza'], ['3. Sarro', 'Solo lo saca el odontólogo']];
                 foreach ([0, 1, 2] as $i) {
                     $x = 90 + $i * 180;
-                    echo '<g transform="translate(' . $x . ' 78)"><path d="' . $tooth . '" fill="#fff" stroke="#14241E" stroke-width="2"/>' . $gum();
-                    if ($i === 0) echo '<g fill="#D49075"><circle cx="-20" cy="8" r="3"/><circle cx="4" cy="-6" r="2.5"/><circle cx="22" cy="12" r="3"/></g>';
-                    if ($i === 1) echo '<path d="M-38 22c10 5 24 7 38 7s28-2 38-7" fill="none" stroke="#D49075" stroke-width="7" stroke-linecap="round"/><g fill="#D49075"><circle cx="-16" cy="4" r="3"/><circle cx="16" cy="0" r="3"/></g>';
-                    if ($i === 2) echo '<path d="M-40 20c10 6 26 9 40 9s30-3 40-9" fill="none" stroke="#A44C29" stroke-width="11" stroke-linecap="round"/>';
+                    echo '<g transform="translate(' . $x . ' 78)"><path d="' . $tooth . '" fill="#fff" stroke="#0B2540" stroke-width="2"/>' . $gum();
+                    if ($i === 0) echo '<g fill="#6FA7DC"><circle cx="-20" cy="8" r="3"/><circle cx="4" cy="-6" r="2.5"/><circle cx="22" cy="12" r="3"/></g>';
+                    if ($i === 1) echo '<path d="M-38 22c10 5 24 7 38 7s28-2 38-7" fill="none" stroke="#6FA7DC" stroke-width="7" stroke-linecap="round"/><g fill="#6FA7DC"><circle cx="-16" cy="4" r="3"/><circle cx="16" cy="0" r="3"/></g>';
+                    if ($i === 2) echo '<path d="M-40 20c10 6 26 9 40 9s30-3 40-9" fill="none" stroke="#0F5C9C" stroke-width="11" stroke-linecap="round"/>';
                     echo '</g><text x="' . $x . '" y="182" text-anchor="middle" font-weight="600">' . e($labels[$i][0]) . '</text><text x="' . $x . '" y="202" text-anchor="middle" class="d-muted">' . e($labels[$i][1]) . '</text>';
-                    if ($i < 2) echo '<path d="M' . ($x + 70) . ' 70h36m-8-6 8 6-8 6" stroke="#A44C29" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>';
+                    if ($i < 2) echo '<path d="M' . ($x + 70) . ' 70h36m-8-6 8 6-8 6" stroke="#0F5C9C" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>';
                 }
             }],
         'placa-bacteriana' => ['Qué es la placa bacteriana', 'Diagrama: una película pegajosa de bacterias cubre el diente, sobre todo junto al borde de la encía; el cepillado y el hilo dental la retiran antes de que se endurezca.',
             function () use ($tooth, $gum) {
-                echo '<g transform="translate(170 86)"><path d="' . $tooth . '" fill="#fff" stroke="#14241E" stroke-width="2"/>' . $gum()
-                   . '<path d="M-44 -6c-1 12 1 22 5 30M44 -6c1 12-1 22-5 30" fill="none" stroke="#D49075" stroke-width="7" stroke-linecap="round"/>'
-                   . '<g fill="#A44C29"><circle cx="-43" cy="4" r="2.5"/><circle cx="-41" cy="16" r="2.5"/><circle cx="43" cy="8" r="2.5"/><circle cx="41" cy="20" r="2.5"/></g></g>'
-                   . '<path d="M222 84h66" stroke="#14241E" stroke-width="1.2"/><text x="298" y="80" font-weight="600">Placa (biofilm)</text><text x="298" y="98" class="d-muted">bacterias + restos de comida</text>'
-                   . '<path d="M232 118h56" stroke="#14241E" stroke-width="1.2"/><text x="298" y="122" font-weight="600">Borde de la encía</text><text x="298" y="140" class="d-muted">donde más se acumula</text>'
-                   . '<text x="298" y="184" font-weight="600" fill="#A44C29">Cepillo + hilo dental</text><text x="298" y="202" class="d-muted">la retiran si es a diario</text>';
+                echo '<g transform="translate(170 86)"><path d="' . $tooth . '" fill="#fff" stroke="#0B2540" stroke-width="2"/>' . $gum()
+                   . '<path d="M-44 -6c-1 12 1 22 5 30M44 -6c1 12-1 22-5 30" fill="none" stroke="#6FA7DC" stroke-width="7" stroke-linecap="round"/>'
+                   . '<g fill="#0F5C9C"><circle cx="-43" cy="4" r="2.5"/><circle cx="-41" cy="16" r="2.5"/><circle cx="43" cy="8" r="2.5"/><circle cx="41" cy="20" r="2.5"/></g></g>'
+                   . '<path d="M222 84h66" stroke="#0B2540" stroke-width="1.2"/><text x="298" y="80" font-weight="600">Placa (biofilm)</text><text x="298" y="98" class="d-muted">bacterias + restos de comida</text>'
+                   . '<path d="M232 118h56" stroke="#0B2540" stroke-width="1.2"/><text x="298" y="122" font-weight="600">Borde de la encía</text><text x="298" y="140" class="d-muted">donde más se acumula</text>'
+                   . '<text x="298" y="184" font-weight="600" fill="#0F5C9C">Cepillo + hilo dental</text><text x="298" y="202" class="d-muted">la retiran si es a diario</text>';
             }],
         'gingivitis' => ['Encía sana vs. encía inflamada', 'Diagrama comparativo: a la izquierda una encía sana, rosada y firme que abraza el diente; a la derecha una encía inflamada, roja e hinchada, con placa en el borde, que sangra al cepillar.',
             function () use ($tooth, $gum) {
                 foreach ([[140, false], [400, true]] as [$x, $bad]) {
-                    echo '<g transform="translate(' . $x . ' 78)"><path d="' . $tooth . '" fill="#fff" stroke="#14241E" stroke-width="2"/>'
-                       . ($bad ? '<path d="M-38 16c10 5 24 7 38 7s28-2 38-7" fill="none" stroke="#D49075" stroke-width="6" stroke-linecap="round"/>' . $gum('#C2603A', 12) . '<path d="M-10 34v10M8 36v8" stroke="#7A2E12" stroke-width="2" stroke-linecap="round"/>'
-                               : $gum('#E7B8A3', 22))
+                    echo '<g transform="translate(' . $x . ' 78)"><path d="' . $tooth . '" fill="#fff" stroke="#0B2540" stroke-width="2"/>'
+                       . ($bad ? '<path d="M-38 16c10 5 24 7 38 7s28-2 38-7" fill="none" stroke="#6FA7DC" stroke-width="6" stroke-linecap="round"/>' . $gum('#1668B8', 12) . '<path d="M-10 34v10M8 36v8" stroke="#7A2E12" stroke-width="2" stroke-linecap="round"/>'
+                               : $gum('#B8D5F0', 22))
                        . '</g><text x="' . $x . '" y="182" text-anchor="middle" font-weight="600">' . ($bad ? 'Encía inflamada' : 'Encía sana') . '</text>'
                        . '<text x="' . $x . '" y="202" text-anchor="middle" class="d-muted">' . ($bad ? 'roja, hinchada, sangra' : 'rosada, firme, no sangra') . '</text>';
                 }
@@ -542,8 +542,8 @@ function edu_diagram(string $slug): void
                 $worn   = 'M-44 -4L44 -4' . str_replace('C46 2', 'C45 6', $roots);
                 $worn   = str_replace('-44 -14Z', '-44 -4Z', $worn);
                 foreach ([[140, $normal, 'Muela normal', 'cúspides marcadas', false], [400, $worn, 'Muela desgastada', 'superficie plana, más sensible', true]] as [$x, $p, $t, $sub, $w]) {
-                    echo '<g transform="translate(' . $x . ' 78)"><path d="' . $p . '" fill="#fff" stroke="#14241E" stroke-width="2" stroke-linejoin="round"/>'
-                       . ($w ? '<path d="M-46 -4h92" stroke="#A44C29" stroke-width="4" stroke-linecap="round"/><path d="M-38 -26l8 8M0 -32v12M38 -26l-8 8" stroke="#A44C29" stroke-width="2" stroke-linecap="round"/>' : '')
+                    echo '<g transform="translate(' . $x . ' 78)"><path d="' . $p . '" fill="#fff" stroke="#0B2540" stroke-width="2" stroke-linejoin="round"/>'
+                       . ($w ? '<path d="M-46 -4h92" stroke="#0F5C9C" stroke-width="4" stroke-linecap="round"/><path d="M-38 -26l8 8M0 -32v12M38 -26l-8 8" stroke="#0F5C9C" stroke-width="2" stroke-linecap="round"/>' : '')
                        . '</g><text x="' . $x . '" y="182" text-anchor="middle" font-weight="600">' . e($t) . '</text><text x="' . $x . '" y="202" text-anchor="middle" class="d-muted">' . e($sub) . '</text>';
                 }
             }],
@@ -551,7 +551,7 @@ function edu_diagram(string $slug): void
     if (!isset($d[$slug])) return;
     [$title, $label, $draw] = $d[$slug];
     $id = 'dg-' . $slug;
-    echo '<figure class="diagram"><svg viewBox="0 0 540 220" role="img" aria-labelledby="' . $id . '-t ' . $id . '-d" font-size="13" fill="#14241E"><title id="' . $id . '-t">' . e($title) . '</title><desc id="' . $id . '-d">' . e($label) . '</desc>';
+    echo '<figure class="diagram"><svg viewBox="0 0 540 220" role="img" aria-labelledby="' . $id . '-t ' . $id . '-d" font-size="13" fill="#0B2540"><title id="' . $id . '-t">' . e($title) . '</title><desc id="' . $id . '-d">' . e($label) . '</desc>';
     $draw();
     echo '</svg><figcaption>' . e($title) . '. Esquema ilustrativo.</figcaption></figure>';
 }
