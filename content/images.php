@@ -27,6 +27,8 @@ return [
         'implantes-dentales'        => ['file' => 'implantes-dentales-asuncion', 'alt' => 'Hombre de 50 años sonriendo tras un implante dental', 'size' => [1280, 964]],
         'carillas-dentales'         => ['file' => 'despues-carillas', 'alt' => 'Sonrisa con dientes frontales armoniosos, estética dental (imagen ilustrativa)', 'size' => [1280, 964]],
         'odontopediatria'           => ['file' => 'odontopediatria-ninos', 'alt' => 'Niño riendo en el sillón dental durante una consulta de odontopediatría', 'size' => [1280, 964]],
+        'urgencias-odontologicas'   => ['file' => 'urgencias-dentales-asuncion', 'alt' => 'Hombre con una compresa fría en la mejilla llamando para pedir una consulta dental urgente', 'size' => [1280, 964]],
+        'reconstruccion-dental'     => ['file' => 'reconstruccion-dental-resina', 'alt' => 'Resina compuesta, guía de colores y modelo dental con un incisivo reconstruido', 'size' => [1280, 964]],
 
         // Partner page (illustrative, not a real partner)
         'odontologa'    => ['file' => 'odontologa-consultorio', 'alt' => 'Odontóloga en un consultorio moderno (imagen ilustrativa)', 'size' => [1280, 1600]],
