@@ -29,6 +29,7 @@ return [
         'odontopediatria'           => ['file' => 'odontopediatria-ninos', 'alt' => 'Niño riendo en el sillón dental durante una consulta de odontopediatría', 'size' => [1280, 964]],
         'urgencias-odontologicas'   => ['file' => 'urgencias-dentales-asuncion', 'alt' => 'Hombre con una compresa fría en la mejilla llamando para pedir una consulta dental urgente', 'size' => [1280, 964]],
         'reconstruccion-dental'     => ['file' => 'reconstruccion-dental-resina', 'alt' => 'Resina compuesta, guía de colores y modelo dental con un incisivo reconstruido', 'size' => [1280, 964]],
+        'endodoncia'                => ['file' => 'endodoncia-tratamiento-conducto', 'alt' => 'Modelo de una muela cortada que muestra los conductos, junto a limas de endodoncia y una radiografía dental', 'size' => [1168, 880]],
 
         // Partner page (illustrative, not a real partner)
         'odontologa'    => ['file' => 'odontologa-consultorio', 'alt' => 'Odontóloga en un consultorio moderno (imagen ilustrativa)', 'size' => [1280, 1600]],

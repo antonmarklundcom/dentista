@@ -28,7 +28,8 @@
    "/zonas/<city>/": "service cards",
    "/para-odontologos/": "odontologa + consultorio"
   },
-  "batch_2026_09_26": "2 images (urgencias-odontologicas, reconstruccion-dental), gpt_image_2_5 sunburst medium 1k, get_cost 0.5 each, downloaded HTTP 200 from local PC, converted with webimg 640/1280; ledger checked: 2 x -0.5 \"GPT Image 2.5 Sunburst\" at 2026-09-26T23:24:13Z"
+  "batch_2026_09_26": "2 images (urgencias-odontologicas, reconstruccion-dental), gpt_image_2_5 sunburst medium 1k, get_cost 0.5 each, downloaded HTTP 200 from local PC, converted with webimg 640/1280; ledger checked: 2 x -0.5 \"GPT Image 2.5 Sunburst\" at 2026-09-26T23:24:13Z",
+  "batch_2026_09_27": "1 image (endodoncia), gpt_image_2_5 sunburst medium 1k, get_cost 0.5; ledger: -0.5 GPT Image 2.5 Sunburst at 2026-09-27T00:08:49Z; converted from the URL with webimg (no upscale: 1280 variant capped at 1168)"
  },
  "images": [
   {
@@ -494,6 +495,22 @@
    "prompt": "Clean educational close-up still life for a dental website: a dental resin composite syringe, a shade guide with natural tooth shades, a curing light and a small white typodont model of front teeth with one incisor restored, arranged on a bright white clinical surface with a pale blue background. Soft diffused daylight, crisp focus, minimal and modern, no people, no text, no logos, photorealistic product photography.",
    "url": "https://d8j0ntlcm91z4.cloudfront.net/user_349VrHjTFIpx9q71lpfpAXcLXvR/hf_20260926_232413_cfd6995d-64f0-45a0-a15c-04fd80ee54ca.png",
    "job_id": "cfd6995d-64f0-45a0-a15c-04fd80ee54ca"
+  },
+  {
+   "id": "endodoncia",
+   "file": "endodoncia-tratamiento-conducto",
+   "alt_es": "Modelo de una muela cortada que muestra los conductos, junto a limas de endodoncia y una radiografía dental",
+   "ratio": "4:3",
+   "px": 1168,
+   "model": "gpt_image_2_5",
+   "variant": "sunburst",
+   "quality": "medium",
+   "resolution": "1k",
+   "prompt": "Clean educational still life for a dental website about root canal treatment: a large white anatomical model of a molar tooth cut in half showing the pulp chamber and root canals, next to fine endodontic files arranged neatly on a sterile tray and a dental x-ray film on a light viewer, bright white clinical surface with a pale blue background, soft diffused daylight, crisp focus, minimal and modern, no people, no blood, no text, no letters, no logos, photorealistic product photography.",
+   "url": "https://d8j0ntlcm91z4.cloudfront.net/user_349VrHjTFIpx9q71lpfpAXcLXvR/hf_20260927_000849_c4980110-2e12-4a37-ba12-c76e2a9f3ca3.png",
+   "width": 1168,
+   "height": 880,
+   "job_id": "c4980110-2e12-4a37-ba12-c76e2a9f3ca3"
   }
  ]
 }
