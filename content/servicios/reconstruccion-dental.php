@@ -7,7 +7,7 @@ return [
     'keyword'     => 'reconstruccion dental',
     'volume'      => 90,
     'image'       => null,
-    'title'       => 'Reconstrucción dental en Asunción: recuperar un diente dañado',
+    'title'       => 'Reconstrucción dental en Asunción: diente dañado',
     'description' => 'Reconstrucción dental en Asunción y Gran Asunción. Diente roto, desgastado o debilitado explicado. Contanos tu caso por WhatsApp, presupuesto sin costo.',
     'h1'          => 'Reconstrucción dental en Asunción y Gran Asunción',
     'lead'        => 'Un diente roto, desgastado o debilitado por una caries se puede restaurar sin necesidad de extraerlo, siempre que la raíz esté en condiciones. Contanos qué le pasa a tu diente por WhatsApp y coordinamos tu consulta con un odontólogo matriculado.',

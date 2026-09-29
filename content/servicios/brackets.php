@@ -8,7 +8,7 @@ return [
     'volume'      => 4400,
     'image'       => null,
     'title'       => 'Brackets en Asunción: coordiná tu evaluación con ortodoncia',
-    'description' => 'Brackets en Asunción y Gran Asunción. Tipos, duración y cuidados explicados. Contanos tu caso por WhatsApp y coordinamos tu evaluación, presupuesto sin costo.',
+    'description' => 'Brackets en Asunción y Gran Asunción. Tipos, duración y cuidados. Contanos tu caso por WhatsApp y coordinamos tu evaluación, presupuesto sin costo.',
     'h1'          => 'Brackets en Asunción y Gran Asunción',
     'lead'        => 'Los brackets corrigen la posición de los dientes y la mordida con un tratamiento que un odontólogo planifica según cada boca. No hay dos casos iguales: la cantidad de movimiento, el tiempo y el tipo de aparato dependen de una evaluación con radiografías. Contanos qué te preocupa y coordinamos tu consulta con un odontólogo matriculado, por WhatsApp.',
     'card'        => 'Brackets metálicos, estéticos o autoligado. Coordinamos tu evaluación con un odontólogo y te explican qué tipo se ajusta a tu caso.',

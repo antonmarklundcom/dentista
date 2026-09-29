@@ -9,7 +9,7 @@ return [
     'card'        => 'Odontólogos cerca de vos en Asunción y Gran Asunción: cómo te orientamos según tu zona y tu caso, sin listados genéricos. Coordinación gratis por WhatsApp.',
     'image'       => null,
     'title'       => 'Odontólogos cerca de vos en Asunción y Gran Asunción',
-    'description' => 'Buscás odontólogos cerca de vos en Asunción o Gran Asunción. Contanos tu caso y tu zona por WhatsApp y coordinamos tu consulta con un odontólogo matriculado.',
+    'description' => 'Buscás odontólogos cerca de vos en Asunción o Gran Asunción. Contanos tu caso y tu zona por WhatsApp y coordinamos con un odontólogo matriculado.',
     'h1'          => 'Odontólogos cerca de vos en Asunción y Gran Asunción',
     'lead'        => 'Cuando buscás un odontólogo cerca de vos, lo que necesitás casi nunca es una lista larga de nombres, sino un profesional matriculado que atienda tu caso puntual, en una zona que te resulte accesible. Acá te contamos cómo coordinamos esa consulta y qué conviene tener en cuenta antes de elegir.',
     'sections'    => [

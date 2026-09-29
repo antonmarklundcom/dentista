@@ -9,7 +9,7 @@ return [
     'card'        => 'Odontología en Asunción: qué áreas existen (general, estética, ortodoncia, endodoncia, periodoncia, odontopediatría) y cómo elegir. Orientación gratis por WhatsApp.',
     'image'       => null,
     'title'       => 'Odontología en Asunción: áreas y cómo elegir',
-    'description' => 'Odontología en Asunción: qué áreas existen, qué tratamientos incluye cada una y cómo elegir un profesional. Coordinamos tu consulta por WhatsApp, sin costo.',
+    'description' => 'Odontología en Asunción: qué áreas existen, qué tratamientos incluye cada una y cómo elegir un profesional. Consultá por WhatsApp, sin costo.',
     'h1'          => 'Odontología en Asunción: áreas y cómo elegir',
     'lead'        => 'La odontología en Asunción cubre desde un control de rutina hasta tratamientos puntuales como ortodoncia, endodoncia o cirugía. Antes de sacar turno en cualquier clínica odontología, ayuda entender qué área corresponde a tu caso. Acá repasamos las principales áreas, qué tratamientos incluye cada una y cómo elegir bien.',
     'sections'    => [
