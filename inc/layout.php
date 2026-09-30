@@ -30,7 +30,10 @@ $L_nav = [
 <title><?= e($page['title']) ?></title>
 <meta name="description" content="<?= e($page['description']) ?>">
 <?php if ($L_noindex): ?><meta name="robots" content="noindex,follow">
-<?php else: ?><link rel="canonical" href="<?= e($L_canonical) ?>">
+<?php else: ?><meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1">
+<link rel="canonical" href="<?= e($L_canonical) ?>">
+<link rel="alternate" hreflang="es-PY" href="<?= e($L_canonical) ?>">
+<link rel="alternate" hreflang="x-default" href="<?= e($L_canonical) ?>">
 <?php endif; ?>
 <?php if (cfg('gsc_verification')): ?><meta name="google-site-verification" content="<?= e(cfg('gsc_verification')) ?>">
 <?php endif; ?>
@@ -45,6 +48,9 @@ $L_nav = [
 <meta property="og:image:height" content="630">
 <meta property="og:image:alt" content="Dentista.com.py: tu dentista en Asunción, coordinado por WhatsApp">
 <meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="<?= e($page['title']) ?>">
+<meta name="twitter:description" content="<?= e($page['description']) ?>">
+<meta name="twitter:image" content="<?= e($L_og) ?>">
 <meta name="theme-color" content="#0B2540">
 <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">

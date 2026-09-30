@@ -8,14 +8,14 @@ require_once __DIR__ . '/inc/app.php';
 $path = rawurldecode(parse_url($_SERVER['REQUEST_URI'] ?? '/', PHP_URL_PATH) ?: '/');
 
 if (PHP_SAPI === 'cli-server' && $path !== '/') {
-    if (preg_match('#^/(inc|content|leads|templates|docs)/|^/(config|KEYWORDS|README)#', $path)) { http_response_code(403); exit('Forbidden'); }
+    if (preg_match('#^/(inc|content|leads|templates|docs|tools)/|^/(config|KEYWORDS|README)#', $path)) { http_response_code(403); exit('Forbidden'); }
     if (is_file(__DIR__ . $path) || is_file(__DIR__ . rtrim($path, '/') . '/index.php')) return false;
 }
 
 if ($path === '/sitemap.xml') { require ROOT . '/templates/sitemap.php'; exit; }
 if ($path === '/robots.txt') {
     header('Content-Type: text/plain; charset=utf-8');
-    echo cfg('noindex') ? "User-agent: *\nDisallow: /\n" : "User-agent: *\nDisallow: /gracias/\nDisallow: /lp/\nDisallow: /wa/\nDisallow: /admin/\nDisallow: /enviar.php\n\nSitemap: " . abs_url('/sitemap.xml') . "\n";
+    echo cfg('noindex') ? "User-agent: *\nDisallow: /\n" : "User-agent: *\nDisallow: /gracias/\nDisallow: /wa/\nDisallow: /admin/\nDisallow: /enviar.php\n\nSitemap: " . abs_url('/sitemap.xml') . "\n";
     exit;
 }
 

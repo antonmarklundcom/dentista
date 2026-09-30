@@ -8,7 +8,7 @@ return [
     'volume'      => 110,
     'image'       => null,
     'title'       => 'Urgencias odontológicas en Asunción: qué hacer ya',
-    'description' => 'Dolor de muela o diente roto en Asunción y Gran Asunción. Escribinos por WhatsApp y coordinamos tu consulta lo antes posible, sin costo por la orientación.',
+    'description' => 'Dolor de muela o diente roto en Asunción y Gran Asunción. Escribinos por WhatsApp y coordinamos tu consulta lo antes posible, orientación sin costo.',
     'h1'          => 'Urgencias odontológicas en Asunción y Gran Asunción',
     'lead'        => 'Un dolor fuerte, un golpe en la boca o un diente roto no siempre pueden esperar. Contanos qué te está pasando por WhatsApp y coordinamos tu consulta con un odontólogo matriculado lo más rápido que podamos, según la disponibilidad del momento.',
     'card'        => 'Dolor de muela, diente roto o golpe en la boca. Coordinamos tu consulta con un odontólogo matriculado lo antes posible.',
