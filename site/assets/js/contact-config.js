@@ -1,8 +1,7 @@
-/* Enable only after the owner confirms this recipient and the service role.
-   tools/configure-contact.py updates both JS and HTML/no-JS links together. */
+/* Updated by tools/configure-contact.py; no secrets here. */
 window.DENTISTA_CONTACT = {
-  enabled: false,
-  ownerConfirmed: false,
-  whatsappNumber: "",
-  phoneDisplay: ""
+  "enabled": true,
+  "ownerConfirmed": true,
+  "whatsappNumber": "595992279599",
+  "phoneDisplay": "+595 992 279599"
 };

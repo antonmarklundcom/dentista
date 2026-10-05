@@ -17,7 +17,20 @@ test('confirmed recipient creates correctly encoded Spanish context and city',()
 test('untrusted query values do not appear in the consultation text',()=>{
   assert.deepEqual(api.selection('<script>','https://evil.example'),{topic:'',city:''});
   const msg=api.message('<script>','secret patient data','?token=private');
-  assert.doesNotMatch(msg,/script|secret|token|private/); assert.match(msg,/Página: \/contacto\//);
+  assert.doesNotMatch(msg,/script|secret|token|private/); assert.match(msg,/Página: https:\/\/dentista\.com\.py\/contacto\//);
+});
+
+test('owner-confirmed recipient and dynamic messages identify the site, topic and full page URL',()=>{
+  const config={...fixture,whatsappNumber:'595992279599'};
+  for (const topic of api.topics) {
+    const message=api.message(topic,'Asunción','/contacto/');
+    const url=new URL(api.whatsapp(config,message));
+    assert.equal(url.pathname,'/595992279599');
+    assert.equal(url.searchParams.get('text'),message);
+    assert.ok(message.includes('vengo de Dentista.com.py'));
+    assert.ok(message.includes(topic));
+    assert.ok(message.includes('https://dentista.com.py/contacto/'));
+  }
 });
 test('selector fallback preserves only allowed optional answers in the contact URL',()=>{
   const url=new URL(api.contactPath('estética dental','Asunción'),'https://dentista.com.py');

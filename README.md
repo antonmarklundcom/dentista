@@ -4,7 +4,7 @@
 > en `site/`. Leé `docs/DELIVERY-2026-10-04.md` y `docs/RELEASE.md` antes de desplegar.
 > Los archivos de la raíz que se documentan abajo son una versión histórica que
 > no coincide con producción. **No subas todo este repositorio a public_html.**
-> El contacto de la nueva versión requiere confirmación del dueño antes de activarlo.
+> El dueño confirmó +595 992 279599 el 2026-10-05. El contacto está activo en `site/`.
 
 Sitio estático (HTML + CSS + JS, sin build) para subir tal cual a Hostinger.
 Reconstrucción 1:1 del diseño de referencia `Dentista_Homepage.dc.html`, con la

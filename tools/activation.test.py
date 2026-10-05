@@ -10,15 +10,20 @@ with tempfile.TemporaryDirectory(prefix='dentista-contact-test-') as folder:
     (scratch/'tools').mkdir()
     shutil.copyfile(repo/'tools/configure-contact.py',scratch/'tools/configure-contact.py')
     script=str(scratch/'tools/configure-contact.py')
+    def cache_version():
+        import re
+        return re.search(r'contact-config\.js\?v=([^"]+)',(scratch/'site/index.html').read_text(encoding='utf-8'))[1]
     rejected=subprocess.run([sys.executable,script,'--number','595981234567'],capture_output=True,text=True)
     assert rejected.returncode!=0, 'Unconfirmed activation must fail'
     subprocess.run([sys.executable,script,'--number','595981234567','--display','Test only','--owner-confirmed'],check=True)
+    enabled_version=cache_version()
     for file in (scratch/'site').rglob('*.html'):
         html=file.read_text(encoding='utf-8')
         assert 'href="https://wa.me/595995628862' not in html
         assert 'href="tel:+595995628862' not in html
         assert 'href="https://wa.me/595981234567' in html
     subprocess.run([sys.executable,script,'--disable'],check=True)
+    assert cache_version()!=enabled_version, 'Contact changes must invalidate the cached recipient'
     for file in (scratch/'site').rglob('*.html'):
         html=file.read_text(encoding='utf-8')
         assert 'href="https://wa.me/' not in html

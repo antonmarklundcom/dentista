@@ -19,9 +19,9 @@
     const picked = selection(topic, city);
     const subject = picked.topic || 'una evaluación odontológica';
     const safePage = /^\/[a-z0-9/-]*\/$/.test(page) || page === '/' ? page : '/contacto/';
-    return `Hola, encontré Dentista.com.py y quisiera consultar sobre ${subject}.` +
+    return `Hola, vengo de Dentista.com.py y quisiera consultar sobre ${subject}.` +
       (picked.city ? ` Mi ciudad: ${picked.city}.` : '') +
-      ` ¿Podrían confirmar disponibilidad, profesional y ubicación? Página: ${safePage}`;
+      ` ¿Podrían confirmar disponibilidad, profesional y ubicación? Página: https://dentista.com.py${safePage}`;
   }
   function whatsapp(config, text) {
     return isAvailable(config) ? `https://wa.me/${config.whatsappNumber}?text=${encodeURIComponent(text)}` : '';

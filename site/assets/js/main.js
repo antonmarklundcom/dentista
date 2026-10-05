@@ -14,6 +14,14 @@
     if (available && !phone) { link.target = '_blank'; link.rel = 'noopener noreferrer'; }
     else { link.removeAttribute('target'); link.removeAttribute('rel'); }
   });
+  function updateInquiryLinks(topic, city) {
+    if (!available) return;
+    const picked = api.selection(topic, city);
+    document.querySelectorAll('[data-contact-kind="whatsapp"]:not([data-selector-action])').forEach(link => {
+      const text = picked.topic || picked.city ? api.message(picked.topic, picked.city, page.path || '/') : link.dataset.message;
+      link.href = api.whatsapp(contact, text);
+    });
+  }
   const notice = document.querySelector('[data-contact-notice]');
   if (notice && available) {
     notice.replaceChildren();
@@ -58,6 +66,7 @@
   let chosenTopic = '';
   function updateSelector() {
     const city = selectorCity?.value || '';
+    updateInquiryLinks(chosenTopic, city);
     const text = api.message(chosenTopic, city, '/');
     selectorAction.href = available ? api.whatsapp(contact, text) : api.contactPath(chosenTopic, city);
     selectorAction.textContent = available ? 'Revisar consulta en WhatsApp ↗' : 'Continuar a contacto →';
@@ -88,7 +97,11 @@
     city.value = prefill.city;
     const result = form.querySelector('[data-message-result]');
     const open = form.querySelector('[data-message-open]');
-    function invalidate() { result.hidden = true; open.hidden = true; open.removeAttribute('href'); }
+    updateInquiryLinks(topic.value, city.value);
+    function invalidate() {
+      result.hidden = true; open.hidden = true; open.removeAttribute('href');
+      updateInquiryLinks(topic.value, city.value);
+    }
     form.addEventListener('change', invalidate);
     form.addEventListener('submit', event => {
       event.preventDefault();

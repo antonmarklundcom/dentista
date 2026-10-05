@@ -6,10 +6,10 @@ Preview- och testverktygen körs bara lokalt.
 
 ## Återstående beslut före publicering
 
-1. Bekräfta mottagarnumret, vem som svarar och att verksamheten är en
-   orienterings-/förmedlingstjänst. Live visar +595 995 628862, men äldre
-   ägarunderlag markerar det som ett antagande. Live visar därför inte i sig att
-   mottagaren är godkänd. Ingen mottagare har aktiverats i denna leverans.
+1. Mottagarnumret **+595 992 279599** bekräftades av Anton den 5 oktober 2026
+   och är aktiverat i denna leverans. Alla WhatsApp-knappar anger Dentista.com.py,
+   aktuell sida och relevant tjänst/ämne. Namngiven ansvarig verksamhet och
+   vem som svarar behöver fortfarande anges med verifierade uppgifter.
 2. Identifiera eller säkerhetskopiera nuvarande Hostinger-installation. Ingen
    befintlig GitHub-gren matchade den publicerade sidstrukturen/koden. Denna
    leverans utgår från offentlig live-HTML och behöver därför godkännas som ny
@@ -18,15 +18,16 @@ Preview- och testverktygen körs bara lokalt.
    med verifierad identitet. Lägg bara till schema för en klinik när verklig
    klinik, adress och yrkesuppgifter faktiskt är verifierade.
 
-## Aktivera kontakt efter bekräftelse
+## Bekräftad kontakt och framtida ändringar
 
-Kör från checkouten, med det **bekräftade** numret och visningsformen:
+Det bekräftade numret är redan aktiverat. För att återskapa konfigureringen:
 
 ```text
-python tools/configure-contact.py --number BEKRÄFTAT_NUMMER --display VISNINGSFORM --owner-confirmed
+python tools/configure-contact.py --number 595992279599 --display "+595 992 279599" --owner-confirmed
 node --test tools/contact.test.cjs
 python tools/activation.test.py
 python tools/check-site.py
+python tools/check-whatsapp.py
 ```
 
 `--owner-confirmed` representerar ett faktiskt ägarbeslut, inte ett sätt att
@@ -55,8 +56,9 @@ python tools/package-site.py --output ../dentista-delivery/dentista-review.zip
 
 Paketet innehåller **enbart innehållet i `site/`**, direkt på zip-roten. Git,
 historisk rotversion, anteckningar, testkod och skärmbilder ingår inte. Det
-levererade paketet har kontakt **avstängd** och är ett granskningspaket;
-skapa ett nytt paket efter kontaktbekräftelse och godkänd diff.
+levererade paketet har kontakt **aktiverad** för det bekräftade numret.
+Paketet har uppdaterats efter aktiveringen; publicera efter godkänd diff och
+kontrollerna nedan. PR #9 är redo för merge, inte draft.
 
 ## Hosted kontroll efter en separat godkänd publicering
 
