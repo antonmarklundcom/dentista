@@ -1,0 +1,20 @@
+{
+  "limit_credits": 100,
+  "submitted_jobs": 1,
+  "quoted_total_credits": 0.5,
+  "completed_jobs": 1,
+  "failed_jobs": 0,
+  "retries": 0,
+  "settled_charge": "Not returned by MCP; exact preflight quote 0.5 credits, one completed job.",
+  "jobs": [
+    {
+      "id": "48a02844-d4eb-43a7-bba9-aaadd6c25d48",
+      "model": "gpt_image_2_5",
+      "variant": "sunburst",
+      "quality": "medium",
+      "resolution": "1k",
+      "estimated_credits": 0.5,
+      "status": "completed"
+    }
+  ]
+}

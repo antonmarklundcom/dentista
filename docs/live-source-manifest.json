@@ -1,0 +1,161 @@
+{
+  "observed_local_date": "2026-10-04",
+  "source": "public live HTML; no branch matched",
+  "pages": [
+    {
+      "url": "https://dentista.com.py/",
+      "status": 200,
+      "sha256_saved_html": "4e7d31bb68722b18c5923a945d04ff06ced1abee1c7e746e461f92a3895bd06d"
+    },
+    {
+      "url": "https://dentista.com.py/urgencias/",
+      "status": 200,
+      "sha256_saved_html": "3e163f61d3c7e68c7973a124e721f5fca80f976fd2e9549028d7c3d0087acc04"
+    },
+    {
+      "url": "https://dentista.com.py/implantes/",
+      "status": 200,
+      "sha256_saved_html": "66700469016d953961b164f010c2d69441f9c36b898ea2d89809326660544ed9"
+    },
+    {
+      "url": "https://dentista.com.py/protesis/",
+      "status": 200,
+      "sha256_saved_html": "030122d0801923ac863a7572117b808cea4feb6a01fa768283940a9830de7c3b"
+    },
+    {
+      "url": "https://dentista.com.py/rehabilitacion/",
+      "status": 200,
+      "sha256_saved_html": "8922a3860038f80495217238a7f2f7e2fb4abc6c8c37fc8f9bce97087a26e5e8"
+    },
+    {
+      "url": "https://dentista.com.py/ortodoncia/",
+      "status": 200,
+      "sha256_saved_html": "dff1babad95922b3826fd52981f45c624e5c0a8a3335c8e9a7971c1b6f6cdc44"
+    },
+    {
+      "url": "https://dentista.com.py/alineadores/",
+      "status": 200,
+      "sha256_saved_html": "f8100a03d45980aae21201cfdf505fc1fad66a4d27cfa12810e4a76067223651"
+    },
+    {
+      "url": "https://dentista.com.py/carillas/",
+      "status": 200,
+      "sha256_saved_html": "64a1d0e94ad3fcaeb72e4d4e0a5cf01be7431bd238bf4a2981a48aa035795189"
+    },
+    {
+      "url": "https://dentista.com.py/diseno-de-sonrisa/",
+      "status": 200,
+      "sha256_saved_html": "63b5cd4e2a88bc90819be2f0de1250269aa20151361af59f199adb787ff85e81"
+    },
+    {
+      "url": "https://dentista.com.py/endodoncia/",
+      "status": 200,
+      "sha256_saved_html": "0b361d28b23e893cf159c9d4f7e842d0cc57bd2aaa345ab23322931e0aad1990"
+    },
+    {
+      "url": "https://dentista.com.py/extracciones/",
+      "status": 200,
+      "sha256_saved_html": "5e0f6c3518e1f56884537818c51ee12f2efe4a1e180d676fe95c11bdaa8708e6"
+    },
+    {
+      "url": "https://dentista.com.py/muelas-del-juicio/",
+      "status": 200,
+      "sha256_saved_html": "5c5a5f7d126626075a22368c47db3fbb1cd8b13b14ec956c3a26dc83fa6d92fb"
+    },
+    {
+      "url": "https://dentista.com.py/limpieza/",
+      "status": 200,
+      "sha256_saved_html": "d3ac4d4da02d177be2c8aff28b5f6d69a82982ac7d13c2b020138c736901435e"
+    },
+    {
+      "url": "https://dentista.com.py/blanqueamiento/",
+      "status": 200,
+      "sha256_saved_html": "769c21e1abd07d536ee7f7023f21868ef0efd81ac2454f50aadc58452cad36c2"
+    },
+    {
+      "url": "https://dentista.com.py/odontologia-general/",
+      "status": 200,
+      "sha256_saved_html": "5dd2c47f21e2436148a043a54617b0b189d7dc65054ff906bbed54397b89b94f"
+    },
+    {
+      "url": "https://dentista.com.py/odontopediatria/",
+      "status": 200,
+      "sha256_saved_html": "01273a1ed8e9357ff6bbbce825926b61fb82a3d03f27ee3607929de6351baf3c"
+    },
+    {
+      "url": "https://dentista.com.py/zonas/asuncion/",
+      "status": 200,
+      "sha256_saved_html": "9935a659d2d29e4337f87503cf9c634310ef14b1ee39680d003061605efb537d"
+    },
+    {
+      "url": "https://dentista.com.py/zonas/luque/",
+      "status": 200,
+      "sha256_saved_html": "59bb6a90009900e2ccd9f5647a6063e8b3586c0f66b92e739fa2d8c05f6ab745"
+    },
+    {
+      "url": "https://dentista.com.py/zonas/san-lorenzo/",
+      "status": 200,
+      "sha256_saved_html": "2e377c42905085c4008c3a82c3c40615d9d06aaf83632f843b5db214bd0b0f1c"
+    },
+    {
+      "url": "https://dentista.com.py/zonas/fernando-de-la-mora/",
+      "status": 200,
+      "sha256_saved_html": "60b46826c0c911fd65378b1762e92ea4d0480d22ad269d56132823d54d61b635"
+    },
+    {
+      "url": "https://dentista.com.py/zonas/lambare/",
+      "status": 200,
+      "sha256_saved_html": "71692c7c60ae785e821e14829c7ec87ccf34bacfd6efb2c983b52fced816bdd8"
+    },
+    {
+      "url": "https://dentista.com.py/zonas/capiata/",
+      "status": 200,
+      "sha256_saved_html": "8a7747d9864239cbe747c0a31d1c67918dadec66bb1d63c1a6d4b07f65d0ef22"
+    },
+    {
+      "url": "https://dentista.com.py/zonas/mariano-roque-alonso/",
+      "status": 200,
+      "sha256_saved_html": "14190eb0e2b4a2b8919e359813548fb2f32f92bae3e3bf0a78bdf3771f88de85"
+    },
+    {
+      "url": "https://dentista.com.py/zonas/limpio/",
+      "status": 200,
+      "sha256_saved_html": "398202c0613c93d69f2ce8e7dd864d0224d8893c5dc35e149b2da5962782b2e4"
+    },
+    {
+      "url": "https://dentista.com.py/nosotros/",
+      "status": 200,
+      "sha256_saved_html": "21939ffc1962a3cff226c80a8fd6dfb82e930d90d36c2ad611a5bee738f34d9a"
+    },
+    {
+      "url": "https://dentista.com.py/contacto/",
+      "status": 200,
+      "sha256_saved_html": "dea97cb80fb2215dbe8cfad7cb17ba6d41190f7f70f59af2f7952ed7e29e74f6"
+    },
+    {
+      "url": "https://dentista.com.py/preguntas-frecuentes/",
+      "status": 200,
+      "sha256_saved_html": "3a5b10541d19210c724b15afc7bd5f462033c1a1d15e532ab42303025a710003"
+    },
+    {
+      "url": "https://dentista.com.py/privacidad/",
+      "status": 200,
+      "sha256_saved_html": "9d410e0f647dfba1acad7942239a1d3028cb242c63fe31c9052a4a3c578fe834"
+    },
+    {
+      "url": "https://dentista.com.py/terminos/",
+      "status": 200,
+      "sha256_saved_html": "26c7c4e43af6a82944762bc17e06785e591691b5a0c5077aa6f8873da40ccd1f"
+    },
+    {
+      "url": "https://dentista.com.py/aviso-medico/",
+      "status": 200,
+      "sha256_saved_html": "58da270814180206b645b786235d921b90add7a2a53a05230610325569c1f261"
+    },
+    {
+      "url": "https://dentista.com.py/cookies/",
+      "status": 200,
+      "sha256_saved_html": "ed54a650c622cfa8ecbb4bfaa16c3318794379cb34caf93f088db4670b3316d0"
+    }
+  ]
+}

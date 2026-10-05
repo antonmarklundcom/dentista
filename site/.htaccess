@@ -1,0 +1,42 @@
+DirectoryIndex index.html
+Options -Indexes
+ErrorDocument 404 /404.html
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteCond %{HTTP_HOST} ^www\.dentista\.com\.py$ [NC]
+  RewriteRule ^ https://dentista.com.py%{REQUEST_URI} [R=301,L,NE]
+  RewriteCond %{HTTPS} !=on
+  RewriteRule ^ https://dentista.com.py%{REQUEST_URI} [R=301,L,NE]
+  # Preserve URLs in the older default branch without serving its stale copy.
+  RewriteRule ^tratamientos/(?:index\.html)?$ /#tratamientos [R=301,L,NE]
+  RewriteRule ^tratamientos/implantes\.html$ /implantes/ [R=301,L]
+  RewriteRule ^tratamientos/protesis\.html$ /protesis/ [R=301,L]
+  RewriteRule ^tratamientos/ortodoncia\.html$ /ortodoncia/ [R=301,L]
+  RewriteRule ^tratamientos/alineadores\.html$ /alineadores/ [R=301,L]
+  RewriteRule ^tratamientos/estetica-dental\.html$ /diseno-de-sonrisa/ [R=301,L]
+  RewriteRule ^tratamientos/limpieza-prevencion\.html$ /limpieza/ [R=301,L]
+  RewriteRule ^tratamientos/odontopediatria\.html$ /odontopediatria/ [R=301,L]
+  RewriteRule ^tratamientos/urgencias-dolor\.html$ /urgencias/ [R=301,L]
+  RewriteRule ^zonas/(asuncion|luque|san-lorenzo|fernando-de-la-mora|lambare|capiata|mariano-roque-alonso|limpio)\.html$ /zonas/$1/ [R=301,L]
+</IfModule>
+<FilesMatch "(^\.|\.(php|md|log|csv|sql|bak|zip|py|toml)$)">
+  Require all denied
+</FilesMatch>
+<IfModule mod_headers.c>
+  Header always set X-Content-Type-Options "nosniff"
+  Header always set Referrer-Policy "strict-origin-when-cross-origin"
+  Header always set X-Frame-Options "SAMEORIGIN"
+  Header always set Permissions-Policy "camera=(), microphone=(), geolocation=()"
+  Header always set Content-Security-Policy "default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self'; img-src 'self' data:; font-src 'self'; connect-src 'none'; frame-ancestors 'self'; form-action 'self'; base-uri 'self'; object-src 'none'"
+</IfModule>
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/html text/css application/javascript application/json image/svg+xml text/xml
+</IfModule>
+<IfModule mod_expires.c>
+  ExpiresActive On
+  ExpiresByType text/html "access plus 0 seconds"
+  ExpiresByType text/css "access plus 1 day"
+  ExpiresByType application/javascript "access plus 1 day"
+  ExpiresByType image/webp "access plus 1 year"
+  ExpiresByType image/jpeg "access plus 1 year"
+</IfModule>

@@ -1,5 +1,11 @@
 # Dentista.com.py
 
+> **Entrega de revisión 2026-10-04:** la versión basada en el sitio publicado está
+> en `site/`. Leé `docs/DELIVERY-2026-10-04.md` y `docs/RELEASE.md` antes de desplegar.
+> Los archivos de la raíz que se documentan abajo son una versión histórica que
+> no coincide con producción. **No subas todo este repositorio a public_html.**
+> El contacto de la nueva versión requiere confirmación del dueño antes de activarlo.
+
 Sitio estático (HTML + CSS + JS, sin build) para subir tal cual a Hostinger.
 Reconstrucción 1:1 del diseño de referencia `Dentista_Homepage.dc.html`, con la
 lógica del componente (mobile/desktop, selector de 3 pasos, FAQ, menú) portada
