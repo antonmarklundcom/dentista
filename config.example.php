@@ -13,6 +13,8 @@ return [
     // VenderCRM — la clave va SOLO en config.php del servidor (o variable de
     // entorno VENDERCRM_API_KEY). Nunca en el repo ni en JavaScript.
     'vcrm_url'        => 'https://crm.clientes.com.py',
+    // Legacy fallback. New setup: private/vendercrm.php with VENDERCRM_URL
+    // (base origin) and VENDERCRM_API_KEY; persistent file outside document root.
     'vcrm_api_key'    => '',
 
     // Aviso por email de cada lead (opcional, usa mail() de PHP).
