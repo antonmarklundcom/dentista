@@ -6,8 +6,28 @@
  * enviar.php sigue igual si falla.
  */
 
+require_once dirname(__DIR__) . '/lib/vendercrm-config.php';
+function canonical_crm(): ?\VenderCRM\Config {
+    static $loaded = false, $config = null;
+    if (!$loaded) {
+$canonicalEnv = ['VENDERCRM_URL'=>getenv('VENDERCRM_URL'), 'VENDERCRM_API_KEY'=>getenv('VENDERCRM_API_KEY'), 'VENDERCRM_CONFIG_FILE'=>getenv('VENDERCRM_CONFIG_FILE')];
+// Verified historical key-only setting remains in the legacy fallback.
+if (!$canonicalEnv['VENDERCRM_URL']) $canonicalEnv['VENDERCRM_API_KEY'] = false;
+        $config = \VenderCRM\Config::optional(dirname(__DIR__), $canonicalEnv);
+        $loaded = true;
+    }
+    return $config;
+}
 function vcrm_key(): string
 {
+    try {
+        $canonical = canonical_crm();
+    } catch (RuntimeException $error) {
+        // Keep enviar.php's CSV and notification fallback available.
+        error_log('dentista: invalid server CRM configuration');
+        return '';
+    }
+    if ($canonical) return $canonical->apiKey();
     return (string)(cfg('vcrm_api_key') ?: getenv('VENDERCRM_API_KEY') ?: '');
 }
 
@@ -38,7 +58,8 @@ function vcrm_send(array $payload): array
     if ($key === '' || !function_exists('curl_init')) return [0, 'not configured'];
 
     $payload = array_filter($payload, static fn($v) => $v !== null && $v !== '' && $v !== []);
-    $ch = curl_init(rtrim((string)cfg('vcrm_url'), '/') . '/api/v1/leads');
+    $canonical = canonical_crm();
+    $ch = curl_init($canonical ? $canonical->endpoint() : rtrim((string)cfg('vcrm_url'), '/') . '/api/v1/leads');
     curl_setopt_array($ch, [
         CURLOPT_POST           => true,
         CURLOPT_RETURNTRANSFER => true,
